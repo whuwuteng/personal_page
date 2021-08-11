@@ -1,11 +1,11 @@
 ---
 toc: true
 layout: post
-description: first post.
+description: blog.
 categories: [markdown]
-title: Some good blog on Deep learning
+title: Some good blogs on Deep learning
 ---
-# Deep learning
+# Deep learning on Computer Vision
 
 ## blog
 
