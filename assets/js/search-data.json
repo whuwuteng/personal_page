@@ -39,8 +39,8 @@
 
   
       ,"page1": {
-          "title": "Teng Wu",
-          "content": "; This website is powered by fastpages [^1]. . A PhD in photogrammetry and remote sensing, work on 3D vision. . ;[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats. .",
+          "title": "About",
+          "content": "#Teng Wu . A PhD in photogrammetry and remote sensing, work on 3D vision. .",
           "url": "https://whuwuteng.github.io/personal_page/about/",
           "relUrl": "/about/",
           "date": ""
@@ -51,8 +51,6 @@
   
 
   
-
-  
   
 
   
@@ -72,7 +70,7 @@
   
 
   
-      ,"page11": {
+      ,"page10": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://whuwuteng.github.io/personal_page/robots.txt",
