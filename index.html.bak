@@ -10,12 +10,12 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://whuwuteng.github.io/personal_page/" />
-<meta property="og:url" content="https://whuwuteng.github.io/personal_page/" />
+<link rel="canonical" href="https://whuwuteng.github.io/personal_page/index.html.bak" />
+<meta property="og:url" content="https://whuwuteng.github.io/personal_page/index.html.bak" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:image" content="https://whuwuteng.github.io/personal_page/images/logo.png" />
 <script type="application/ld+json">
-{"url":"https://whuwuteng.github.io/personal_page/","@type":"WebSite","image":"https://whuwuteng.github.io/personal_page/images/logo.png","headline":"fastpages","name":"fastpages","description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
+{"url":"https://whuwuteng.github.io/personal_page/index.html.bak","@type":"WebPage","image":"https://whuwuteng.github.io/personal_page/images/logo.png","headline":"fastpages","description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/personal_page/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://whuwuteng.github.io/personal_page/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/personal_page/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -77,7 +77,7 @@ This site is built with [fastpages](https://github.com/fastai/fastpages), An eas
 You can edit the `index.html` file to change this content.
 //-->
 
-<p>A self-lost PhD with his research.</p>
+<p>A self-lost PhD</p>
 
 <p><img src="/personal_page/images/googlemap.jpg" alt="" title="IGN" /></p>
 
@@ -102,19 +102,7 @@ You can edit the `index.html` file to change this content.
 
    <!-- Assemble final sorted posts array -->
   
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/personal_page/markdown/2021/08/11/deep-learning.html">
-    Some good blog on Deep learning
-    </a>
-</h3><p class="post-meta-description">first post.</p><p class="post-meta">Aug 11, 2021</p>
-</li><li><h3>
-    <a class="post-link" href="/personal_page/jupyter/2021/08/10/==2020-02-20-test.html">
-    Fastpages Notebook Blog Post
-    </a>
-</h3><p class="post-meta-description">A tutorial of fastpages for Jupyter notebooks.</p><p class="post-meta">Aug 10, 2021</p>
-</li></ul>
-
-    </div>
+  </div>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/personal_page/"></data>
