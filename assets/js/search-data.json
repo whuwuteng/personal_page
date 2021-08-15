@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Some good blogs on Deep learning",
-            "content": "Deep learning on Computer Vision . blog . (1) NVIDIA介绍3D与Deep learning, 可以通过Youtube视频来了解一些具体的原理，发现室内重建是用的colmap，人物重建还是用的360°相机，人工的编辑很多。 . paper . project .",
+            "content": "Deep learning on Computer Vision . blog . (1) NVIDIA介绍3D与Deep learning, 可以通过Youtube视频来了解一些具体的原理，发现室内重建是用的colmap，人物重建还是用的360°相机，人工的编辑很多。值得注意的是只有一部分是人工合成的 1。 . paper . project . Footnotes . https://www.zhihu.com/question/479214973 &#8617; . |",
             "url": "https://whuwuteng.github.io/personal_page/markdown/2021/08/11/deep-learning.html",
             "relUrl": "/markdown/2021/08/11/deep-learning.html",
             "date": " • Aug 11, 2021"
@@ -51,7 +51,7 @@
   
       ,"page1": {
           "title": "About",
-          "content": "#Teng Wu . A PhD in photogrammetry and remote sensing, work on 3D vision. .",
+          "content": "Teng Wu . A PhD in photogrammetry and remote sensing, work on 3D vision. . contact : whuwuteng@gmail.com .",
           "url": "https://whuwuteng.github.io/personal_page/about/",
           "relUrl": "/about/",
           "date": ""
