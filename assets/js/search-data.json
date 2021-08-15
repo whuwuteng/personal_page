@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "一些blog的记录",
-            "content": "记录一些blog的内容 . (1) 技术型创业者需要从你们博士的躯壳里走出来，开始谦卑地学习客户永远是对的。1 . Footnotes . 李开复 https://weibo.com/ttarticle/p/show?id=2309404281740599412204 . &#8617; . |",
+            "content": "记录一些blog的内容 . 内容 . (1) 技术型创业者需要从你们博士的躯壳里走出来，开始谦卑地学习客户永远是对的。1 . Footnotes . 李开复 https://weibo.com/ttarticle/p/show?id=2309404281740599412204 . &#8617; . |",
             "url": "https://whuwuteng.github.io/personal_page/markdown/2021/08/15/blog.html",
             "relUrl": "/markdown/2021/08/15/blog.html",
             "date": " • Aug 15, 2021"
@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Some good blogs on Deep learning",
-            "content": "Deep learning on Computer Vision . blog . paper . project .",
+            "content": "Deep learning on Computer Vision . blog . (1) NVIDIA介绍3D与Deep learning, 可以通过Youtube视频来了解一些具体的原理，发现室内重建是用的colmap，人物重建还是用的360°相机，人工的编辑很多。 . paper . project .",
             "url": "https://whuwuteng.github.io/personal_page/markdown/2021/08/11/deep-learning.html",
             "relUrl": "/markdown/2021/08/11/deep-learning.html",
             "date": " • Aug 11, 2021"
