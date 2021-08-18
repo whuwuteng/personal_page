@@ -15,6 +15,9 @@ title: Some good blogs on Deep learning
 
 ## project
 
+(1) [Zillow Indoor Dataset](https://github.com/zillow/zind)
+数据集是室内场景，包括影像和室内的layout。
+
 ## Footnotes
 
 [^1]: https://www.zhihu.com/question/479214973
