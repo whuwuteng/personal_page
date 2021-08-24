@@ -13,6 +13,9 @@ title: Some good blogs on Deep learning
 
 ## paper
 
+(1) Depth-supervised NeRF: Fewer Views and Faster Training for Free [website](https://www.cs.cmu.edu/~dsnerf/), [paper](https://arxiv.org/abs/2107.02791)
+论文充分利用了Colmap的结果，对比不用colmap大大提高了准确率， 减少了错误区域。
+
 ## project
 
 (1) [Zillow Indoor Dataset](https://github.com/zillow/zind)
