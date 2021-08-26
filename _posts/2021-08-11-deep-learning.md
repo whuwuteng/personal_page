@@ -16,7 +16,7 @@ title: Some good blogs on Deep learning
 ## paper
 
 (1) Depth-supervised NeRF: Fewer Views and Faster Training for Free
- 
+
 [website](https://www.cs.cmu.edu/~dsnerf/), [paper](https://arxiv.org/abs/2107.02791)
 
 论文充分利用了Colmap的结果，对比不用colmap大大提高了准确率， 减少了错误区域。
@@ -28,6 +28,10 @@ title: Some good blogs on Deep learning
 [paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Cruz_Zillow_Indoor_Dataset_Annotated_Floor_Plans_With_360deg_Panoramas_and_CVPR_2021_paper.pdf)
 
 数据集是室内场景，包括影像和室内的layout。
+
+(2) [ETH-MS localization dataset](https://github.com/cvg/visloc-iccv2021)
+
+数据集是定位相关的，室内外都有。
 
 ## Footnotes
 
