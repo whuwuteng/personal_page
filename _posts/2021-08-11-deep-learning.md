@@ -33,6 +33,12 @@ title: Some good blogs on Deep learning
 
 数据集是定位相关的，室内外都有。
 
+## Tutorial
+
+(1) [Machine Learning Robustness, Fairness, and their Convergence](https://kdd21tutorial-robust-fair-learning.github.io/)
+
+主要是可以应对noise label的问题，noise label是一个有点偏应用的问题。
+
 ## Footnotes
 
 [^1]: https://www.zhihu.com/question/479214973
