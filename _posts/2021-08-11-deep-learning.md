@@ -21,6 +21,8 @@ title: Some good blogs on Deep learning
 
 论文充分利用了Colmap的结果，对比不用colmap大大提高了准确率， 减少了错误区域。
 
+类似的应用是depth from video，如google的[blog](https://ai.googleblog.com/2019/05/moving-camera-moving-people-deep.html).
+
 ## project
 
 (1) [Zillow Indoor Dataset](https://github.com/zillow/zind)
