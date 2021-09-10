@@ -35,6 +35,10 @@ title: Some good blogs on Deep learning
 
 数据集是定位相关的，室内外都有。
 
+(3) [Open Buildingsg](https://sites.research.google/open-buildings/#dataformat)
+
+是Google的一个从卫星影像提取建筑物的数据，不过貌似没有真值，看[blog](https://ai.googleblog.com/2021/07/mapping-africas-buildings-with.html)。
+
 ## Tutorial
 
 (1) [Machine Learning Robustness, Fairness, and their Convergence](https://kdd21tutorial-robust-fair-learning.github.io/)
