@@ -21,7 +21,7 @@ title: Some good blogs on Deep learning
 
 论文充分利用了Colmap的结果，对比不用colmap大大提高了准确率， 减少了错误区域。
 
-类似的应用是depth from video，如google的[blog](https://ai.googleblog.com/2019/05/moving-camera-moving-people-deep.html).
+类似的应用是depth from video，如google的[blog](https://ai.googleblog.com/2019/05/moving-camera-moving-people-deep.html)。
 
 ## project
 
@@ -39,11 +39,31 @@ title: Some good blogs on Deep learning
 
 是Google的一个从卫星影像提取建筑物的数据，不过貌似没有真值，看[blog](https://ai.googleblog.com/2021/07/mapping-africas-buildings-with.html)。
 
+(4) [MIAP (More Inclusive Annotations for People)](https://storage.googleapis.com/openimages/web/extended.html)
+
+一个关于人物检测的数据集，参考Google的[blog](https://ai.googleblog.com/2021/06/a-step-toward-more-inclusive-people.html)。
+
+(5) [ViP-DeepLab: Learning Visual Perception with Depth-aware Video Panoptic Segmentation](https://arxiv.org/abs/2012.05258)
+
+[panoptic segmentation](https://ai.googleblog.com/2021/04/holistic-video-scene-understanding-with.html)是最近才流行的算法。
+
+(6) [iGibson](http://svl.stanford.edu/igibson/)
+
+一个室内模拟器，和carla类似，一个[blog](https://ai.googleblog.com/2021/04/presenting-igibson-challenge-on.html)的介绍。
+
+(7)[Accelerating Neural Networks on Mobile and Web with Sparse Inference](http://ai.googleblog.com/2021/03/accelerating-neural-networks-on-mobile.html)
+
+移动设备运行CNN是一个很工程的问题。
+
 ## Tutorial
 
 (1) [Machine Learning Robustness, Fairness, and their Convergence](https://kdd21tutorial-robust-fair-learning.github.io/)
 
 主要是可以应对noise label的问题，noise label是一个有点偏应用的问题。
+
+(2) [Do Wide and Deep Networks Learn the Same Things?](http://ai.googleblog.com/2021/05/do-wide-and-deep-networks-learn-same.html)
+
+探讨网络结构的的问题。
 
 ## Footnotes
 
