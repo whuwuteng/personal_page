@@ -21,7 +21,7 @@ title: Some good blogs on Deep learning
 
 论文充分利用了Colmap的结果，对比不用colmap大大提高了准确率， 减少了错误区域。
 
-类似的应用是depth from video，如google的[blog](https://ai.googleblog.com/2019/05/moving-camera-moving-people-deep.html)。
+类似的应用是depth from video，如google的[depth from video blog](https://ai.googleblog.com/2019/05/moving-camera-moving-people-deep.html)和[cinematic photo blog](https://ai.googleblog.com/2021/02/the-technology-behind-cinematic-photos.html)。
 
 ## project
 
@@ -54,6 +54,16 @@ title: Some good blogs on Deep learning
 (7)[Accelerating Neural Networks on Mobile and Web with Sparse Inference](http://ai.googleblog.com/2021/03/accelerating-neural-networks-on-mobile.html)
 
 移动设备运行CNN是一个很工程的问题。
+
+(8) [AutoML](https://ai.googleblog.com/2021/02/introducing-model-search-open-source.html) 
+
+网络的查找是最近深度学习的一个重要的发展方向，[Model Search](https://github.com/google/model_search)是一个开源的库。
+
+(9) [3D Scene Understanding with TensorFlow 3D](http://ai.googleblog.com/2021/02/3d-scene-understanding-with-tensorflow.html)
+
+3D 是最近一个热点，Pytorch也有[Pytorch 3D](https://github.com/facebookresearch/pytorch3d)。
+
+
 
 ## Tutorial
 
