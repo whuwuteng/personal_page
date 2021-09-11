@@ -113,6 +113,74 @@ window.onload = wrap_img;
 
 <p>可以通过<a href="https://www.youtube.com/watch?v=1qhqZ9ECm70">Youtube视频</a>来了解一些具体的原理，发现室内重建是用的<a href="https://colmap.github.io/">colmap</a>，人物重建还是用的360°相机，人工的编辑很多。值得注意的是只有一部分是人工合成的 <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>。</p>
 
+<p>(2 <a href="https://ai.googleblog.com/2019/06/an-inside-look-at-google-earth-timelapse.html">Google Eearth</a> 的介绍</p>
+
+<p>介绍了google earth 从<a href="https://googleblog.blogspot.com/2004/09/journey-may-be-reward-but-so-is.html">map pyramiding technique</a> 到目前的time machine的变化。</p>
+
+<p>(3) <a href="http://ai.googleblog.com/2020/04/efficientdet-towards-scalable-and.html">EfficientDet</a></p>
+
+<p>一个多尺度的network用在图像识别的例子。</p>
+
+<p>(4) <a href="http://ai.googleblog.com/2020/04/udepth-real-time-3d-depth-sensing-on.html">uDepth</a></p>
+
+<p>Google在pixel 4 手机上用IR相机加上神经网络实现深度图的方法。</p>
+
+<p>(5) <a href="http://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html">Turbo color map</a></p>
+
+<p>一个类似与jet的color map。</p>
+
+<p>(6) <a href="http://ai.googleblog.com/2020/03/a-neural-weather-model-for-eight-hour.html">A Neural Weather Model for Eight-Hour Precipitation Forecasting</a></p>
+
+<p>利用深度学习与1 km 分辨率的影像实现天气预报。</p>
+
+<p>(7)<a href="http://ai.googleblog.com/2020/02/learning-to-see-transparent-objects.html">Learning to See Transparent Objects</a></p>
+
+<p>透明物体有不少研究，类似的还有镜子中物体的重建。</p>
+
+<p>(8) <a href="http://ai.googleblog.com/2020/01/can-you-trust-your-models-uncertainty.html">Can You Trust Your Model’s Uncertainty?</a></p>
+
+<p>Uncertainty一直是一个很重要的topic，data shift也很关键。</p>
+
+<p>另外也有一个问题，就是label中的<a href="https://ai.googleblog.com/2020/08/understanding-deep-learning-on.html">noisy</a>怎么处理。</p>
+
+<p>(9) <a href="http://ai.googleblog.com/2019/09/an-inside-look-at-flood-forecasting.html">An Inside Look at Flood Forecasting</a></p>
+
+<p>Flood Forecasting 的估计本质上是在DEM上做分析，深度学习就是代替了很多几何分析的步骤，一个更早的<a href="https://ai.googleblog.com/2020/09/the-technology-behind-our-recent.html">blog</a>。</p>
+
+<p>(10) <a href="http://ai.googleblog.com/2020/05/announcing-meta-dataset-dataset-of.html">Meta-Dataset: A Dataset of Datasets for Few-Shot Learning</a></p>
+
+<p>few-shot classification也是一个研究方向 <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>。</p>
+
+<p>(11) <a href="http://ai.googleblog.com/2020/05/speeding-up-neural-network-training.html">Speeding Up Neural Network Training with Data Echoing</a></p>
+
+<p>数据的处理是深度学习中很关键的一步。</p>
+
+<p>(12) <a href="http://ai.googleblog.com/2020/05/open-sourcing-bit-exploring-large-scale.html">Open-Sourcing BiT: Exploring Large-Scale Pre-training for Computer Vision</a></p>
+
+<p>Transfer learning 或者 data shift是应用中很关键的一步。</p>
+
+<p>(13) <a href="http://ai.googleblog.com/2020/06/machine-learning-based-damage.html">Machine Learning-based Damage Assessment for Disaster Relief</a></p>
+
+<p>遥感影像的变化检测的应用。</p>
+
+<p>(14) <a href="http://ai.googleblog.com/2020/10/recreating-historical-streetscapes.html">Recreating Historical Streetscapes Using Deep Learning and Crowdsourcing</a></p>
+
+<p>一个利用多个数据的城市建模方法。</p>
+
+<p>(15) <a href="http://ai.googleblog.com/2020/10/rethinking-attention-with-performers.html">Rethinking Attention with Performers</a></p>
+
+<p>Attention机制是图像处理中经常用的。</p>
+
+<p>(16) <a href="http://ai.googleblog.com/2020/12/end-to-end-transferable-deep-rl-for.html">End-to-End, Transferable Deep RL for Graph Optimization</a></p>
+
+<p>(17) <a href="http://ai.googleblog.com/2021/01/addressing-range-anxiety-with-smart.html">Addressing Range Anxiety with Smart Electric Vehicle Routing</a></p>
+
+<p>类似与路径规划。</p>
+
+<p>(18) <a href="http://ai.googleblog.com/2021/02/machine-learning-for-computer.html">Machine Learning for Computer Architecture</a></p>
+
+<p>(19) <a href="http://ai.googleblog.com/2021/02/tracin-simple-method-to-estimate.html">TracIn — A Simple Method to Estimate Training Data Influence</a></p>
+
 <h2 id="paper">
 <a class="anchor" href="#paper" aria-hidden="true"><span class="octicon octicon-link"></span></a>paper</h2>
 
@@ -165,6 +233,38 @@ window.onload = wrap_img;
 
 <p>3D 是最近一个热点，Pytorch也有<a href="https://github.com/facebookresearch/pytorch3d">Pytorch 3D</a>。</p>
 
+<p>(10) <a href="https://ai.facebook.com/blog/common-objects-in-3d-dataset-for-3d-reconstruction/">CO3D</a></p>
+
+<p>CO3D是facebook的一个三维重建的数据集。</p>
+
+<p>(11) <a href="https://github.com/google-research-datasets/Objectron">Objectron Dataset</a></p>
+
+<p>介绍3D box的数据集的<a href="https://ai.googleblog.com/2020/11/announcing-objectron-dataset.html">blog</a>。</p>
+
+<p>(12) <a href="http://ai.googleblog.com/2020/06/spinenet-novel-architecture-for-object.html">Neural Architecture Search</a></p>
+
+<p>Neural Architecture Search 是AutoML中一个常用的方法。</p>
+
+<p>(13)  <a href="http://ai.googleblog.com/2020/04/announcing-2020-image-matching.html">Image Matching Benchmark and Challenge</a></p>
+
+<p>特征点提取和匹配的数据集。</p>
+
+<p>(14) <a href="http://ai.googleblog.com/2019/06/announcing-youtube-8m-segments-dataset.html">YouTube-8M Segments Dataset</a></p>
+
+<p>主要是video的Segments 与 undertanding的数据集。</p>
+
+<p>(15) <a href="http://ai.googleblog.com/2020/02/open-images-v6-now-featuring-localized.html">Open Images V6</a></p>
+
+<p>image classification, object detection, visual relationship detection, and instance segmentation的<a href="https://storage.googleapis.com/openimages/web/factsfigures.html">数据集</a>。</p>
+
+<p>(16) <a href="https://ai.googleblog.com/2020/02/enhancing-research-communitys-access-to.html">StreetLearn dataset</a></p>
+
+<p>主要是用来自动驾驶定位的，利用<a href="https://sites.google.com/view/streetlearn/">Google街景实现定位</a>。</p>
+
+<p>(17) <a href="http://ai.googleblog.com/2021/01/rxr-multilingual-benchmark-for.html">RxR: A Multilingual Benchmark for Navigation Instruction Following</a></p>
+
+<p>室内场景的数据集。</p>
+
 <h2 id="tutorial">
 <a class="anchor" href="#tutorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tutorial</h2>
 
@@ -183,6 +283,9 @@ window.onload = wrap_img;
   <ol>
     <li id="fn:1" role="doc-endnote">
       <p>https://www.zhihu.com/question/479214973 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>https://zhuanlan.zhihu.com/p/61215293 <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
