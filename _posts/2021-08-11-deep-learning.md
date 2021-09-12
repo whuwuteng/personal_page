@@ -87,6 +87,12 @@ Attention机制是图像处理中经常用的。
 
 
 
+(20) [Using Global Localization to Improve Navigation](http://ai.googleblog.com/2019/02/using-global-localization-to-improve.html)
+
+(21) [The Decade of Deep Learning](https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/)
+
+
+
 ## paper
 
 (1) Depth-supervised NeRF: Fewer Views and Faster Training for Free
@@ -94,6 +100,8 @@ Attention机制是图像处理中经常用的。
 [website](https://www.cs.cmu.edu/~dsnerf/), [paper](https://arxiv.org/abs/2107.02791)
 
 论文充分利用了Colmap的结果，对比不用colmap大大提高了准确率， 减少了错误区域。
+
+更早的文章[NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://www.matthewtancik.com/nerf)， [blog](https://dellaert.github.io/NeRF/)。
 
 类似的应用是depth from video，如google的[depth from video blog](https://ai.googleblog.com/2019/05/moving-camera-moving-people-deep.html)和[cinematic photo blog](https://ai.googleblog.com/2021/02/the-technology-behind-cinematic-photos.html)。
 
