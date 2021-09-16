@@ -89,9 +89,15 @@ Attention机制是图像处理中经常用的。
 
 (20) [Using Global Localization to Improve Navigation](http://ai.googleblog.com/2019/02/using-global-localization-to-improve.html)
 
+
+
 (21) [The Decade of Deep Learning](https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/)
 
 
+
+(22) [Data Augmentation](https://nanonets.com/blog/data-augmentation-how-to-use-deep-learning-when-you-have-limited-data-part-2/)
+
+数据增强是深度学习比较工程化的一个步骤，主要是应对测试的数据与训练的数据不一致的情况。不过更多的是考虑当训练的数据比较少的时候，怎么提高performance。
 
 ## paper
 
