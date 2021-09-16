@@ -97,6 +97,10 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#记录一些电脑的trick">记录一些电脑的trick</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#内容">内容</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#this-is-important">this is important</a>
+<ul>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
@@ -112,9 +116,27 @@ window.onload = wrap_img;
 
 <p>(2) 一个不错的<a href="https://jhermann.github.io/blog/">blog</a>框架，可以参考<a href="https://github.com/jhermann/blog">源码</a>。</p>
 
-<p>(3) 双硬盘装Ubuntu的问题
-尝试装20.04时，出现了 “executing grub-install /dev/sda failed”的问题
+<p>(3) 双硬盘装Ubuntu的问题</p>
+
+<p>尝试装20.04时，出现了 “executing grub-install /dev/sda failed”的问题
 当不管这个问题时，进入<a href="https://blog.csdn.net/C_chuxin/article/details/82812955">grub</a>之后出现 file ‘/grub/i386-pc/normal.mod’ not found的<a href="https://askubuntu.com/questions/266429/error-file-grub-i386-pc-normal-mod-not-found">问题</a>，尝试用18.04也有一样的问题，发现是因为系统安装在/dev/sdb，最后安装在/dev/sda上（<a href="https://askubuntu.com/questions/459620/unable-to-install-grub-in-dev-sda-when-installing-grub">参考</a>），就有引导了，而且出现两个系统。</p>
+
+<p>(4) Ubuntu18.04台式机安装wifi</p>
+
+<p>目前用的是<a href="https://www.amazon.fr/dp/B07FCNP2VL/ref=pe_27091421_487052621_TE_item">brostrend ac1200 wifi</a>, 下载的驱动是在<a href="https://github.com/cilynx/rtl88x2bu">Github</a>的，命令行很简单：
+‘’’</p>
+
+<p>make</p>
+
+<h1 id="this-is-important">
+<a class="anchor" href="#this-is-important" aria-hidden="true"><span class="octicon octicon-link"></span></a>this is important</h1>
+<p>sudo modprobe cfg80211</p>
+
+<p>sudo insmod 88x2bu.ko</p>
+
+<p>’’’</p>
+
+<p>在这个过程中，发现插入USB3.0时没反应，用USB2.0就没有问题。</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
