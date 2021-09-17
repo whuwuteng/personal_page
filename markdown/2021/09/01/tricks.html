@@ -97,10 +97,6 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#记录一些电脑的trick">记录一些电脑的trick</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#内容">内容</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h1"><a href="#this-is-important">this is important</a>
-<ul>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
@@ -123,20 +119,39 @@ window.onload = wrap_img;
 
 <p>(4) Ubuntu18.04台式机安装wifi</p>
 
-<p>目前用的是<a href="https://www.amazon.fr/dp/B07FCNP2VL/ref=pe_27091421_487052621_TE_item">brostrend ac1200 wifi</a>, 下载的驱动是在<a href="https://github.com/cilynx/rtl88x2bu">Github</a>的，命令行很简单：
-‘’’</p>
+<p>目前用的是<a href="https://www.amazon.fr/dp/B07FCNP2VL/ref=pe_27091421_487052621_TE_item">brostrend ac1200 wifi</a>, 下载的驱动是在<a href="https://github.com/cilynx/rtl88x2bu">Github</a>的，命令行很简单：</p>
 
-<p>make</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
 
-<h1 id="this-is-important">
-<a class="anchor" href="#this-is-important" aria-hidden="true"><span class="octicon octicon-link"></span></a>this is important</h1>
-<p>sudo modprobe cfg80211</p>
+# this is important
+sudo modprobe cfg80211
 
-<p>sudo insmod 88x2bu.ko</p>
-
-<p>’’’</p>
+sudo insmod 88x2bu.ko
+</code></pre></div></div>
 
 <p>在这个过程中，发现插入USB3.0时没反应，用USB2.0就没有问题。</p>
+
+<p>(5) Unbuntu 18.04 安装NIVDIA显卡驱动</p>
+
+<p>如果不知道显卡型号，需要用命令：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu-drivers devices
+</code></pre></div></div>
+
+<p>然后在<a href="https://www.nvidia.cn/Download/index.aspx?lang=cn">官网</a>上下载对应的型号的驱动，安装步骤<a href="https://zhuanlan.zhihu.com/p/59618999">参见第三种</a>。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install build-essential libc6:i386
+
+sudo bash -c "echo blacklist nouveau &gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+sudo bash -c "echo options nouveau modeset=0 &gt;&gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+
+# check
+cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+</code></pre></div></div>
+
+<p>重启之后<code class="language-plaintext highlighter-rouge">sudo telinit 3</code>。然后按快捷键：<code class="language-plaintext highlighter-rouge">CTRL+ALT+F1</code> 进入字符界面，注意是<code class="language-plaintext highlighter-rouge">sudo bash NVIDIA-Linux-x86_xx.sh</code>。</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
