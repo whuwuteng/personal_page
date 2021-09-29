@@ -183,7 +183,9 @@ Neural Architecture Search 是AutoML中一个常用的方法。
 
 室内场景的数据集。
 
+(18) [nuScenes](https://www.nuscenes.org/nuscenes#data-format)
 
+类似与[KITTI](http://www.cvlibs.net/datasets/kitti/)的数据，但是没有stereo的数据。
 
 ## Tutorial
 
