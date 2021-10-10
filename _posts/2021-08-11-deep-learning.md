@@ -99,6 +99,22 @@ Attention机制是图像处理中经常用的。
 
 数据增强是深度学习比较工程化的一个步骤，主要是应对测试的数据与训练的数据不一致的情况。不过更多的是考虑当训练的数据比较少的时候，怎么提高performance。
 
+
+
+(23) [Test and Validation Datasets](https://machinelearningmastery.com/difference-test-validation-datasets/)
+
+[参考文档](https://easyaitech.medium.com/%E4%B8%80%E6%96%87%E7%9C%8B%E6%87%82-ai-%E6%95%B0%E6%8D%AE%E9%9B%86-%E8%AE%AD%E7%BB%83%E9%9B%86-%E9%AA%8C%E8%AF%81%E9%9B%86-%E6%B5%8B%E8%AF%95%E9%9B%86-%E9%99%84-%E5%88%86%E5%89%B2%E6%96%B9%E6%B3%95-%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81-9b3afd37fd58)，当模型训练好之后，并不知道他的表现如何。这个时候就可以使用验证集（Validation Dataset）来看看模型在新数据（验证集和测试集是不同的数据）上的表现如何。**同时通过调整超参数，让模型处于最好的状态**。
+
+验证集有2个主要的作用：
+
+1. 评估模型效果，为了调整超参数而服务
+2. 调整超参数，使得模型在验证集上的效果最好
+
+说明：
+
+1. 验证集不像训练集和测试集，它是非必需的。如果不需要调整超参数，就可以不使用验证集，直接用测试集来评估效果。
+2. 验证集评估出来的效果并非模型的最终效果，主要是用来调整超参数的，模型最终效果以测试集的评估结果为准。
+
 ## paper
 
 (1) Depth-supervised NeRF: Fewer Views and Faster Training for Free
