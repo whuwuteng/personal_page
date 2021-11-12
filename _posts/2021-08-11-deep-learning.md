@@ -115,6 +115,16 @@ Attention机制是图像处理中经常用的。
 1. 验证集不像训练集和测试集，它是非必需的。如果不需要调整超参数，就可以不使用验证集，直接用测试集来评估效果。
 2. 验证集评估出来的效果并非模型的最终效果，主要是用来调整超参数的，模型最终效果以测试集的评估结果为准。
 
+(24) [Embendding](https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526)
+
+Embendding 用更朴素的解释是降维，会与Encoder有一些相似的地方，因为都是 dense representation of data，blog中是对NLP数据的处理。
+
+另外有一个[blog](https://towardsdatascience.com/extracting-rich-embedding-features-from-coco-pictures-using-pytorch-and-resnext-wsl-vademecum-of-6fdbdbe876a8)是对影像的处理，如[blog1](https://zhuanlan.zhihu.com/p/55256210)与[blog2](https://towardsdatascience.com/dimensionality-reduction-for-data-visualization-pca-vs-tsne-vs-umap-be4aa7b1cb29)特征的维度也不是越多越好。
+
+(25) [The Golden Age of Computer Vision](https://medium.com/reconstruct-inc/the-golden-age-of-computer-vision-338da3e471d1)
+
+主要介绍3D Vision的算法变化 ，目前主要是靠数据进行训练。
+
 ## paper
 
 (1) Depth-supervised NeRF: Fewer Views and Faster Training for Free
