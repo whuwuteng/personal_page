@@ -125,6 +125,12 @@ Embendding 用更朴素的解释是降维，会与Encoder有一些相似的地�
 
 主要介绍3D Vision的算法变化 ，目前主要是靠数据进行训练。
 
+(26) [training dataset size](https://towardsdatascience.com/how-do-you-know-you-have-enough-training-data-ad9b1fd679ee)
+
+在experiment中发现了一个规律，如果数据有很大的[**Imbalanced**](https://machinelearningmastery.com/what-is-imbalanced-classification/)，那么增加数据量是提高evaluation的方法。
+
+训练数据量也是一个很难确定的事，参考[blog](https://machinelearningmastery.com/much-training-data-required-machine-learning/)。
+
 ## paper
 
 (1) Depth-supervised NeRF: Fewer Views and Faster Training for Free
