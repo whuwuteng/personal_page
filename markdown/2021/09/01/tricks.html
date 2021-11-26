@@ -166,6 +166,10 @@ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
 
 <p>在使用的过程中，会出现内核升级，发现内核升级之后显卡的驱动会失效，所以要禁用Ubuntu的自动升级。不过目前不太确定这个内核升级影响有多大，在Ubuntu16.04的系统和另在一台Ubuntu18.04的系统下，没有禁用升级，显卡也没有失效。</p>
 
+<p>不过安装NVIDIA Drive会给安装CUDA带来问题，参考<a href="https://forums.developer.nvidia.com/t/nvdia-smi-show-cuda-version-but-nvcc-not-found/67311/3">blog</a>， 因该意思是要重新安装CUDA的驱动，应为CUDA会带有NVIDIA的drive。</p>
+
+<p>先卸载NVIDIA Drive，然后安装CUDA。</p>
+
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
 
