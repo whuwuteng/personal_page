@@ -166,9 +166,13 @@ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
 
 <p>在使用的过程中，会出现内核升级，发现内核升级之后显卡的驱动会失效，所以要禁用Ubuntu的自动升级。不过目前不太确定这个内核升级影响有多大，在Ubuntu16.04的系统和另在一台Ubuntu18.04的系统下，没有禁用升级，显卡也没有失效。</p>
 
-<p>不过安装NVIDIA Drive会给安装CUDA带来问题，参考<a href="https://forums.developer.nvidia.com/t/nvdia-smi-show-cuda-version-but-nvcc-not-found/67311/3">blog</a>， 因该意思是要重新安装CUDA的驱动，应为CUDA会带有NVIDIA的drive。</p>
+<p>不过安装NVIDIA Drive会给安装CUDA带来问题，参考<a href="https://forums.developer.nvidia.com/t/nvdia-smi-show-cuda-version-but-nvcc-not-found/67311/3">blog</a>， 因该意思是要重新安装CUDA的驱动，应为CUDA会带有NVIDIA的drive。有两种办法解决问题：</p>
 
-<p>先卸载NVIDIA Drive，然后安装CUDA。</p>
+<p>a. 先卸载NVIDIA Drive，然后安装CUDA，参考<a href="https://pianshen.com/article/69862015604/">blog1</a> 和 <a href="https://www.jianshu.com/p/ba6beab8ad7f">blog2</a>。</p>
+
+<p>b. 不安装CUDA自带的Drive。</p>
+
+<p>之后之安装cudnn，参考<a href="https://blog.csdn.net/qq_33200967/article/details/80689543">blog</a>。</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
