@@ -131,6 +131,16 @@ Embendding 用更朴素的解释是降维，会与Encoder有一些相似的地�
 
 训练数据量也是一个很难确定的事，参考[blog](https://machinelearningmastery.com/much-training-data-required-machine-learning/)。
 
+(27) [Domain Adaption](https://medium.com/capital-one-tech/domain-adaptation-5955edf0277b)
+
+介绍了domain adaption 与[transfer learning](https://cs231n.github.io/transfer-learning/), dataset shift 的关系。
+
+domain adaption是在一个数据上训练，在另外一个数据上测试。
+
+Transfer Learning 通常是指用fine tuning实现从一个model到另一个数据上的model的训练。
+
+Dataset shift 像一个更细节的解释，如 Covariate Shift；Prior Probability Shift；Concept Shift。
+
 ## paper
 
 (1) Depth-supervised NeRF: Fewer Views and Faster Training for Free
