@@ -96,6 +96,7 @@ window.onload = wrap_img;
     <ul class="section-nav">
 <li class="toc-entry toc-h1"><a href="#rmsprop-与-adam">RMSprop 与 Adam</a>
 <ul>
+<li class="toc-entry toc-h2"><a href="#adam">Adam</a></li>
 <li class="toc-entry toc-h2"><a href="#rmsprop">RMSprop</a></li>
 <li class="toc-entry toc-h2"><a href="#comparison">Comparison</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
@@ -103,21 +104,28 @@ window.onload = wrap_img;
 </li>
 </ul><h1 id="rmsprop-与-adam">
 <a class="anchor" href="#rmsprop-%E4%B8%8E-adam" aria-hidden="true"><span class="octicon octicon-link"></span></a>RMSprop 与 Adam</h1>
-<p>深度学习中的optimizer有许多算法，如SGD ，RMSprop, Adam等。<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
+<p>深度学习中的optimizer有许多算法，如SGD ，RMSprop, Adam等<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup><sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">2</a></sup>。</p>
 
 <p>目前没看到说那个算法就是比其他的都好的说法，大部分都是直接用Adam，只是最近发现了用RMSprop比Adam的效果好，引发了我对这个思考，因为optimizer同时有对learning rate的依赖，具体是因素的主要作用只能用实验来说明。</p>
 
 <p>具体的公式可以在网上查找，下面只写一些blog的观点。</p>
 
+<h2 id="adam">
+<a class="anchor" href="#adam" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adam</h2>
+
+<p>Adam 几乎是在Deep learning中用的最多的 <sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">3</a></sup>。</p>
+
 <h2 id="rmsprop">
 <a class="anchor" href="#rmsprop" aria-hidden="true"><span class="octicon octicon-link"></span></a>RMSprop</h2>
-<p>RMSprop 是 Geoff Hinton 提出的 <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">2</a></sup> ，</p>
+<p>RMSprop 是 Geoff Hinton 提出的 <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">4</a></sup> ，如何实现RMSprop可以参考  <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">5</a></sup> 。</p>
 
 <h2 id="comparison">
 <a class="anchor" href="#comparison" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparison</h2>
 
 <ol>
-  <li>Reinforcement learning中用RMSprop而不用Adam <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup>，解释是RMSprop is suitable for sparse problems。</li>
+  <li>Reinforcement learning中用RMSprop而不用Adam <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">6</a></sup>，解释是RMSprop is suitable for sparse problems。</li>
+  <li>有一个例子出现RMSprop的结果优于Adam <sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup> 。</li>
+  <li>甚至有的情况下出现SGD要优于其他的optimizer <sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">8</a></sup> 。</li>
 </ol>
 
 <h2 id="footnotes">
@@ -128,11 +136,26 @@ window.onload = wrap_img;
     <li id="fn:1" role="doc-endnote">
       <p>https://zhuanlan.zhihu.com/p/32488889 . <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>https://ruder.io/optimizing-gradient-descent/ . <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c . <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
     <li id="fn:3" role="doc-endnote">
       <p>http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf . <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>https://machinelearningmastery.com/gradient-descent-with-rmsprop-from-scratch/ . <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
     <li id="fn:2" role="doc-endnote">
       <p>https://stats.stackexchange.com/questions/435735/advantage-of-rmsprop-over-adam . <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>https://medium.com/analytics-vidhya/a-complete-guide-to-adam-and-rmsprop-optimizer-75f4502d83be . <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>https://shaoanlu.wordpress.com/2017/05/29/sgd-all-which-one-is-the-best-optimizer-dogs-vs-cats-toy-experiment/ . <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
