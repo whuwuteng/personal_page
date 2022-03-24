@@ -16,6 +16,8 @@ title: RMSprop 与 Adam
 
 Adam 几乎是在Deep learning中用的最多的 [^8]。
 
+Adam训练的结果比SGD权重更大，可能导致test loss 更小，但是**generalize**（泛化）没有SGD好[^9]。
+
 
 
 ## RMSprop
@@ -43,4 +45,4 @@ RMSprop 是 Geoff Hinton 提出的 [^3] ，如何实现RMSprop可以参考  [^4]
 [^6]: https://shaoanlu.wordpress.com/2017/05/29/sgd-all-which-one-is-the-best-optimizer-dogs-vs-cats-toy-experiment/ .
 [^7]: https://medium.com/analytics-vidhya/a-complete-guide-to-adam-and-rmsprop-optimizer-75f4502d83be . 
 [^8]: https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c .
-
+[^9]: https://medium.com/mini-distill/effect-of-batch-size-on-training-dynamics-21c14f7a716e .
