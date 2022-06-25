@@ -4,19 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>RMSprop 与 Adam | whuwuteng(吴腾)</title>
+<title>Parallel in Deep learning | whuwuteng(吴腾)</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="RMSprop 与 Adam" />
+<meta property="og:title" content="Parallel in Deep learning" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="blog." />
 <meta property="og:description" content="blog." />
-<link rel="canonical" href="https://whuwuteng.github.io/personal_page/markdown/2022/03/20/optimizer.html" />
-<meta property="og:url" content="https://whuwuteng.github.io/personal_page/markdown/2022/03/20/optimizer.html" />
+<link rel="canonical" href="https://whuwuteng.github.io/personal_page/markdown/2022/06/25/parallel.html" />
+<meta property="og:url" content="https://whuwuteng.github.io/personal_page/markdown/2022/06/25/parallel.html" />
 <meta property="og:site_name" content="whuwuteng(吴腾)" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-03-20T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-06-25T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2022-03-20T00:00:00-05:00","url":"https://whuwuteng.github.io/personal_page/markdown/2022/03/20/optimizer.html","@type":"BlogPosting","headline":"RMSprop 与 Adam","dateModified":"2022-03-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://whuwuteng.github.io/personal_page/markdown/2022/03/20/optimizer.html"},"description":"blog.","@context":"https://schema.org"}</script>
+{"datePublished":"2022-06-25T00:00:00-05:00","url":"https://whuwuteng.github.io/personal_page/markdown/2022/06/25/parallel.html","@type":"BlogPosting","headline":"Parallel in Deep learning","dateModified":"2022-06-25T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://whuwuteng.github.io/personal_page/markdown/2022/06/25/parallel.html"},"description":"blog.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/personal_page/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://whuwuteng.github.io/personal_page/feed.xml" title="whuwuteng(吴腾)" /><link rel="shortcut icon" type="image/x-icon" href="/personal_page/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,8 +71,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">RMSprop 与 Adam</h1><p class="page-description">blog.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-03-20T00:00:00-05:00" itemprop="datePublished">
-        Mar 20, 2022
+    <h1 class="post-title p-name" itemprop="name headline">Parallel in Deep learning</h1><p class="page-description">blog.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-06-25T00:00:00-05:00" itemprop="datePublished">
+        Jun 25, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -94,77 +94,47 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#rmsprop-与-adam">RMSprop 与 Adam</a>
+<li class="toc-entry toc-h1"><a href="#parallel-in-deep-learning">Parallel in Deep learning</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#adam">Adam</a></li>
-<li class="toc-entry toc-h2"><a href="#rmsprop">RMSprop</a></li>
-<li class="toc-entry toc-h2"><a href="#comparison">Comparison</a></li>
+<li class="toc-entry toc-h2"><a href="#dataparallel-in-pytorch">DataParallel in Pytorch</a></li>
+<li class="toc-entry toc-h2"><a href="#distributeddataparallel-in-pytorch">DistributedDataParallel in Pytorch</a></li>
+<li class="toc-entry toc-h2"><a href="#pytorch-lightning">Pytorch Lightning</a></li>
+<li class="toc-entry toc-h2"><a href="#batch-size">Batch size</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
-</ul><h1 id="rmsprop-与-adam">
-<a class="anchor" href="#rmsprop-%E4%B8%8E-adam" aria-hidden="true"><span class="octicon octicon-link"></span></a>RMSprop 与 Adam</h1>
-<p>深度学习中的optimizer有许多算法，如SGD ，RMSprop, Adam等<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup><sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">2</a></sup>。</p>
+</ul><h1 id="parallel-in-deep-learning">
+<a class="anchor" href="#parallel-in-deep-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallel in Deep learning</h1>
+<p>在cluster上用多个GPU进行训练，减少训练的时间；另外随着batch Size 增加，需要的内存也越来越大，在一块GPU上不能进行训练，因此如何用多个GPU进行训练也是一个需求。</p>
 
-<p>目前没看到说那个算法就是比其他的都好的说法，大部分都是直接用Adam，只是最近发现了用RMSprop比Adam的效果好，引发了我对这个思考，因为optimizer同时有对learning rate的依赖，具体是因素的主要作用只能用实验来说明。</p>
+<h2 id="dataparallel-in-pytorch">
+<a class="anchor" href="#dataparallel-in-pytorch" aria-hidden="true"><span class="octicon octicon-link"></span></a>DataParallel in Pytorch</h2>
+<p>虽然DataParallel不被推荐使用，即使是在一个node中<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>，但是因为<a href="https://pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel"><code class="language-plaintext highlighter-rouge">DistributedDataParallel</code></a>有一些问题，如windows不支持，所以DataParallel还是可以用的<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>。</p>
 
-<p>具体的公式可以在网上查找，下面只写一些blog的观点。</p>
+<h2 id="distributeddataparallel-in-pytorch">
+<a class="anchor" href="#distributeddataparallel-in-pytorch" aria-hidden="true"><span class="octicon octicon-link"></span></a>DistributedDataParallel in Pytorch</h2>
 
-<h2 id="adam">
-<a class="anchor" href="#adam" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adam</h2>
+<h2 id="pytorch-lightning">
+<a class="anchor" href="#pytorch-lightning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pytorch Lightning</h2>
 
-<p>Adam 几乎是在Deep learning中用的最多的 <sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">3</a></sup>。</p>
-
-<p>Adam训练的结果比SGD权重更大，可能导致test loss 更小，但是<strong>generalize</strong>（泛化）没有SGD好<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">4</a></sup>。</p>
-
-<h2 id="rmsprop">
-<a class="anchor" href="#rmsprop" aria-hidden="true"><span class="octicon octicon-link"></span></a>RMSprop</h2>
-<p>RMSprop 是 Geoff Hinton 提出的 <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">5</a></sup> ，如何实现RMSprop可以参考  <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">6</a></sup> 。</p>
-
-<h2 id="comparison">
-<a class="anchor" href="#comparison" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparison</h2>
-
-<ol>
-  <li>Reinforcement learning中用RMSprop而不用Adam <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">7</a></sup>，解释是RMSprop is suitable for sparse problems。</li>
-  <li>有一个例子出现RMSprop的结果优于Adam <sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">8</a></sup> 。</li>
-  <li>甚至有的情况下出现SGD要优于其他的optimizer <sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">9</a></sup> 。</li>
-</ol>
+<h2 id="batch-size">
+<a class="anchor" href="#batch-size" aria-hidden="true"><span class="octicon octicon-link"></span></a>Batch size</h2>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
+
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1" role="doc-endnote">
-      <p>https://zhuanlan.zhihu.com/p/32488889 . <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
-    </li>
-    <li id="fn:5" role="doc-endnote">
-      <p>https://ruder.io/optimizing-gradient-descent/ . <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
-    </li>
-    <li id="fn:8" role="doc-endnote">
-      <p>https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c . <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a></p>
-    </li>
-    <li id="fn:9" role="doc-endnote">
-      <p>https://medium.com/mini-distill/effect-of-batch-size-on-training-dynamics-21c14f7a716e . <a href="#fnref:9" class="reversefootnote" role="doc-backlink">↩</a></p>
-    </li>
-    <li id="fn:3" role="doc-endnote">
-      <p>http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf . <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
-    </li>
-    <li id="fn:4" role="doc-endnote">
-      <p>https://machinelearningmastery.com/gradient-descent-with-rmsprop-from-scratch/ . <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:2" role="doc-endnote">
-      <p>https://stats.stackexchange.com/questions/435735/advantage-of-rmsprop-over-adam . <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
-    </li>
-    <li id="fn:7" role="doc-endnote">
-      <p>https://medium.com/analytics-vidhya/a-complete-guide-to-adam-and-rmsprop-optimizer-75f4502d83be . <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a></p>
-    </li>
-    <li id="fn:6" role="doc-endnote">
-      <p>https://shaoanlu.wordpress.com/2017/05/29/sgd-all-which-one-is-the-best-optimizer-dogs-vs-cats-toy-experiment/ . <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://www.youtube.com/watch?v=a6_pY9WwqdQ. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
 
-  </div><a class="u-url" href="/personal_page/markdown/2022/03/20/optimizer.html" hidden></a>
+  </div><a class="u-url" href="/personal_page/markdown/2022/06/25/parallel.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
