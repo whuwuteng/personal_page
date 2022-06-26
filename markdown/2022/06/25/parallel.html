@@ -111,14 +111,26 @@ window.onload = wrap_img;
 <a class="anchor" href="#dataparallel-in-pytorch" aria-hidden="true"><span class="octicon octicon-link"></span></a>DataParallel in Pytorch</h2>
 <p>虽然DataParallel不被推荐使用，即使是在一个node中<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>，但是因为<a href="https://pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel"><code class="language-plaintext highlighter-rouge">DistributedDataParallel</code></a>有一些问题，如windows不支持，所以DataParallel还是可以用的<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>。</p>
 
+<p>不推荐的主要原因是由于模型要在多个node中复制。</p>
+
+<p>另外的还有<strong>mp.spawn</strong>来做并行，感觉需要的代码更多<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>。</p>
+
 <h2 id="distributeddataparallel-in-pytorch">
 <a class="anchor" href="#distributeddataparallel-in-pytorch" aria-hidden="true"><span class="octicon octicon-link"></span></a>DistributedDataParallel in Pytorch</h2>
+
+<p>DistributedDataParallel 是只用Pytorch的基础上利用较多的，目前很多这样的博客，缺点就是配置起来比较困难<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">4</a></sup>。</p>
 
 <h2 id="pytorch-lightning">
 <a class="anchor" href="#pytorch-lightning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pytorch Lightning</h2>
 
+<p>是独立于Pytorch的一个库<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">5</a></sup>，因此对于分布配置时并不用考虑，可以直接从pytorch的模型到pytorch lightning<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">6</a></sup>。</p>
+
 <h2 id="batch-size">
 <a class="anchor" href="#batch-size" aria-hidden="true"><span class="octicon octicon-link"></span></a>Batch size</h2>
+
+<p>Batch size 是一个重要的问题，因为batch size的大小影响训练的精度，实际上的batch size是多少跟采用哪种并行方式有关，可以参考视频中的计算方式<sup id="fnref:2:1" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>。</p>
+
+<p>考虑到Batch size 的变化，learning rate也需要跟着变化，要不然用DDP的accuracy会降低<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup>。</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
@@ -129,7 +141,22 @@ window.onload = wrap_img;
       <p>https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:2" role="doc-endnote">
-      <p>https://www.youtube.com/watch?v=a6_pY9WwqdQ. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://www.youtube.com/watch?v=a6_pY9WwqdQ. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>https://zhuanlan.zhihu.com/p/336863012. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>https://zhuanlan.zhihu.com/p/206467852. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>https://zhuanlan.zhihu.com/p/319810661. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>https://www.youtube.com/watch?v=DbESHcCoWbM&amp;t=1678s. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>https://discuss.pytorch.org/t/should-we-split-batch-size-according-to-ngpu-per-node-when-distributeddataparallel/72769/6. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
