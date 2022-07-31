@@ -11,6 +11,8 @@ title: Hyperparameters in Deep learning
 ## Batch Size
 Batch Size 是很关键的一个参数，因为它影响利用的内存、每epoch的时间等 [^1]，相同的epoch，steps（iteration）的次数也不同。在比较大的Batch Size时，learning rate同时增加，学习结果最好。
 
+## Upsampling
+
 
 
 

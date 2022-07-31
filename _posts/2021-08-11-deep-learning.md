@@ -153,6 +153,12 @@ Dataset shift 像一个更细节的解释，如 Covariate Shift；Prior Probabil
 
 类似的应用是depth from video，如google的[depth from video blog](https://ai.googleblog.com/2019/05/moving-camera-moving-people-deep.html)和[cinematic photo blog](https://ai.googleblog.com/2021/02/the-technology-behind-cinematic-photos.html)。
 
+(2) Urban Radiance Fields
+
+[website](https://urban-radiance-fields.github.io/), [paper](https://urban-radiance-fields.github.io/images/go_urf.pdf)
+
+论文不是基于RF的图像显示，而是有一个mesh。
+
 ## project
 
 (1) [Zillow Indoor Dataset](https://github.com/zillow/zind)
