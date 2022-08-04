@@ -236,6 +236,10 @@ Neural Architecture Search 是AutoML中一个常用的方法。
 
 类似与[KITTI](http://www.cvlibs.net/datasets/kitti/)的数据，但是没有stereo的数据。
 
+(19) [Urban forest monitoring](https://ai.googleblog.com/2022/06/mapping-urban-trees-across-north.html) 
+
+包括aerial的tree的数据与街景的tree的数据。
+
 ## Tutorial
 
 (1) [Machine Learning Robustness, Fairness, and their Convergence](https://kdd21tutorial-robust-fair-learning.github.io/)

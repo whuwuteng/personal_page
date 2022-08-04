@@ -14,7 +14,7 @@ title: Transfer learning in Deep learning
 
 ## The Visual Task Adaptation Benchmark
 
-[VTAB](https://ai.googleblog.com/2019/11/the-visual-task-adaptation-benchmark.html)基于多种数据、多种任务之间。
+[VTAB](https://ai.googleblog.com/2019/11/the-visual-task-adaptation-benchmark.html)基于多种数据、多种任务之间的Transfer learning。
 
 当数据量增加的时候，从scratch训练，不会有performance的损失。
 
