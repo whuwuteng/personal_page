@@ -96,16 +96,23 @@ window.onload = wrap_img;
     <ul class="section-nav">
 <li class="toc-entry toc-h1"><a href="#tsne">tSNE</a>
 <ul>
+<li class="toc-entry toc-h2"><a href="#kullback-leibler-divergence">Kullback-Leibler divergence</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
 </ul><h1 id="tsne">
 <a class="anchor" href="#tsne" aria-hidden="true"><span class="octicon octicon-link"></span></a>tSNE</h1>
 
-<p>深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>的降维工具，通常与PCA<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>进行比较。</p>
+<p>深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>的降维工具，通常与PCA<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>进行比较<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>。</p>
+
+<h2 id="kullback-leibler-divergence">
+<a class="anchor" href="#kullback-leibler-divergence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kullback-Leibler divergence</h2>
+
+<p>KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>，</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
+
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1" role="doc-endnote">
@@ -116,6 +123,12 @@ window.onload = wrap_img;
     </li>
     <li id="fn:3" role="doc-endnote">
       <p>https://en.wikipedia.org/wiki/Principal_component_analysis. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>https://medium.com/analytics-vidhya/note-visualize-multi-dimension-datasets-in-a-2d-graph-using-t-sne-airbnb-bookings-dataset-as-824541cc5388. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>http://www.scholarpedia.org/article/Mutual_information. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>

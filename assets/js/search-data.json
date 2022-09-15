@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "tSNE",
-            "content": "tSNE . 深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE1是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence2的降维工具，通常与PCA3进行比较。 . Footnotes . https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html. &#8617; . | https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence. &#8617; . | https://en.wikipedia.org/wiki/Principal_component_analysis. &#8617; . |",
+            "content": "tSNE . 深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE1是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence2的降维工具，通常与PCA3进行比较4。 . Kullback-Leibler divergence . KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息5， . Footnotes . https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html. &#8617; . | https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence. &#8617; . | https://en.wikipedia.org/wiki/Principal_component_analysis. &#8617; . | https://medium.com/analytics-vidhya/note-visualize-multi-dimension-datasets-in-a-2d-graph-using-t-sne-airbnb-bookings-dataset-as-824541cc5388. &#8617; . | http://www.scholarpedia.org/article/Mutual_information. &#8617; . |",
             "url": "https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html",
             "relUrl": "/markdown/2022/09/05/tSNE.html",
             "date": " • Sep 5, 2022"
