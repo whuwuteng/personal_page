@@ -97,24 +97,37 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#tsne">tSNE</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#kullback-leibler-divergence">Kullback-Leibler divergence</a></li>
+<li class="toc-entry toc-h2"><a href="#tsne-1">tSNE</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
 </ul><h1 id="tsne">
 <a class="anchor" href="#tsne" aria-hidden="true"><span class="octicon octicon-link"></span></a>tSNE</h1>
 
-<p>深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>的降维工具，通常与PCA<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>进行比较<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>。</p>
+<p>tSNE是一个显示工具，可以参考论文<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">1</a></sup>。</p>
+
+<p>深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">2</a></sup>是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup>的降维工具，通常与PCA<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">4</a></sup>进行比较<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">5</a></sup>。对于Curse of Dimensionality，当维数太大，会有问题<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">6</a></sup>。</p>
 
 <h2 id="kullback-leibler-divergence">
 <a class="anchor" href="#kullback-leibler-divergence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kullback-Leibler divergence</h2>
 
-<p>KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>，</p>
+<p>KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">7</a></sup>，有点类似于表达两个分布的差异，而且结果是非对称的<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">8</a></sup>。</p>
+
+<h2 id="tsne-1">
+<a class="anchor" href="#tsne-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>tSNE</h2>
+
+<p>tSNE 主要是多维特征的显示<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">5</a></sup>，利用KL divergence作为目标函数，用 stochastic gradient descent进行优化<sup id="fnref:7:1" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">6</a></sup>。</p>
+
+<p>网上有一个GUI的例子，显示迭代次数与显示结果的关系<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">9</a></sup>。</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
+    <li id="fn:9" role="doc-endnote">
+      <p>https://lvdmaaten.github.io/tsne/. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
     <li id="fn:1" role="doc-endnote">
       <p>https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
@@ -125,10 +138,19 @@ window.onload = wrap_img;
       <p>https://en.wikipedia.org/wiki/Principal_component_analysis. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:4" role="doc-endnote">
-      <p>https://medium.com/analytics-vidhya/note-visualize-multi-dimension-datasets-in-a-2d-graph-using-t-sne-airbnb-bookings-dataset-as-824541cc5388. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://medium.com/analytics-vidhya/note-visualize-multi-dimension-datasets-in-a-2d-graph-using-t-sne-airbnb-bookings-dataset-as-824541cc5388. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:4:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>https://jotterbach.github.io/content/posts/tsne/2016-05-23-TSNE/. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:7:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
     </li>
     <li id="fn:5" role="doc-endnote">
       <p>http://www.scholarpedia.org/article/Mutual_information. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>https://zhuanlan.zhihu.com/p/425693597. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>https://distill.pub/2016/misread-tsne/. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
