@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>tSNE | whuwuteng(吴腾)</title>
+<title>Visualization | whuwuteng(吴腾)</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="tSNE" />
+<meta property="og:title" content="Visualization" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="blog." />
 <meta property="og:description" content="blog." />
@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-09-05T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2022-09-05T00:00:00-05:00","url":"https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html","@type":"BlogPosting","headline":"tSNE","dateModified":"2022-09-05T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html"},"description":"blog.","@context":"https://schema.org"}</script>
+{"datePublished":"2022-09-05T00:00:00-05:00","url":"https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html","@type":"BlogPosting","headline":"Visualization","dateModified":"2022-09-05T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html"},"description":"blog.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/personal_page/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://whuwuteng.github.io/personal_page/feed.xml" title="whuwuteng(吴腾)" /><link rel="shortcut icon" type="image/x-icon" href="/personal_page/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,7 +71,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">tSNE</h1><p class="page-description">blog.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-05T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Visualization</h1><p class="page-description">blog.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-05T00:00:00-05:00" itemprop="datePublished">
         Sep 5, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -94,37 +94,51 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#tsne">tSNE</a>
+<li class="toc-entry toc-h1"><a href="#visualization">Visualization</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#kullback-leibler-divergence">Kullback-Leibler divergence</a></li>
-<li class="toc-entry toc-h2"><a href="#tsne-1">tSNE</a></li>
+<li class="toc-entry toc-h2"><a href="#tsne">tSNE</a></li>
+<li class="toc-entry toc-h2"><a href="#feature-visualization">Feature visualization</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
-</ul><h1 id="tsne">
-<a class="anchor" href="#tsne" aria-hidden="true"><span class="octicon octicon-link"></span></a>tSNE</h1>
+</ul><h1 id="visualization">
+<a class="anchor" href="#visualization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visualization</h1>
 
-<p>tSNE是一个显示工具，可以参考论文<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">1</a></sup>。</p>
+<p>A picture is worth a thousand words<sup id="fnref:13" role="doc-noteref"><a href="#fn:13" class="footnote" rel="footnote">1</a></sup><sup id="fnref:14" role="doc-noteref"><a href="#fn:14" class="footnote" rel="footnote">2</a></sup>。</p>
 
-<p>深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">2</a></sup>是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup>的降维工具，通常与PCA<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">4</a></sup>进行比较<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">5</a></sup>。对于Curse of Dimensionality，当维数太大，会有问题<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">6</a></sup>。</p>
+<p>tSNE是一个显示工具，可以参考论文<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">3</a></sup>。</p>
+
+<p>深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">4</a></sup>是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">5</a></sup>的降维工具，通常与PCA<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">6</a></sup>进行比较<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup>。对于Curse of Dimensionality，当维数太大，会有问题<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">8</a></sup>。</p>
 
 <h2 id="kullback-leibler-divergence">
 <a class="anchor" href="#kullback-leibler-divergence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kullback-Leibler divergence</h2>
 
-<p>KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">7</a></sup>，有点类似于表达两个分布的差异，而且结果是非对称的<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">8</a></sup>。</p>
+<p>KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息（MI）<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">9</a></sup>，但是MI与KL divergence并不等价<sup id="fnref:10" role="doc-noteref"><a href="#fn:10" class="footnote" rel="footnote">10</a></sup>，有点类似于表达两个分布的差异，而且结果是非对称的<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">11</a></sup>。</p>
 
-<h2 id="tsne-1">
-<a class="anchor" href="#tsne-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>tSNE</h2>
+<p>另外，KL divergence可以作为目标函数<sup id="fnref:11" role="doc-noteref"><a href="#fn:11" class="footnote" rel="footnote">12</a></sup>，在pytorch中有实现<sup id="fnref:12" role="doc-noteref"><a href="#fn:12" class="footnote" rel="footnote">13</a></sup>。</p>
 
-<p>tSNE 主要是多维特征的显示<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">5</a></sup>，利用KL divergence作为目标函数，用 stochastic gradient descent进行优化<sup id="fnref:7:1" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">6</a></sup>。</p>
+<h2 id="tsne">
+<a class="anchor" href="#tsne" aria-hidden="true"><span class="octicon octicon-link"></span></a>tSNE</h2>
 
-<p>网上有一个GUI的例子，显示迭代次数与显示结果的关系<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">9</a></sup>。</p>
+<p>tSNE 主要是多维特征的显示<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup>，利用KL divergence作为目标函数，用 stochastic gradient descent进行优化<sup id="fnref:7:1" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">8</a></sup>。</p>
+
+<p>网上有一个GUI的例子，显示迭代次数与显示结果的关系<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">14</a></sup>。</p>
+
+<h2 id="feature-visualization">
+<a class="anchor" href="#feature-visualization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feature visualization</h2>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
+    <li id="fn:13" role="doc-endnote">
+      <p>https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words. <a href="#fnref:13" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:14" role="doc-endnote">
+      <p>https://towardsdatascience.com/the-art-of-effective-visualization-of-multi-dimensional-data-6c7202990c57. <a href="#fnref:14" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
     <li id="fn:9" role="doc-endnote">
       <p>https://lvdmaaten.github.io/tsne/. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
@@ -146,8 +160,17 @@ window.onload = wrap_img;
     <li id="fn:5" role="doc-endnote">
       <p>http://www.scholarpedia.org/article/Mutual_information. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
+    <li id="fn:10" role="doc-endnote">
+      <p>https://stats.stackexchange.com/questions/487012/are-mutual-information-and-kullback-leibler-divergence-equivalent. <a href="#fnref:10" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
     <li id="fn:6" role="doc-endnote">
       <p>https://zhuanlan.zhihu.com/p/425693597. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:11" role="doc-endnote">
+      <p>https://timvieira.github.io/blog/post/2014/10/06/kl-divergence-as-an-objective-function/. <a href="#fnref:11" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:12" role="doc-endnote">
+      <p>https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html. <a href="#fnref:12" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:8" role="doc-endnote">
       <p>https://distill.pub/2016/misread-tsne/. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a></p>
