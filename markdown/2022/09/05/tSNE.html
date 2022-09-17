@@ -121,16 +121,19 @@ window.onload = wrap_img;
 <h2 id="tsne">
 <a class="anchor" href="#tsne" aria-hidden="true"><span class="octicon octicon-link"></span></a>tSNE</h2>
 
-<p>tSNE 主要是多维特征的显示<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup>，利用KL divergence作为目标函数，用 stochastic gradient descent进行优化<sup id="fnref:7:1" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">8</a></sup>。</p>
+<p>tSNE 主要是多维特征的显示<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup>，利用KL divergence作为目标函数，用 stochastic gradient descent进行优化<sup id="fnref:7:1" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">8</a></sup>，而且可能多次运行的结果并不一样<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">14</a></sup>。</p>
 
-<p>网上有一个GUI的例子，显示迭代次数与显示结果的关系<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">14</a></sup>。</p>
+<p>网上有一个GUI的例子，显示迭代次数与显示结果的关系<sup id="fnref:8:1" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">14</a></sup>。</p>
 
 <h2 id="feature-visualization">
 <a class="anchor" href="#feature-visualization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feature visualization</h2>
 
+<p>对于CNN中间layer的分析，发现CNN有translationally invariant，但是没有rotationally invariant<sup id="fnref:15" role="doc-noteref"><a href="#fn:15" class="footnote" rel="footnote">15</a></sup>。有对应的基于pytorch的代码<sup id="fnref:16" role="doc-noteref"><a href="#fn:16" class="footnote" rel="footnote">16</a></sup>。同时，在pytorch的forum上也有学多feature visualization的讨论<sup id="fnref:17" role="doc-noteref"><a href="#fn:17" class="footnote" rel="footnote">17</a></sup>。</p>
+
+<p>常用的做法都是用hook函数，直接显示layer的output<sup id="fnref:18" role="doc-noteref"><a href="#fn:18" class="footnote" rel="footnote">18</a></sup>。</p>
+
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
-
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:13" role="doc-endnote">
@@ -173,7 +176,19 @@ window.onload = wrap_img;
       <p>https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html. <a href="#fnref:12" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:8" role="doc-endnote">
-      <p>https://distill.pub/2016/misread-tsne/. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://distill.pub/2016/misread-tsne/. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:8:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:15" role="doc-endnote">
+      <p>https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030. <a href="#fnref:15" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:16" role="doc-endnote">
+      <p>https://github.com/fg91/visualizing-cnn-feature-maps. <a href="#fnref:16" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:17" role="doc-endnote">
+      <p>https://discuss.pytorch.org/t/visualize-feature-map/29597. <a href="#fnref:17" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:18" role="doc-endnote">
+      <p>https://github.com/lewis-morris/mapextrackt. <a href="#fnref:18" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
