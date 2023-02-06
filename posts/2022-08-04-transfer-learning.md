@@ -1,6 +1,6 @@
 ---
 toc: true
-comments: true
+comments: false
 layout: post
 description: blog.
 categories: [markdown]
