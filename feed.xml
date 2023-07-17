@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2023-07-17T10:00:05-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">Visualization</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html" rel="alternate" type="text/html" title="Visualization" /><published>2022-09-05T00:00:00-05:00</published><updated>2022-09-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html">&lt;h1 id=&quot;visualization&quot;&gt;Visualization&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2023-07-17T10:06:39-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">Visualization</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html" rel="alternate" type="text/html" title="Visualization" /><published>2022-09-05T00:00:00-05:00</published><updated>2022-09-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html">&lt;h1 id=&quot;visualization&quot;&gt;Visualization&lt;/h1&gt;
 
 &lt;p&gt;A picture is worth a thousand words&lt;sup id=&quot;fnref:13&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:14&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:14&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 
@@ -97,7 +97,7 @@
 
 &lt;p&gt;由于loss的非凸性、type的不同，造成Transfer learning在不同的数据、task上表现并没有规律性。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./images/VTAB_loss.png&quot; alt=&quot;&quot; title=&quot;VTAB protocol&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/personal_page/images/VTAB_loss.png&quot; alt=&quot;&quot; title=&quot;VTAB protocol&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-visual-task-adaptation-benchmark&quot;&gt;The Visual Task Adaptation Benchmark&lt;/h2&gt;
 
@@ -105,7 +105,7 @@
 
 &lt;p&gt;当数据量增加的时候，从scratch训练，不会有performance的损失。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./images/VTAB_scratch.png&quot; alt=&quot;&quot; title=&quot;Performance&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/personal_page/images/VTAB_scratch.png&quot; alt=&quot;&quot; title=&quot;Performance&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;pretained-models&quot;&gt;Pretained models&lt;/h2&gt;
 
@@ -182,7 +182,7 @@ make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;
 
 &lt;p&gt;写有基于python与wxpython&lt;sup id=&quot;fnref:9&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;的工具，是基于keypointgui &lt;sup id=&quot;fnref:10&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;开发的，可以支持Micmac的文本和二进制格式  &lt;sup id=&quot;fnref:11&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; ：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./images/micmac_demo.png&quot; alt=&quot;&quot; title=&quot;feature show&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/personal_page/images/micmac_demo.png&quot; alt=&quot;&quot; title=&quot;feature show&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;显示epipolar&quot;&gt;显示Epipolar&lt;/h3&gt;
 
@@ -190,7 +190,7 @@ make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;
 
 &lt;p&gt;写有一个基于C++与QT的工具 &lt;sup id=&quot;fnref:8&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;，可以显示红/绿映像：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./images/eth3d.png&quot; alt=&quot;&quot; title=&quot;red cyan &quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/personal_page/images/eth3d.png&quot; alt=&quot;&quot; title=&quot;red cyan &quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;显示空三结果&quot;&gt;显示空三结果&lt;/h3&gt;
 

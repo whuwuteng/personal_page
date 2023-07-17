@@ -109,7 +109,17 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="visualization">Visualization</h1>
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#visualization">Visualization</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#kullback-leibler-divergence">Kullback-Leibler divergence</a></li>
+<li class="toc-entry toc-h2"><a href="#tsne">tSNE</a></li>
+<li class="toc-entry toc-h2"><a href="#feature-visualization">Feature visualization</a></li>
+<li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+</ul><h1 id="visualization">
+<a class="anchor" href="#visualization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visualization</h1>
 
 <p>A picture is worth a thousand words<sup id="fnref:13" role="doc-noteref"><a href="#fn:13" class="footnote" rel="footnote">1</a></sup><sup id="fnref:14" role="doc-noteref"><a href="#fn:14" class="footnote" rel="footnote">2</a></sup>。</p>
 
@@ -117,80 +127,84 @@ window.onload = wrap_img;
 
 <p>深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">4</a></sup>是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">5</a></sup>的降维工具，通常与PCA<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">6</a></sup>进行比较<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup>。对于Curse of Dimensionality，当维数太大，会有问题<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">8</a></sup>。</p>
 
-<h2 id="kullback-leibler-divergence">Kullback-Leibler divergence</h2>
+<h2 id="kullback-leibler-divergence">
+<a class="anchor" href="#kullback-leibler-divergence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kullback-Leibler divergence</h2>
 
 <p>KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息（MI）<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">9</a></sup>，但是MI与KL divergence并不等价<sup id="fnref:10" role="doc-noteref"><a href="#fn:10" class="footnote" rel="footnote">10</a></sup>，有点类似于表达两个分布的差异，而且结果是非对称的<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">11</a></sup>。</p>
 
 <p>另外，KL divergence可以作为目标函数<sup id="fnref:11" role="doc-noteref"><a href="#fn:11" class="footnote" rel="footnote">12</a></sup>，在pytorch中有实现<sup id="fnref:12" role="doc-noteref"><a href="#fn:12" class="footnote" rel="footnote">13</a></sup>。</p>
 
-<h2 id="tsne">tSNE</h2>
+<h2 id="tsne">
+<a class="anchor" href="#tsne" aria-hidden="true"><span class="octicon octicon-link"></span></a>tSNE</h2>
 
 <p>tSNE 主要是多维特征的显示<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup>，利用KL divergence作为目标函数，用 stochastic gradient descent进行优化<sup id="fnref:7:1" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">8</a></sup>，而且可能多次运行的结果并不一样<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">14</a></sup>。</p>
 
 <p>网上有一个GUI的例子，显示迭代次数与显示结果的关系<sup id="fnref:8:1" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">14</a></sup>。</p>
 
-<h2 id="feature-visualization">Feature visualization</h2>
+<h2 id="feature-visualization">
+<a class="anchor" href="#feature-visualization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feature visualization</h2>
 
 <p>对于CNN中间layer的分析，发现CNN有translationally invariant，但是没有rotationally invariant<sup id="fnref:15" role="doc-noteref"><a href="#fn:15" class="footnote" rel="footnote">15</a></sup>。有对应的基于pytorch的代码<sup id="fnref:16" role="doc-noteref"><a href="#fn:16" class="footnote" rel="footnote">16</a></sup>。同时，在pytorch的forum上也有学多feature visualization的讨论<sup id="fnref:17" role="doc-noteref"><a href="#fn:17" class="footnote" rel="footnote">17</a></sup>。</p>
 
 <p>常用的做法都是用hook函数，直接显示layer的output<sup id="fnref:18" role="doc-noteref"><a href="#fn:18" class="footnote" rel="footnote">18</a></sup>。</p>
 
-<h2 id="footnotes">Footnotes</h2>
+<h2 id="footnotes">
+<a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:13" role="doc-endnote">
-      <p>https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words. <a href="#fnref:13" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words. <a href="#fnref:13" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:14" role="doc-endnote">
-      <p>https://towardsdatascience.com/the-art-of-effective-visualization-of-multi-dimensional-data-6c7202990c57. <a href="#fnref:14" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://towardsdatascience.com/the-art-of-effective-visualization-of-multi-dimensional-data-6c7202990c57. <a href="#fnref:14" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:9" role="doc-endnote">
-      <p>https://lvdmaaten.github.io/tsne/. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://lvdmaaten.github.io/tsne/. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:1" role="doc-endnote">
-      <p>https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:2" role="doc-endnote">
-      <p>https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:3" role="doc-endnote">
-      <p>https://en.wikipedia.org/wiki/Principal_component_analysis. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://en.wikipedia.org/wiki/Principal_component_analysis. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:4" role="doc-endnote">
-      <p>https://medium.com/analytics-vidhya/note-visualize-multi-dimension-datasets-in-a-2d-graph-using-t-sne-airbnb-bookings-dataset-as-824541cc5388. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:4:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+      <p>https://medium.com/analytics-vidhya/note-visualize-multi-dimension-datasets-in-a-2d-graph-using-t-sne-airbnb-bookings-dataset-as-824541cc5388. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:4:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
     </li>
     <li id="fn:7" role="doc-endnote">
-      <p>https://jotterbach.github.io/content/posts/tsne/2016-05-23-TSNE/. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:7:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+      <p>https://jotterbach.github.io/content/posts/tsne/2016-05-23-TSNE/. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:7:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
     </li>
     <li id="fn:5" role="doc-endnote">
-      <p>http://www.scholarpedia.org/article/Mutual_information. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>http://www.scholarpedia.org/article/Mutual_information. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:10" role="doc-endnote">
-      <p>https://stats.stackexchange.com/questions/487012/are-mutual-information-and-kullback-leibler-divergence-equivalent. <a href="#fnref:10" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://stats.stackexchange.com/questions/487012/are-mutual-information-and-kullback-leibler-divergence-equivalent. <a href="#fnref:10" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:6" role="doc-endnote">
-      <p>https://zhuanlan.zhihu.com/p/425693597. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://zhuanlan.zhihu.com/p/425693597. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:11" role="doc-endnote">
-      <p>https://timvieira.github.io/blog/post/2014/10/06/kl-divergence-as-an-objective-function/. <a href="#fnref:11" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://timvieira.github.io/blog/post/2014/10/06/kl-divergence-as-an-objective-function/. <a href="#fnref:11" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:12" role="doc-endnote">
-      <p>https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html. <a href="#fnref:12" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html. <a href="#fnref:12" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:8" role="doc-endnote">
-      <p>https://distill.pub/2016/misread-tsne/. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:8:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+      <p>https://distill.pub/2016/misread-tsne/. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:8:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
     </li>
     <li id="fn:15" role="doc-endnote">
-      <p>https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030. <a href="#fnref:15" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030. <a href="#fnref:15" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:16" role="doc-endnote">
-      <p>https://github.com/fg91/visualizing-cnn-feature-maps. <a href="#fnref:16" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://github.com/fg91/visualizing-cnn-feature-maps. <a href="#fnref:16" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:17" role="doc-endnote">
-      <p>https://discuss.pytorch.org/t/visualize-feature-map/29597. <a href="#fnref:17" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://discuss.pytorch.org/t/visualize-feature-map/29597. <a href="#fnref:17" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:18" role="doc-endnote">
-      <p>https://github.com/lewis-morris/mapextrackt. <a href="#fnref:18" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>https://github.com/lewis-morris/mapextrackt. <a href="#fnref:18" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
