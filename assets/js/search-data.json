@@ -69,7 +69,7 @@
     
         ,"post6": {
             "title": "3D point cloud and Mesh Software",
-            "content": "3D point cloud and Mesh Software . 主要是介绍一些3D point cloud与Mesh 相关的软件，主要是软件、功能也很多，有利于以后查找。 . Open Source . Open Source主要是以C++为主，随着python的流行，后来也有很多基于python的库。 . CGAL . CGAL 是目前处理point cloud 和 Mesh首推的库，功能很多，包括点云处理（法向量估计，KD-Tree等）、Mesh处理（重建、平滑、距离查询等），也有GUI的界面，可以跟Meshlab一样的使用。 . 在二次开发上，由于都是基于模板类的C++，因此扩展性也是很强的。 . libigl . libigl 更多的偏向计算机图形学，因此有很多geometry computational、differential geometry的东西，它也有很多接口是基于CGAL的开发。 . OpenMesh . OpenMesh早期是基于C++开发的，目前有了python的接口，感觉优势是处理polygonal mesh，而不是triangle based mesh。 . geogram . geogram 也是基于C++的开源库，主要是计算图形学(geometry computational、differential geometry)的算法。 . Gmsh与pygmsh . Gmsh 是一个基于C++开发的，主要是CAD相关的模型后处理，如reparametrization、remeshing等，偏计算机图形学。 . MeshLab . MeshLab 是开源的，是基于C++的，目前的大都是基于GUI的使用，尤其在Ubuntu下面，是一个很好的显示软件。 . MEPP . MEEP是一个mesh处理的开源库，功能上有点类似MeshLab，也是基于C++的。 . TetGen与Triangle . TetGen是基于C++开发的，功能主要是3DT 与CDT，Triangle也是基于C++的，主要是2DT, 虽然这些功能很简单，包含在CGAL里面，但是速度快和数据结构比CGAL简单，用的很广泛。 . VTK . VTK是基于C++开发的，由于包括影像处理与图形处理， 因此应用的比较广泛，如Kinect的开发包就利用了VTK。 . ParaView . ParaView 是基于C++开发的，发现显示线与mesh很方便，比MeshLab显示线的效果更好一些。 . CloudCompare . CloudCompare 是基于C++的开源库，主要是点云处理，在Ubuntu下面是比较好的显示工具，支持的数据格式也比较多，有一个比较有意思的地方是支持命令行处理 1。 . Easy3D . Easy3D也是C++开源的，主要是3D Vision数据的显示，如Keyframe animation的功能就是很好的展示功能，类似飞行模式2 。 . PCL . PCL是一个基于C++的开源库，代码实现比CGAL友好，安装简单一些，因此用的非常广泛，对于小的数据量还行，因此做实验还可以。 . Open3D . Open3D更多的是一个算法库，主要是点云处理，早期是基于C++开发，现在基于python的接口做的很好。 . LAStools . LAStools 是基于C++的库，主要是实现LAS file的读写。 . PyMesh . 是基于python的Mesh处理的库，比Python based Open3D简洁。 . meshio . 是基于python的Mesh读写库，支持mesh的各种格式。 . potree . 基于web显示点云。 . F3D . 开源的跨平台的mesh显示工具。 . Point Processing Toolkit . Point Processing Toolkit (pptk) 是基于python的显示2D/3D点云的工具，有个技术性的文档介绍。 . laspy . laspy是一个基于python的读写LAS/LAZ文件的开源库。 . PDAL . PDAL是一个基于C++的处理点云数据的开源库，提供python接口。 . Other . 这下面主要是商业软件，很多都是处理整个流程的。 . Geomagic Wrap . Geomagic Wrap 可以实现点云到Mesh，主要是显示效果很厉害 3。 . FugroViewer . FugroViewer 只能在windows中用，能显示很大的点云数据，操作起来比CloudCompare方便。 . ArcGIS 3D . ArcGIS也是windows中用的显示3D模型很好的工具。 . RhinoCity . 处理LiDAR数据的一家公司，还做城市的solar energy。 . Footnotes . https://www.cloudcompare.org/doc/wiki/index.php?title=Command_line_mode . &#8617; . | https://www.youtube.com/watch?v=ST7QWXzez2E&amp;list=PLzcbdLuSRF1PSqnycLzDsn3qG1W63bva7. &#8617; . | https://zhuanlan.zhihu.com/p/364552330 . &#8617; . |",
+            "content": "3D point cloud and Mesh Software . 主要是介绍一些3D point cloud与Mesh 相关的软件，主要是软件、功能也很多，有利于以后查找。 . Open Source . Open Source主要是以C++为主，随着python的流行，后来也有很多基于python的库。 . CGAL . CGAL 是目前处理point cloud 和 Mesh首推的库，功能很多，包括点云处理（法向量估计，KD-Tree等）、Mesh处理（重建、平滑、距离查询等），也有GUI的界面，可以跟Meshlab一样的使用。 . 在二次开发上，由于都是基于模板类的C++，因此扩展性也是很强的。 . libigl . libigl 更多的偏向计算机图形学，因此有很多geometry computational、differential geometry的东西，它也有很多接口是基于CGAL的开发。 . OpenMesh . OpenMesh早期是基于C++开发的，目前有了python的接口，感觉优势是处理polygonal mesh，而不是triangle based mesh。 . geogram . geogram 也是基于C++的开源库，主要是计算图形学(geometry computational、differential geometry)的算法。 . Gmsh与pygmsh . Gmsh 是一个基于C++开发的，主要是CAD相关的模型后处理，如reparametrization、remeshing等，偏计算机图形学。 . MeshLab . MeshLab 是开源的，是基于C++的，目前的大都是基于GUI的使用，尤其在Ubuntu下面，是一个很好的显示软件。 . MEPP . MEEP是一个mesh处理的开源库，功能上有点类似MeshLab，也是基于C++的。 . TetGen与Triangle . TetGen是基于C++开发的，功能主要是3DT 与CDT，Triangle也是基于C++的，主要是2DT, 虽然这些功能很简单，包含在CGAL里面，但是速度快和数据结构比CGAL简单，用的很广泛。 . Fade2D与Fade3D . Fade2D 与Traingle的功能类似，Fade3D 与TetGen类似，不过没有源代码，但是可以基于开源的lib进行开发。 . VTK与PyVista . VTK是基于C++开发的，由于包括影像处理与图形处理， 因此应用的比较广泛，如Kinect的开发包就利用了VTK。 . PyVista是基于VTK的python的接口。 . ParaView . ParaView 是基于C++开发的，发现显示线与mesh很方便，比MeshLab显示线的效果更好一些。 . CloudCompare . CloudCompare 是基于C++的开源库，主要是点云处理，在Ubuntu下面是比较好的显示工具，支持的数据格式也比较多，有一个比较有意思的地方是支持命令行处理 1。 . Easy3D . Easy3D也是C++开源的，主要是3D Vision数据的显示，如Keyframe animation的功能就是很好的展示功能，类似飞行模式2 。 . PCL . PCL是一个基于C++的开源库，代码实现比CGAL友好，安装简单一些，因此用的非常广泛，对于小的数据量还行，因此做实验还可以。 . Open3D . Open3D更多的是一个算法库，主要是点云处理，早期是基于C++开发，现在基于python的接口做的很好。 . LAStools . LAStools 是基于C++的库，主要是实现LAS file的读写。 . PyMesh . 是基于python的Mesh处理的库，比Python based Open3D简洁。 . meshio . 是基于python的Mesh读写库，支持mesh的各种格式。 . potree . 基于web显示点云。 . F3D . 开源的跨平台的mesh显示工具。 . Point Processing Toolkit . Point Processing Toolkit (pptk) 是基于python的显示2D/3D点云的工具，有个技术性的文档介绍。 . laspy . laspy是一个基于python的读写LAS/LAZ文件的开源库。 . PDAL . PDAL是一个基于C++的处理点云数据的开源库，提供python接口。 . Other . 这下面主要是商业软件，很多都是处理整个流程的。 . Geomagic Wrap . Geomagic Wrap 可以实现点云到Mesh，主要是显示效果很厉害 3。 . FugroViewer . FugroViewer 只能在windows中用，能显示很大的点云数据，操作起来比CloudCompare方便。 . ArcGIS 3D . ArcGIS也是windows中用的显示3D模型很好的工具。 . RhinoCity . 处理LiDAR数据的一家公司，还做城市的solar energy。 . Footnotes . https://www.cloudcompare.org/doc/wiki/index.php?title=Command_line_mode . &#8617; . | https://www.youtube.com/watch?v=ST7QWXzez2E&amp;list=PLzcbdLuSRF1PSqnycLzDsn3qG1W63bva7. &#8617; . | https://zhuanlan.zhihu.com/p/364552330 . &#8617; . |",
             "url": "https://whuwuteng.github.io/personal_page/markdown/2022/03/23/3D-software.html",
             "relUrl": "/markdown/2022/03/23/3D-software.html",
             "date": " • Mar 23, 2022"
@@ -179,9 +179,174 @@
 
   
   
+      ,"page0": {
+          "title": "An Example Markdown Post",
+          "content": "Example Markdown Post . Basic setup . Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-filename.md . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and filename is whatever file name you choose, to remind yourself what this post is about. .md is the file extension for markdown files. . The first line of the file should start with a single hash character, then a space, then your title. This is how you create a “level 1 heading” in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line ## File names above. . Basic formatting . You can use italics, bold, code font text, and create links. Here’s a footnote 1. Here’s a horizontal rule: . . Lists . Here’s a list: . item 1 | item 2 | . And a numbered list: . item 1 | item 2 | Boxes and stuff . This is a quotation . . You can include alert boxes …and… . . You can include info boxes Images . . Code . You can format text and code per usual . General preformatted text: . # Do a thing do_thing() . Python code and output: . # Prints &#39;2&#39; print(1+1) . 2 . Formatting text as shell commands: . echo &quot;hello world&quot; ./some_script.sh --option &quot;value&quot; wget https://example.com/cat_photo1.png . Formatting text as YAML: . key: value - another_key: &quot;another value&quot; . Tables . Column 1 Column 2 . A thing | Another thing | . Tweetcards . Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 Footnotes . This is the footnote. &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2020-01-14-test-markdown-post.html",
+          "relUrl": "/posts/2020-01-14-test-markdown-post.html",
+          "date": ""
+      }
+      
+  
 
   
       ,"page1": {
+          "title": "Some good blogs on Deep learning",
+          "content": "Deep learning on Computer Vision . blog . (1) NVIDIA介绍3D与Deep learning。 . 可以通过Youtube视频来了解一些具体的原理，发现室内重建是用的colmap，人物重建还是用的360°相机，人工的编辑很多。值得注意的是只有一部分是人工合成的 1。 . (2 Google Eearth 的介绍 . 介绍了google earth 从map pyramiding technique 到目前的time machine的变化。 . (3) EfficientDet . 一个多尺度的network用在图像识别的例子。 . (4) uDepth . Google在pixel 4 手机上用IR相机加上神经网络实现深度图的方法。 . (5) Turbo color map . 一个类似与jet的color map。 . (6) A Neural Weather Model for Eight-Hour Precipitation Forecasting . 利用深度学习与1 km 分辨率的影像实现天气预报。 . (7)Learning to See Transparent Objects . 透明物体有不少研究，类似的还有镜子中物体的重建。 . (8) Can You Trust Your Model’s Uncertainty? . Uncertainty一直是一个很重要的topic，data shift也很关键。 . 另外也有一个问题，就是label中的noisy怎么处理。 . (9) An Inside Look at Flood Forecasting . Flood Forecasting 的估计本质上是在DEM上做分析，深度学习就是代替了很多几何分析的步骤，一个更早的blog。 . (10) Meta-Dataset: A Dataset of Datasets for Few-Shot Learning . few-shot classification也是一个研究方向 2。 . (11) Speeding Up Neural Network Training with Data Echoing . 数据的处理是深度学习中很关键的一步。 . (12) Open-Sourcing BiT: Exploring Large-Scale Pre-training for Computer Vision . Transfer learning 或者 data shift是应用中很关键的一步。 . (13) Machine Learning-based Damage Assessment for Disaster Relief . 遥感影像的变化检测的应用。 . (14) Recreating Historical Streetscapes Using Deep Learning and Crowdsourcing . 一个利用多个数据的城市建模方法。 . (15) Rethinking Attention with Performers . Attention机制是图像处理中经常用的。 . (16) End-to-End, Transferable Deep RL for Graph Optimization . (17) Addressing Range Anxiety with Smart Electric Vehicle Routing . 类似与路径规划。 . (18) Machine Learning for Computer Architecture . (19) TracIn — A Simple Method to Estimate Training Data Influence . (20) Using Global Localization to Improve Navigation . (21) The Decade of Deep Learning . (22) Data Augmentation . 数据增强是深度学习比较工程化的一个步骤，主要是应对测试的数据与训练的数据不一致的情况。不过更多的是考虑当训练的数据比较少的时候，怎么提高performance。 . (23) Test and Validation Datasets . 参考文档，当模型训练好之后，并不知道他的表现如何。这个时候就可以使用验证集（Validation Dataset）来看看模型在新数据（验证集和测试集是不同的数据）上的表现如何。同时通过调整超参数，让模型处于最好的状态。 . 验证集有2个主要的作用： . 评估模型效果，为了调整超参数而服务 | 调整超参数，使得模型在验证集上的效果最好 | 说明： . 验证集不像训练集和测试集，它是非必需的。如果不需要调整超参数，就可以不使用验证集，直接用测试集来评估效果。 | 验证集评估出来的效果并非模型的最终效果，主要是用来调整超参数的，模型最终效果以测试集的评估结果为准。 | (24) Embendding . Embendding 用更朴素的解释是降维，会与Encoder有一些相似的地方，因为都是 dense representation of data，blog中是对NLP数据的处理。 . 另外有一个blog是对影像的处理，如blog1与blog2特征的维度也不是越多越好。 . (25) The Golden Age of Computer Vision . 主要介绍3D Vision的算法变化 ，目前主要是靠数据进行训练。 . (26) training dataset size . 在experiment中发现了一个规律，如果数据有很大的Imbalanced，那么增加数据量是提高evaluation的方法。 . 训练数据量也是一个很难确定的事，参考blog。 . (27) Domain Adaption . 介绍了domain adaption 与transfer learning, dataset shift 的关系。 . domain adaption是在一个数据上训练，在另外一个数据上测试。 . Transfer Learning 通常是指用fine tuning实现从一个model到另一个数据上的model的训练。 . Dataset shift 像一个更细节的解释，如 Covariate Shift；Prior Probability Shift；Concept Shift。 . paper . (1) Depth-supervised NeRF: Fewer Views and Faster Training for Free . website, paper . 论文充分利用了Colmap的结果，对比不用colmap大大提高了准确率， 减少了错误区域。 . 更早的文章NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis， blog。 . 类似的应用是depth from video，如google的depth from video blog和cinematic photo blog。 . (2) Urban Radiance Fields . website, paper . 论文不是基于RF的图像显示，而是有一个mesh。 . project . (1) Zillow Indoor Dataset . paper . 数据集是室内场景，包括影像和室内的layout。 . (2) ETH-MS localization dataset . 数据集是定位相关的，室内外都有。 . (3) Open Buildingsg . 是Google的一个从卫星影像提取建筑物的数据，不过貌似没有真值，看blog。 . (4) MIAP (More Inclusive Annotations for People) . 一个关于人物检测的数据集，参考Google的blog。 . (5) ViP-DeepLab: Learning Visual Perception with Depth-aware Video Panoptic Segmentation . panoptic segmentation是最近才流行的算法。 . (6) iGibson . 一个室内模拟器，和carla类似，一个blog的介绍。 . (7)Accelerating Neural Networks on Mobile and Web with Sparse Inference . 移动设备运行CNN是一个很工程的问题。 . (8) AutoML . 网络的查找是最近深度学习的一个重要的发展方向，Model Search是一个开源的库。 . (9) 3D Scene Understanding with TensorFlow 3D . 3D 是最近一个热点，Pytorch也有Pytorch 3D。 . (10) CO3D . CO3D是facebook的一个三维重建的数据集。 . (11) Objectron Dataset . 介绍3D box的数据集的blog。 . (12) Neural Architecture Search . Neural Architecture Search 是AutoML中一个常用的方法。 . (13) Image Matching Benchmark and Challenge . 特征点提取和匹配的数据集。 . (14) YouTube-8M Segments Dataset . 主要是video的Segments 与 undertanding的数据集。 . (15) Open Images V6 . image classification, object detection, visual relationship detection, and instance segmentation的数据集。 . (16) StreetLearn dataset . 主要是用来自动驾驶定位的，利用Google街景实现定位。 . (17) RxR: A Multilingual Benchmark for Navigation Instruction Following . 室内场景的数据集。 . (18) nuScenes . 类似与KITTI的数据，但是没有stereo的数据。 . (19) Urban forest monitoring . 包括aerial的tree的数据与街景的tree的数据。 . Tutorial . (1) Machine Learning Robustness, Fairness, and their Convergence . 主要是可以应对noise label的问题，noise label是一个有点偏应用的问题。 . (2) Do Wide and Deep Networks Learn the Same Things? . 探讨网络结构的的问题。 . Footnotes . https://www.zhihu.com/question/479214973 &#8617; . | https://zhuanlan.zhihu.com/p/61215293 &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2021-08-11-deep-learning.html",
+          "relUrl": "/posts/2021-08-11-deep-learning.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
+          "title": "一些blog的记录",
+          "content": "记录一些blog的内容 . 内容 . (1) 技术型创业者需要从你们博士的躯壳里走出来，开始谦卑地学习客户永远是对的。1 . Footnotes . 李开复 https://weibo.com/ttarticle/p/show?id=2309404281740599412204 . &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2021-08-15-blog.html",
+          "relUrl": "/posts/2021-08-15-blog.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page3": {
+          "title": "吴军博士的书",
+          "content": "阅读《格局》 . 介绍 . 《格局》是吴军博士的一本书，吴军博士有很多书，如读过的《浪潮之巅》、《数学之美》、《文明之光》等，感觉还不错。 . 这本书总的说来还给人很多启发的，虽然上面的有关商业的比较多，但是对于人生的发展、工作的发展有很多指导意义。 . 摘录 . (1) 而当明确了位置和方向后，格局的大小就要看采取行动的方式。在这一点上，格局大的人追求的是重复的成功和可叠加式的进步，格局小的人满足于自己某件事做得快、做得漂亮。 . (2) 很多人担心学计算机专业将来只能吃青春饭，其实，这只反映出那些没有护城河的从业者的现状，因为那些从业者可以随时被替代。但是，少数经验不断积累的从业者如今非常稀缺，无论他们开什么价，都有人愿意请他们做事情。 . (3) 现在的很多人（包括一些科技从业者）混淆了技术在目的和手段之间应有的位置。技术从来都是手段而不是目的，搞不清楚这一点，就会为了技术而研发技术。很多时候，我们知道一个需求可能是刚需，但是这个需求的解决方案（技术）并不一^定是刚需，用其他手段也能解决问题，甚至解决得更好。当我们混淆了手段和目的时，就难免闹笑话。 . (4) 生活中最重要的是掌握好节奏。人在忙碌的时候，很容易忘掉忙碌的目的，最后反而离目标越来越远。从忙乱 中退一步，思考一下目的，能省掉多余的需求和行动，减少不必要的麻烦，让我们更快地接近目标。 . 阅读《态度》 . 介绍 . 《态度》这一本书主要是通过与女儿写信的方式，表达作者的观点，还是有很多值得读的。 . 摘录 . (1) 服从是训练领导力的第一步，但也仅仅是第一步，因为仅服从，只懂得对上负责，是无法成为领导的。第二步就是合作。对于合作者一定要在公共场合认可他们的贡献，这一点非常重要。这样合作者就会想，即使我不当领导，他也会为我争取所有荣誉和利益，因此接受他的领导对我来讲是有好处的。培养领导力的第三步是给领导当好助手。世界上能力再强的人也不可能事必躬亲，领导也是如此，他们需要好的助手。 . (2) 人一辈子，不可能凡事都顺利，总会遇到很多不尽如人意的事情，甚至遇到一些悲 剧。但是，人不要抱怨，要主动想想是否有更好的方法，然后行动起来。休伯说，遇事不要逃避，问问自己是否有比逃避更好的方法，能否做点什么，解决问题，哪怕是解决一部分问题。 . (3) 年轻人在做任何决定之前应该做好准备，三思而行，但是对于想清楚的事情，做起来就不要犹豫。很多事情你在做成之后，回过头来看成功的概率不过5％甚至更低。如果你在做之前就开始算概率，很多事根本不会开始做。年轻人和老年人的一个差别在于，前者很多时候不知艰难，努力去做了，也就做成了，而后者因为有过失败的教训，知道一件事不是那么容易做成，想想做成的可能性，算算成本，还没有开始，就已经放弃了。努力 了，至少还有一个希望；放弃了，则永远不可能有希望。 . (4) 最后，我想和你说的是，千万不要把科学当成宗教。你可能会说：“它们怎么可能被混淆呢？它们完全不同啊！”事实上，很多半瓶子醋的科技工作者和学生对待科学的态度和教徒对待宗教没有什么不同。宗教的三个特点在他们身上都能看到。一是盲从，对科学结论的盲从。二是道德优越感，觉得自己是搞科学的就看不起别人。三是喜欢相信书本上的教条和权威人士给出的结论。这些是教徒的习惯，但是你肯定能在一些自诩为搞科学的人身上看到，这偏离了科学的根本。希望你不要染上类似的习气，做一个理性的怀疑者， 一个对未知的探索者。 . (5) 人们通常对科学的一个误解就是把它等同于正确，把正确等同于有用。很显然，正确不等于有用。如果你说明天要么下雨，要么不下雨，这当然正确，但是毫无用途。类似 地，正确和科学也不能画等号。牛顿的万有引力定律在宇宙的尺度上并不正确，或者说不 . 准确，但这并不能否定它的科学性。类似地，一个巫医通过烧香治好一个绝症患者的病， 并非他的做法就有科学性。科学是方法和过程，相信你对于这一点的体会会越来越深。 其次，科学是不断发展的，没有绝对正确和绝对真理。 既然科学是一个人认识世界的过程，随着我们对世界认识的加深，就会发现之前的一些认识可能是肤浅的。因此，真正有学识的科学家总是对世界和世界的规律充满敬畏，而不会说他们代表正确，只有宗教人士才会说他们手里握有绝对真理。 如果你认可了这个道理，我们再往前走一步，就能得到这样一个结论：科学家并不高人一等，也并不比别人更接近真理，因为真理是客观存在的，一个人并不会因为学历高、职位高就能更接近真理。 . (6) 与人沟通，切忌啰唆。很多人认为，自己讲的越多，对方接收的信息也越多。其实， 如果废话太多，对方根本搞不清你要说什么，沟通的效果为零。更何况在通信中，多少会有点儿噪声，话多了，难免词不达意，让人误解，这就是噪声。任何好的沟通，需要清楚对方是谁，用什么样的一两句话能够让对方理解你的意图。 . 阅读《见识》 . 介绍 . 看到一个人对见识总结的不错1，如下: . . https://www.zhihu.com/question/265999029/answer/748446004 &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2021-08-21-altitude.html",
+          "relUrl": "/posts/2021-08-21-altitude.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page4": {
+          "title": "记录一些电脑的trick",
+          "content": "记录一些电脑的trick . 内容 . (1) Thinkpad 用HDMI连显示器，显示器无信号(确认显示器和线没有问题) . 解决：笔记本有静电 拔掉电源，电池，鼠标等线，然后按开机几次就可以 。1 . (2) 一个不错的blog框架，可以参考源码。 . (3) 双硬盘装Ubuntu的问题 . 尝试装20.04时，出现了 “executing grub-install /dev/sda failed”的问题 当不管这个问题时，进入grub之后出现 file ‘/grub/i386-pc/normal.mod’ not found的问题，尝试用18.04也有一样的问题，发现是因为系统安装在/dev/sdb，最后安装在/dev/sda上（参考），就有引导了，而且出现两个系统。 . (4) Ubuntu18.04台式机安装wifi . 目前用的是brostrend ac1200 wifi, 下载的驱动是在Github的，命令行很简单： . make # this is important sudo modprobe cfg80211 sudo insmod 88x2bu.ko . 在这个过程中，发现插入USB3.0时没反应，用USB2.0就没有问题。 . 在使用的过程中，内核升级需要重新编译： . make clean make sudo modprobe cfg80211 sudo insmod 88x2bu.ko . (5) Unbuntu 18.04 安装NIVDIA显卡驱动 . 如果不知道显卡型号，需要用命令： . ubuntu-drivers devices . 然后在官网上下载对应的型号的驱动，安装步骤参见第三种。 . sudo dpkg --add-architecture i386 sudo apt update sudo apt install build-essential libc6:i386 sudo bash -c &quot;echo blacklist nouveau &gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot; sudo bash -c &quot;echo options nouveau modeset=0 &gt;&gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot; # check cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf . 重启之后sudo telinit 3。然后按快捷键：CTRL+ALT+F1 进入字符界面，注意是sudo bash NVIDIA-Linux-x86_xx.sh。 . 在使用的过程中，会出现内核升级，发现内核升级之后显卡的驱动会失效，所以要禁用Ubuntu的自动升级。不过目前不太确定这个内核升级影响有多大，在Ubuntu16.04的系统和另在一台Ubuntu18.04的系统下，没有禁用升级，显卡也没有失效。 . 不过安装NVIDIA Drive会给安装CUDA带来问题，参考blog， 因该意思是要重新安装CUDA的驱动，应为CUDA会带有NVIDIA的drive。有两种办法解决问题： . a. 先卸载NVIDIA Drive，然后安装CUDA，参考blog1 和 blog2。 . b. 不安装CUDA自带的Drive。 . 之后之安装cudnn，参考blog。 . Footnotes . https://www.zhihu.com/question/273905971 &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2021-09-01-tricks.html",
+          "relUrl": "/posts/2021-09-01-tricks.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page5": {
+          "title": "Google AI blog summary series",
+          "content": "Goole AI blog summary series 分析 . 介绍 . Google AI blog 貌似最近几年有总结和展望，有利于了解Deep learning的工作和趋势： . 2020年 . | 2019年 . | 2018年 . | 2017年 part1 和2017年 part2 . | 2016年 . | . 记录 . 2016年还是数据驱动的一年，主要是依赖大数据的算法与tensorflow的介绍。 . 2017年AutoML才开始流行。 . 2018年中就有Computational Photography在夜景拍摄照片和深度图的研究，同时还有很多数据集，如Open Images V4。 . 2019年的总结写的比较成熟了，也有很多应用，如Lookout ，Google Translate’s camera translation和Live Transcribe ；有学术研究，如 Activation Atlases， Partial Differential Equations等。 . 2020年的总结了工作的领域： . COVID-19 and Health | AutoML | ML for Medical Diagnostics | Understanding ML Algorithms and Models | Weather, Environment and Climate Change | Algorithmic Foundations and Theory | Accessibility | Machine Perception | Applications of ML to Other Fields | Robotics | Responsible AI | Quantum Computing | Natural Language Understanding | Supporting Developers and Researchers | Language Translation | Open Datasets and Dataset Search | Machine Learning Algorithms | Research Community Interaction | Reinforcement Learning | . 比较有特点的工作，如 NeRF， Learning to Factorize and Relight a City等。 . Google Blog . Google Live View | . 有点类似与之前的VPS的功能，就是根据Video进行navigation。 .",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2021-09-12-series.html",
+          "relUrl": "/posts/2021-09-12-series.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page6": {
+          "title": "《活力》经济学的书",
+          "content": "阅读《活力》 . 介绍 . 这本书是一个本经济学方面的书，参考内容介绍。主要感觉是介绍西方国家和日本的经济发展因素相关的问题，印象深刻的方面如创始人对公司的影响、母国对移民后代的影响、社会对创业失败的包容性、机器等人工智能对工资的影响等。 . 总体感觉是一本比较专业的书，有点类似多篇论文通过章节合并的书，有很多公式来说明影响经济发展的因素。 . 摘录 . 创新者喜欢工作的回报属性,愿意在具有创造性的行业工作,并且重视财务独立。创新者往往喜欢不确定性,并乐于冒险。他们也能够接受失败。 . | 我们发现在有增加型机器人时,最初等于零的消费增长率也会变为正值。沿着这条路径,受到比物 质资本折旧速度更快的资本积累推动,人均消费会不断上升。在这条均衡增长路径上,总的非人力财富会与人均消费以同样的速度增长,同时传统机器和增加型机器人的份额不变。然而,我们得到的一个严峻的结果是,真实工资被永久性地压低了,(人类)劳动力在国民收入中的份额渐近于零,尽管总的(人类和机器人)劳动力在国民收入中的份额在长期趋向于一个正的常数。 . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2021-09-26-dynamism.html",
+          "relUrl": "/posts/2021-09-26-dynamism.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page7": {
+          "title": "RMSprop 与 Adam",
+          "content": "RMSprop 与 Adam . 深度学习中的optimizer有许多算法，如SGD ，RMSprop, Adam等12。 . 目前没看到说那个算法就是比其他的都好的说法，大部分都是直接用Adam，只是最近发现了用RMSprop比Adam的效果好，引发了我对这个思考，因为optimizer同时有对learning rate的依赖，具体是因素的主要作用只能用实验来说明。 . 具体的公式可以在网上查找，下面只写一些blog的观点。 . Adam . Adam 几乎是在Deep learning中用的最多的 3。 . Adam训练的结果比SGD权重更大，可能导致test loss 更小，但是generalize（泛化）没有SGD好4。 . RMSprop . RMSprop 是 Geoff Hinton 提出的 5 ，如何实现RMSprop可以参考 6 。 . Comparison . Reinforcement learning中用RMSprop而不用Adam 7，解释是RMSprop is suitable for sparse problems。 | 有一个例子出现RMSprop的结果优于Adam 8 。 | 甚至有的情况下出现SGD要优于其他的optimizer 9 。 | Footnotes . https://zhuanlan.zhihu.com/p/32488889 . &#8617; . | https://ruder.io/optimizing-gradient-descent/ . &#8617; . | https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c . &#8617; . | https://medium.com/mini-distill/effect-of-batch-size-on-training-dynamics-21c14f7a716e . &#8617; . | http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf . &#8617; . | https://machinelearningmastery.com/gradient-descent-with-rmsprop-from-scratch/ . &#8617; . | https://stats.stackexchange.com/questions/435735/advantage-of-rmsprop-over-adam . &#8617; . | https://medium.com/analytics-vidhya/a-complete-guide-to-adam-and-rmsprop-optimizer-75f4502d83be . &#8617; . | https://shaoanlu.wordpress.com/2017/05/29/sgd-all-which-one-is-the-best-optimizer-dogs-vs-cats-toy-experiment/ . &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2022-03-20-optimizer.html",
+          "relUrl": "/posts/2022-03-20-optimizer.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page8": {
+          "title": "3D point cloud and Mesh Software",
+          "content": "3D point cloud and Mesh Software . 主要是介绍一些3D point cloud与Mesh 相关的软件，主要是软件、功能也很多，有利于以后查找。 . Open Source . Open Source主要是以C++为主，随着python的流行，后来也有很多基于python的库。 . CGAL . CGAL 是目前处理point cloud 和 Mesh首推的库，功能很多，包括点云处理（法向量估计，KD-Tree等）、Mesh处理（重建、平滑、距离查询等），也有GUI的界面，可以跟Meshlab一样的使用。 . 在二次开发上，由于都是基于模板类的C++，因此扩展性也是很强的。 . libigl . libigl 更多的偏向计算机图形学，因此有很多geometry computational、differential geometry的东西，它也有很多接口是基于CGAL的开发。 . OpenMesh . OpenMesh早期是基于C++开发的，目前有了python的接口，感觉优势是处理polygonal mesh，而不是triangle based mesh。 . geogram . geogram 也是基于C++的开源库，主要是计算图形学(geometry computational、differential geometry)的算法。 . Gmsh与pygmsh . Gmsh 是一个基于C++开发的，主要是CAD相关的模型后处理，如reparametrization、remeshing等，偏计算机图形学。 . MeshLab . MeshLab 是开源的，是基于C++的，目前的大都是基于GUI的使用，尤其在Ubuntu下面，是一个很好的显示软件。 . MEPP . MEEP是一个mesh处理的开源库，功能上有点类似MeshLab，也是基于C++的。 . TetGen与Triangle . TetGen是基于C++开发的，功能主要是3DT 与CDT，Triangle也是基于C++的，主要是2DT, 虽然这些功能很简单，包含在CGAL里面，但是速度快和数据结构比CGAL简单，用的很广泛。 . Fade2D与Fade3D . Fade2D 与Traingle的功能类似，Fade3D 与TetGen类似，不过没有源代码，但是可以基于开源的lib进行开发。 . VTK与PyVista . VTK是基于C++开发的，由于包括影像处理与图形处理， 因此应用的比较广泛，如Kinect的开发包就利用了VTK。 . PyVista是基于VTK的python的接口。 . ParaView . ParaView 是基于C++开发的，发现显示线与mesh很方便，比MeshLab显示线的效果更好一些。 . CloudCompare . CloudCompare 是基于C++的开源库，主要是点云处理，在Ubuntu下面是比较好的显示工具，支持的数据格式也比较多，有一个比较有意思的地方是支持命令行处理 1。 . Easy3D . Easy3D也是C++开源的，主要是3D Vision数据的显示，如Keyframe animation的功能就是很好的展示功能，类似飞行模式2 。 . PCL . PCL是一个基于C++的开源库，代码实现比CGAL友好，安装简单一些，因此用的非常广泛，对于小的数据量还行，因此做实验还可以。 . Open3D . Open3D更多的是一个算法库，主要是点云处理，早期是基于C++开发，现在基于python的接口做的很好。 . LAStools . LAStools 是基于C++的库，主要是实现LAS file的读写。 . PyMesh . 是基于python的Mesh处理的库，比Python based Open3D简洁。 . meshio . 是基于python的Mesh读写库，支持mesh的各种格式。 . potree . 基于web显示点云。 . F3D . 开源的跨平台的mesh显示工具。 . Point Processing Toolkit . Point Processing Toolkit (pptk) 是基于python的显示2D/3D点云的工具，有个技术性的文档介绍。 . laspy . laspy是一个基于python的读写LAS/LAZ文件的开源库。 . PDAL . PDAL是一个基于C++的处理点云数据的开源库，提供python接口。 . Other . 这下面主要是商业软件，很多都是处理整个流程的。 . Geomagic Wrap . Geomagic Wrap 可以实现点云到Mesh，主要是显示效果很厉害 3。 . FugroViewer . FugroViewer 只能在windows中用，能显示很大的点云数据，操作起来比CloudCompare方便。 . ArcGIS 3D . ArcGIS也是windows中用的显示3D模型很好的工具。 . RhinoCity . 处理LiDAR数据的一家公司，还做城市的solar energy。 . Footnotes . https://www.cloudcompare.org/doc/wiki/index.php?title=Command_line_mode . &#8617; . | https://www.youtube.com/watch?v=ST7QWXzez2E&amp;list=PLzcbdLuSRF1PSqnycLzDsn3qG1W63bva7. &#8617; . | https://zhuanlan.zhihu.com/p/364552330 . &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2022-03-23-3D-software.html",
+          "relUrl": "/posts/2022-03-23-3D-software.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page9": {
+          "title": "Hyperparameters in Deep learning",
+          "content": "Hyperparameters in Deep learning . 深度学习中的hyperparameters(超参数)很多，有时候对结果的影响还挺大的，根据数据的不同、模型的不同会有比较大的区别，下面只是记录一些关于这的blog的内容。 . Batch Size . Batch Size 是很关键的一个参数，因为它影响利用的内存、每epoch的时间等 1，相同的epoch，steps（iteration）的次数也不同。在比较大的Batch Size时，learning rate同时增加，学习结果最好。 . Upsampling . Footnotes . https://medium.com/mini-distill/effect-of-batch-size-on-training-dynamics-21c14f7a716e . &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2022-03-24-hyperparameters.html",
+          "relUrl": "/posts/2022-03-24-hyperparameters.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page10": {
+          "title": "Parallel in Deep learning",
+          "content": "Parallel in Deep learning . 在cluster上用多个GPU进行训练，减少训练的时间；另外随着batch Size 增加，需要的内存也越来越大，在一块GPU上不能进行训练，因此如何用多个GPU进行训练也是一个需求。 . DataParallel in Pytorch . 虽然DataParallel不被推荐使用，即使是在一个node中1，但是因为DistributedDataParallel有一些问题，如windows不支持，所以DataParallel还是可以用的2。 . 不推荐的主要原因是由于模型要在多个node中复制。 . 另外的还有mp.spawn来做并行，感觉需要的代码更多3。 . DistributedDataParallel in Pytorch . DistributedDataParallel 是只用Pytorch的基础上利用较多的，目前很多这样的博客，缺点就是配置起来比较困难4，具体的可以参考blog5。 . Pytorch Lightning . 是独立于Pytorch的一个库6，因此对于分布配置时并不用考虑，可以直接从pytorch的模型到pytorch lightning7。 . Horovod . Horovod8 可以认为是一个分布式训练的框架，可以支持多种工具，如TensorFlow, Keras, PyTorch, and Apache MXNet。 目前在Pytorch Lightning中，也可以支持Horovod9，对于pytorch，也可以自己配置10。 . Batch size . Batch size 是一个重要的问题，因为batch size的大小影响训练的精度，实际上的batch size是多少跟采用哪种并行方式有关，可以参考视频中的计算方式2。 . 考虑到Batch size 的变化，learning rate也需要跟着变化，要不然用DDP的accuracy会降低11。 . Footnotes . https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html. &#8617; . | https://www.youtube.com/watch?v=a6_pY9WwqdQ. &#8617; &#8617;2 . | https://zhuanlan.zhihu.com/p/336863012. &#8617; . | https://zhuanlan.zhihu.com/p/206467852. &#8617; . | https://shomy.top/2022/01/05/torch-ddp-intro/. &#8617; . | https://zhuanlan.zhihu.com/p/319810661. &#8617; . | https://www.youtube.com/watch?v=DbESHcCoWbM&amp;t=1678s. &#8617; . | https://github.com/horovod/horovod. &#8617; . | https://horovod.readthedocs.io/en/stable/pytorch.html. &#8617; . | https://zhuanlan.zhihu.com/p/264778072. &#8617; . | https://discuss.pytorch.org/t/should-we-split-batch-size-according-to-ngpu-per-node-when-distributeddataparallel/72769/6. &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2022-06-25-parallel.html",
+          "relUrl": "/posts/2022-06-25-parallel.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page11": {
+          "title": "Micmac tools in photogrammetry",
+          "content": "Micmac tools in photogrammetry . Micmac 1 是一个摄影测量的开源工具，是基于C++的，可以在Windows和Linux/MacOS X 上运行，由于开发的人主要是Ubuntu，建议在Ubuntu下用。 . Micmac的功能与Colmap2 类似，但是在处理卫星影像数据时，优势是很大的。虽然也有把卫星影像转成Colmap可以处理的类型 3，Micmac的功能更全，包括Crop、RPC的转换等。 . build(编译) . 建议在Ubuntu下编译4，基本不会有配置、运行、编译等错误。 . git clone https://github.com/micmacIGN/micmac.git cd micmac/ mkdir build cd build cmake -DWITH_QT5=1 -DWITH_CPP11=1 .. make install -j4 sudo gedit /etc/bash.bashrc export PATH=/micmac_install_directory/micmac/bin:$PATH . Aerial image(航空影像) . 这里的航空影像是指的框幅影像或者叫小孔成像5，对于普通的相机拍摄的都可以处理。之前Github 6上已经写了一个详细的流程可以参考。 . 在Ubuntu下面显示界面很少， 不过Micmac中有一些显示工具，可以显示影像和输出的结果。 . Vino . Vino是显示影像的模块： . Vino Crop-IMG_PHR1B.tif . 显示Feature point . 可以用SEL这个工具显示： . SEL ./ im0.png im1.png KH=NT . 写有基于python与wxpython7的工具，是基于keypointgui 8开发的，可以支持Micmac的文本和二进制格式 9 ： . . 显示Epipolar . 核线影像是否没有上下视差受影像的姿态精度决定的，也影响后面密集匹配的结果。 . 写有一个基于C++与QT的工具 10，可以显示红/绿映像： . . 显示空三结果 . 最后显示结果可以用AperiCloud输出结果： . AperiCloud &quot;.*tif&quot; Ori-Compense . Satellite image(卫星影像) . 对于卫星影像，由于很多用RPC作为参数，因此和航空影像的处理有一些区别，有一个详细的流程介绍了卫星影像的处理 11 。 . 卫星影像处理除了参数与航空影像不一样之外，内部的原理其实是一致的，因此显示工具基本是可以通用的。 . Crop . Crop是一个很好的工具，当我们要处理一部分数据，可以减少处理时间，可以用命令： . mm3d SateLib CropRPC Ori-satRPC/GB-Orientation-19DEC15WV031000015DEC19142039-P1BS-500514410020_01_P001_________AAE_0AAAAABPABW0.tif.xml Ori-satRPC/GB-Orientation-*.xml BenchMark Org=[2887,13794] Sz=[13489,34373] . Footnotes . https://github.com/micmacIGN/micmac. &#8617; . | https://github.com/colmap/colmap. &#8617; . | https://github.com/Kai-46/ColmapForVisSat. &#8617; . | https://micmac.ensg.eu/index.php/Install_MicMac_Ubuntu. &#8617; . | https://zh.wikipedia.org/wiki/%E9%87%9D%E5%AD%94%E7%9B%B8%E6%A9%9F. &#8617; . | https://github.com/whuwuteng/EuroSDR_UAV_Micmac. &#8617; . | https://www.wxpython.org/. &#8617; . | https://github.com/Kitware/keypointgui. &#8617; . | https://github.com/whuwuteng/keypointgui. &#8617; . | https://github.com/whuwuteng/Stereo_Show. &#8617; . | https://erupnik.github.io/blog/jupyter/2021/05/04/_05_03_satellite_basic_hide.html. &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2022-07-31-micmac.html",
+          "relUrl": "/posts/2022-07-31-micmac.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page12": {
+          "title": "Transfer learning in Deep learning",
+          "content": "Transfer learning in Deep learning . 由于loss的非凸性、type的不同，造成Transfer learning在不同的数据、task上表现并没有规律性。 . . The Visual Task Adaptation Benchmark . VTAB基于多种数据、多种任务之间的Transfer learning。 . 当数据量增加的时候，从scratch训练，不会有performance的损失。 . . Pretained models . 不能想当然的认为pretained models是有用的，参考1，主要的问题有： . 不同的task . | 数据有很大的difference，如果不能share feature，那么不会有什么好处 . | pretained models是local optima，所以会有bias . | 当然，也可以用pretained models做初始值，最后的结果基本也会差不多2。也有文章证明即使是training from scratch3，结果也不会差很多4。 . Footnotes . https://news.ycombinator.com/item?id=33067056. &#8617; . | https://stackoverflow.com/questions/65982245/pretrained-model-or-training-from-scratch-for-object-detection. &#8617; . | https://arxiv.org/abs/1811.08883. &#8617; . | https://heartbeat.comet.ml/pre-trained-machine-learning-models-vs-models-trained-from-scratch-63e079ed648f. &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2022-08-04-transfer-learning.html",
+          "relUrl": "/posts/2022-08-04-transfer-learning.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page13": {
+          "title": "LiDAR and Image in 3D",
+          "content": "LiDAR and Image in 3D . LiDAR与image的同时的应用越来越多，很多设备都同时有LiDAR和camera： . . 4D-Net . 4D-Net for Learned Multi-Modal Alignment用原始的point cloud和image进行训练，获得3D box，比原来把piont cloud转化为map更好一些。 . Lidar-Camera Deep Fusion . 感觉有个很大的问题是解决Alignment的不一致的问题。 .",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2022-08-05-LiDAR-and-Image.html",
+          "relUrl": "/posts/2022-08-05-LiDAR-and-Image.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page14": {
+          "title": "Visualization",
+          "content": "Visualization . A picture is worth a thousand words12。 . tSNE是一个显示工具，可以参考论文3。 . 深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE4是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence5的降维工具，通常与PCA6进行比较7。对于Curse of Dimensionality，当维数太大，会有问题8。 . Kullback-Leibler divergence . KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息（MI）9，但是MI与KL divergence并不等价10，有点类似于表达两个分布的差异，而且结果是非对称的11。 . 另外，KL divergence可以作为目标函数12，在pytorch中有实现13。 . tSNE . tSNE 主要是多维特征的显示7，利用KL divergence作为目标函数，用 stochastic gradient descent进行优化8，而且可能多次运行的结果并不一样14。 . 网上有一个GUI的例子，显示迭代次数与显示结果的关系14。 . Feature visualization . 对于CNN中间layer的分析，发现CNN有translationally invariant，但是没有rotationally invariant15。有对应的基于pytorch的代码16。同时，在pytorch的forum上也有学多feature visualization的讨论17。 . 常用的做法都是用hook函数，直接显示layer的output18。 . Footnotes . https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words. &#8617; . | https://towardsdatascience.com/the-art-of-effective-visualization-of-multi-dimensional-data-6c7202990c57. &#8617; . | https://lvdmaaten.github.io/tsne/. &#8617; . | https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html. &#8617; . | https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence. &#8617; . | https://en.wikipedia.org/wiki/Principal_component_analysis. &#8617; . | https://medium.com/analytics-vidhya/note-visualize-multi-dimension-datasets-in-a-2d-graph-using-t-sne-airbnb-bookings-dataset-as-824541cc5388. &#8617; &#8617;2 . | https://jotterbach.github.io/content/posts/tsne/2016-05-23-TSNE/. &#8617; &#8617;2 . | http://www.scholarpedia.org/article/Mutual_information. &#8617; . | https://stats.stackexchange.com/questions/487012/are-mutual-information-and-kullback-leibler-divergence-equivalent. &#8617; . | https://zhuanlan.zhihu.com/p/425693597. &#8617; . | https://timvieira.github.io/blog/post/2014/10/06/kl-divergence-as-an-objective-function/. &#8617; . | https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html. &#8617; . | https://distill.pub/2016/misread-tsne/. &#8617; &#8617;2 . | https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030. &#8617; . | https://github.com/fg91/visualizing-cnn-feature-maps. &#8617; . | https://discuss.pytorch.org/t/visualize-feature-map/29597. &#8617; . | https://github.com/lewis-morris/mapextrackt. &#8617; . |",
+          "url": "https://whuwuteng.github.io/personal_page/posts/2022-09-05-tSNE.html",
+          "relUrl": "/posts/2022-09-05-tSNE.html",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+      ,"page16": {
           "title": "About",
           "content": "Teng Wu . A PhD in photogrammetry and remote sensing, work on 3D vision. . contact : whuwuteng@gmail.com .",
           "url": "https://whuwuteng.github.io/personal_page/about/",
@@ -192,6 +357,48 @@
   
 
   
+      ,"page17": {
+          "title": "About",
+          "content": "About this blog .",
+          "url": "https://whuwuteng.github.io/personal_page/about.qmd",
+          "relUrl": "/about.qmd",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page18": {
+          "title": "Welcome To My Blog",
+          "content": "This is the first post in a Quarto blog. Welcome! . . Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts. .",
+          "url": "https://whuwuteng.github.io/personal_page/posts/welcome/index.qmd",
+          "relUrl": "/posts/welcome/index.qmd",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page19": {
+          "title": "personal_page",
+          "content": "",
+          "url": "https://whuwuteng.github.io/personal_page/index.qmd",
+          "relUrl": "/index.qmd",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page20": {
+          "title": "Post With Code",
+          "content": "This is a post with executable code. .",
+          "url": "https://whuwuteng.github.io/personal_page/posts/post-with-code/index.qmd",
+          "relUrl": "/posts/post-with-code/index.qmd",
+          "date": ""
+      }
+      
+  
 
   
   
@@ -210,12 +417,10 @@
   
 
   
-
-  
   
 
   
-      ,"page11": {
+      ,"page28": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://whuwuteng.github.io/personal_page/robots.txt",

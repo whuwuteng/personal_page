@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Visualization | whuwuteng(吴腾)</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Visualization" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="blog." />
+<meta property="og:description" content="blog." />
+<link rel="canonical" href="https://whuwuteng.github.io/personal_page/posts/2022-09-05-tSNE.html" />
+<meta property="og:url" content="https://whuwuteng.github.io/personal_page/posts/2022-09-05-tSNE.html" />
+<meta property="og:site_name" content="whuwuteng(吴腾)" />
+<script type="application/ld+json">
+{"url":"https://whuwuteng.github.io/personal_page/posts/2022-09-05-tSNE.html","@type":"WebPage","headline":"Visualization","description":"blog.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/personal_page/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://whuwuteng.github.io/personal_page/feed.xml" title="whuwuteng(吴腾)" /><link rel="shortcut icon" type="image/x-icon" href="/personal_page/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/personal_page/">whuwuteng(吴腾)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/personal_page/posts/2020-01-14-test-markdown-post.html">An Example Markdown Post</a><a class="page-link" href="/personal_page/posts/2021-08-11-deep-learning.html">Some good blogs on Deep learning</a><a class="page-link" href="/personal_page/posts/2021-08-15-blog.html">一些blog的记录</a><a class="page-link" href="/personal_page/posts/2021-08-21-altitude.html">吴军博士的书</a><a class="page-link" href="/personal_page/posts/2021-09-01-tricks.html">记录一些电脑的trick</a><a class="page-link" href="/personal_page/posts/2021-09-12-series.html">Google AI blog summary series</a><a class="page-link" href="/personal_page/posts/2021-09-26-dynamism.html">《活力》经济学的书</a><a class="page-link" href="/personal_page/posts/2022-03-20-optimizer.html">RMSprop 与 Adam</a><a class="page-link" href="/personal_page/posts/2022-03-23-3D-software.html">3D point cloud and Mesh Software</a><a class="page-link" href="/personal_page/posts/2022-03-24-hyperparameters.html">Hyperparameters in Deep learning</a><a class="page-link" href="/personal_page/posts/2022-06-25-parallel.html">Parallel in Deep learning</a><a class="page-link" href="/personal_page/posts/2022-07-31-micmac.html">Micmac tools in photogrammetry</a><a class="page-link" href="/personal_page/posts/2022-08-04-transfer-learning.html">Transfer learning in Deep learning</a><a class="page-link" href="/personal_page/posts/2022-08-05-LiDAR-and-Image.html">LiDAR and Image in 3D</a><a class="page-link" href="/personal_page/posts/2022-09-05-tSNE.html">Visualization</a><a class="page-link" href="/personal_page/about/">About</a><a class="page-link" href="/personal_page/about.qmd">About</a><a class="page-link" href="/personal_page/posts/welcome/index.qmd">Welcome To My Blog</a><a class="page-link" href="/personal_page/index.qmd">personal_page</a><a class="page-link" href="/personal_page/posts/post-with-code/index.qmd">Post With Code</a><a class="page-link" href="/personal_page/search/">Search</a><a class="page-link" href="/personal_page/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Visualization</h1><p class="page-description">blog.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="" itemprop="datePublished">
+        
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/personal_page/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#visualization">Visualization</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#kullback-leibler-divergence">Kullback-Leibler divergence</a></li>
+<li class="toc-entry toc-h2"><a href="#tsne">tSNE</a></li>
+<li class="toc-entry toc-h2"><a href="#feature-visualization">Feature visualization</a></li>
+<li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+</ul><h1 id="visualization">
+<a class="anchor" href="#visualization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visualization</h1>
+
+<p>A picture is worth a thousand words<sup id="fnref:13" role="doc-noteref"><a href="#fn:13" class="footnote" rel="footnote">1</a></sup><sup id="fnref:14" role="doc-noteref"><a href="#fn:14" class="footnote" rel="footnote">2</a></sup>。</p>
+
+<p>tSNE是一个显示工具，可以参考论文<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">3</a></sup>。</p>
+
+<p>深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">4</a></sup>是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">5</a></sup>的降维工具，通常与PCA<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">6</a></sup>进行比较<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup>。对于Curse of Dimensionality，当维数太大，会有问题<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">8</a></sup>。</p>
+
+<h2 id="kullback-leibler-divergence">
+<a class="anchor" href="#kullback-leibler-divergence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kullback-Leibler divergence</h2>
+
+<p>KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息（MI）<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">9</a></sup>，但是MI与KL divergence并不等价<sup id="fnref:10" role="doc-noteref"><a href="#fn:10" class="footnote" rel="footnote">10</a></sup>，有点类似于表达两个分布的差异，而且结果是非对称的<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">11</a></sup>。</p>
+
+<p>另外，KL divergence可以作为目标函数<sup id="fnref:11" role="doc-noteref"><a href="#fn:11" class="footnote" rel="footnote">12</a></sup>，在pytorch中有实现<sup id="fnref:12" role="doc-noteref"><a href="#fn:12" class="footnote" rel="footnote">13</a></sup>。</p>
+
+<h2 id="tsne">
+<a class="anchor" href="#tsne" aria-hidden="true"><span class="octicon octicon-link"></span></a>tSNE</h2>
+
+<p>tSNE 主要是多维特征的显示<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup>，利用KL divergence作为目标函数，用 stochastic gradient descent进行优化<sup id="fnref:7:1" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">8</a></sup>，而且可能多次运行的结果并不一样<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">14</a></sup>。</p>
+
+<p>网上有一个GUI的例子，显示迭代次数与显示结果的关系<sup id="fnref:8:1" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">14</a></sup>。</p>
+
+<h2 id="feature-visualization">
+<a class="anchor" href="#feature-visualization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feature visualization</h2>
+
+<p>对于CNN中间layer的分析，发现CNN有translationally invariant，但是没有rotationally invariant<sup id="fnref:15" role="doc-noteref"><a href="#fn:15" class="footnote" rel="footnote">15</a></sup>。有对应的基于pytorch的代码<sup id="fnref:16" role="doc-noteref"><a href="#fn:16" class="footnote" rel="footnote">16</a></sup>。同时，在pytorch的forum上也有学多feature visualization的讨论<sup id="fnref:17" role="doc-noteref"><a href="#fn:17" class="footnote" rel="footnote">17</a></sup>。</p>
+
+<p>常用的做法都是用hook函数，直接显示layer的output<sup id="fnref:18" role="doc-noteref"><a href="#fn:18" class="footnote" rel="footnote">18</a></sup>。</p>
+
+<h2 id="footnotes">
+<a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:13" role="doc-endnote">
+      <p>https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words. <a href="#fnref:13" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:14" role="doc-endnote">
+      <p>https://towardsdatascience.com/the-art-of-effective-visualization-of-multi-dimensional-data-6c7202990c57. <a href="#fnref:14" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:9" role="doc-endnote">
+      <p>https://lvdmaaten.github.io/tsne/. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:1" role="doc-endnote">
+      <p>https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>https://en.wikipedia.org/wiki/Principal_component_analysis. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>https://medium.com/analytics-vidhya/note-visualize-multi-dimension-datasets-in-a-2d-graph-using-t-sne-airbnb-bookings-dataset-as-824541cc5388. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:4:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>https://jotterbach.github.io/content/posts/tsne/2016-05-23-TSNE/. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:7:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>http://www.scholarpedia.org/article/Mutual_information. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:10" role="doc-endnote">
+      <p>https://stats.stackexchange.com/questions/487012/are-mutual-information-and-kullback-leibler-divergence-equivalent. <a href="#fnref:10" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>https://zhuanlan.zhihu.com/p/425693597. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:11" role="doc-endnote">
+      <p>https://timvieira.github.io/blog/post/2014/10/06/kl-divergence-as-an-objective-function/. <a href="#fnref:11" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:12" role="doc-endnote">
+      <p>https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html. <a href="#fnref:12" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>https://distill.pub/2016/misread-tsne/. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:8:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:15" role="doc-endnote">
+      <p>https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030. <a href="#fnref:15" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:16" role="doc-endnote">
+      <p>https://github.com/fg91/visualizing-cnn-feature-maps. <a href="#fnref:16" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:17" role="doc-endnote">
+      <p>https://discuss.pytorch.org/t/visualize-feature-map/29597. <a href="#fnref:17" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:18" role="doc-endnote">
+      <p>https://github.com/lewis-morris/mapextrackt. <a href="#fnref:18" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div><a class="u-url" href="/personal_page/posts/2022-09-05-tSNE.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/personal_page/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/personal_page/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/personal_page/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Research Blog</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/whuwuteng" target="_blank" title="whuwuteng"><svg class="svg-icon grey"><use xlink:href="/personal_page/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
