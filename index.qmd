@@ -1,14 +1,14 @@
 ---
 title: "personal_page"
+subtitle: News, tips, and commentary about all things nbdev
 listing:
-  contents: posts
   sort: "date desc"
-  type: default
-  categories: true
+  contents: "posts"
   sort-ui: false
   filter-ui: false
+  categories: true
+  feed: true
 page-layout: full
-title-block-banner: true
 ---
 
 
