@@ -360,10 +360,10 @@
 
   
       ,"page18": {
-          "title": "Welcome To My Blog",
-          "content": "This is the first post in a Quarto blog. Welcome! . . Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts. .",
-          "url": "https://whuwuteng.github.io/personal_page/posts/welcome/index.qmd",
-          "relUrl": "/posts/welcome/index.qmd",
+          "title": "Post With Code",
+          "content": "This is a post with executable code. .",
+          "url": "https://whuwuteng.github.io/personal_page/posts/post-with-code/index.qmd",
+          "relUrl": "/posts/post-with-code/index.qmd",
           "date": ""
       }
       
@@ -371,10 +371,10 @@
 
   
       ,"page19": {
-          "title": "Post With Code",
-          "content": "This is a post with executable code. .",
-          "url": "https://whuwuteng.github.io/personal_page/posts/post-with-code/index.qmd",
-          "relUrl": "/posts/post-with-code/index.qmd",
+          "title": "Welcome To My Blog",
+          "content": "This is the first post in a Quarto blog. Welcome! . . Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts. .",
+          "url": "https://whuwuteng.github.io/personal_page/posts/welcome/index.qmd",
+          "relUrl": "/posts/welcome/index.qmd",
           "date": ""
       }
       

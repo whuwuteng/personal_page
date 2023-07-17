@@ -1,1 +1,603 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2023-07-17T03:39:11-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">Visualization</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html" rel="alternate" type="text/html" title="Visualization" /><published>2022-09-05T00:00:00-05:00</published><updated>2022-09-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE</id><author><name></name></author><category term="markdown" /><summary type="html">Visualization</summary></entry><entry><title type="html">LiDAR and Image in 3D</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/08/05/LiDAR-and-Image.html" rel="alternate" type="text/html" title="LiDAR and Image in 3D" /><published>2022-08-05T00:00:00-05:00</published><updated>2022-08-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/08/05/LiDAR-and-Image</id><author><name></name></author><category term="markdown" /><summary type="html">LiDAR and Image in 3D</summary></entry><entry><title type="html">Transfer learning in Deep learning</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/08/04/transfer-learning.html" rel="alternate" type="text/html" title="Transfer learning in Deep learning" /><published>2022-08-04T00:00:00-05:00</published><updated>2022-08-04T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/08/04/transfer-learning</id><author><name></name></author><category term="markdown" /><summary type="html">Transfer learning in Deep learning</summary></entry><entry><title type="html">Micmac tools in photogrammetry</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/07/31/micmac.html" rel="alternate" type="text/html" title="Micmac tools in photogrammetry" /><published>2022-07-31T00:00:00-05:00</published><updated>2022-07-31T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/07/31/micmac</id><author><name></name></author><category term="markdown" /><summary type="html">Micmac tools in photogrammetry Micmac 1 是一个摄影测量的开源工具，是基于C++的，可以在Windows和Linux/MacOS X 上运行，由于开发的人主要是Ubuntu，建议在Ubuntu下用。 https://github.com/micmacIGN/micmac. &amp;#8617;</summary></entry><entry><title type="html">Parallel in Deep learning</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/06/25/parallel.html" rel="alternate" type="text/html" title="Parallel in Deep learning" /><published>2022-06-25T00:00:00-05:00</published><updated>2022-06-25T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/06/25/parallel</id><author><name></name></author><category term="markdown" /><summary type="html">Parallel in Deep learning 在cluster上用多个GPU进行训练，减少训练的时间；另外随着batch Size 增加，需要的内存也越来越大，在一块GPU上不能进行训练，因此如何用多个GPU进行训练也是一个需求。</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2023-07-17T03:47:16-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">Visualization</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html" rel="alternate" type="text/html" title="Visualization" /><published>2022-09-05T00:00:00-05:00</published><updated>2022-09-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html">&lt;h1 id=&quot;visualization&quot;&gt;Visualization&lt;/h1&gt;
+
+&lt;p&gt;A picture is worth a thousand words&lt;sup id=&quot;fnref:13&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:14&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:14&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;tSNE是一个显示工具，可以参考论文&lt;sup id=&quot;fnref:9&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;深度学习中的数据的相似性是很关键，对于transfer learning 或者domain adaption显得比较关键。发现tSNE&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;是一个显示多维特征的工具，是基于最小 Kullback-Leibler divergence&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;的降维工具，通常与PCA&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;进行比较&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;。对于Curse of Dimensionality，当维数太大，会有问题&lt;sup id=&quot;fnref:7&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;kullback-leibler-divergence&quot;&gt;Kullback-Leibler divergence&lt;/h2&gt;
+
+&lt;p&gt;KL divergence可以看作是描述两组数据的分布的一致性，有点类似与互信息（MI）&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;，但是MI与KL divergence并不等价&lt;sup id=&quot;fnref:10&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;，有点类似于表达两个分布的差异，而且结果是非对称的&lt;sup id=&quot;fnref:6&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;另外，KL divergence可以作为目标函数&lt;sup id=&quot;fnref:11&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;，在pytorch中有实现&lt;sup id=&quot;fnref:12&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;tsne&quot;&gt;tSNE&lt;/h2&gt;
+
+&lt;p&gt;tSNE 主要是多维特征的显示&lt;sup id=&quot;fnref:4:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;，利用KL divergence作为目标函数，用 stochastic gradient descent进行优化&lt;sup id=&quot;fnref:7:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;，而且可能多次运行的结果并不一样&lt;sup id=&quot;fnref:8&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;14&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;网上有一个GUI的例子，显示迭代次数与显示结果的关系&lt;sup id=&quot;fnref:8:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;14&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;feature-visualization&quot;&gt;Feature visualization&lt;/h2&gt;
+
+&lt;p&gt;对于CNN中间layer的分析，发现CNN有translationally invariant，但是没有rotationally invariant&lt;sup id=&quot;fnref:15&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:15&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;15&lt;/a&gt;&lt;/sup&gt;。有对应的基于pytorch的代码&lt;sup id=&quot;fnref:16&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:16&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;16&lt;/a&gt;&lt;/sup&gt;。同时，在pytorch的forum上也有学多feature visualization的讨论&lt;sup id=&quot;fnref:17&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:17&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;17&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;常用的做法都是用hook函数，直接显示layer的output&lt;sup id=&quot;fnref:18&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:18&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;18&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:13&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words. &lt;a href=&quot;#fnref:13&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:14&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://towardsdatascience.com/the-art-of-effective-visualization-of-multi-dimensional-data-6c7202990c57. &lt;a href=&quot;#fnref:14&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://lvdmaaten.github.io/tsne/. &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://en.wikipedia.org/wiki/Principal_component_analysis. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://medium.com/analytics-vidhya/note-visualize-multi-dimension-datasets-in-a-2d-graph-using-t-sne-airbnb-bookings-dataset-as-824541cc5388. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:4:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://jotterbach.github.io/content/posts/tsne/2016-05-23-TSNE/. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:7:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;http://www.scholarpedia.org/article/Mutual_information. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://stats.stackexchange.com/questions/487012/are-mutual-information-and-kullback-leibler-divergence-equivalent. &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://zhuanlan.zhihu.com/p/425693597. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://timvieira.github.io/blog/post/2014/10/06/kl-divergence-as-an-objective-function/. &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:12&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html. &lt;a href=&quot;#fnref:12&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://distill.pub/2016/misread-tsne/. &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:8:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:15&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030. &lt;a href=&quot;#fnref:15&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:16&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/fg91/visualizing-cnn-feature-maps. &lt;a href=&quot;#fnref:16&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:17&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://discuss.pytorch.org/t/visualize-feature-map/29597. &lt;a href=&quot;#fnref:17&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:18&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/lewis-morris/mapextrackt. &lt;a href=&quot;#fnref:18&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">Visualization</summary></entry><entry><title type="html">LiDAR and Image in 3D</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/08/05/LiDAR-and-Image.html" rel="alternate" type="text/html" title="LiDAR and Image in 3D" /><published>2022-08-05T00:00:00-05:00</published><updated>2022-08-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/08/05/LiDAR-and-Image</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/08/05/LiDAR-and-Image.html">&lt;h1 id=&quot;lidar-and-image-in-3d&quot;&gt;LiDAR and Image in 3D&lt;/h1&gt;
+
+&lt;p&gt;LiDAR与image的同时的应用越来越多，很多设备都同时有LiDAR和camera：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/personal_page/images/iPace-lineart-sensor_calloutv2_03022020-01.png&quot; alt=&quot;&quot; title=&quot;waymo car&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4d-net&quot;&gt;4D-Net&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://ai.googleblog.com/2022/02/4d-net-learning-multi-modal-alignment.html&quot;&gt;4D-Net for Learned Multi-Modal Alignment&lt;/a&gt;用原始的point cloud和image进行训练，获得3D box，比原来把piont cloud转化为map更好一些。&lt;/p&gt;
+
+&lt;h2 id=&quot;lidar-camera-deep-fusion&quot;&gt;&lt;a href=&quot;http://ai.googleblog.com/2022/04/lidar-camera-deep-fusion-for-multi.html&quot;&gt;Lidar-Camera Deep Fusion&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;感觉有个很大的问题是解决&lt;strong&gt;Alignment&lt;/strong&gt;的不一致的问题。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">LiDAR and Image in 3D</summary></entry><entry><title type="html">Transfer learning in Deep learning</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/08/04/transfer-learning.html" rel="alternate" type="text/html" title="Transfer learning in Deep learning" /><published>2022-08-04T00:00:00-05:00</published><updated>2022-08-04T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/08/04/transfer-learning</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/08/04/transfer-learning.html">&lt;h1 id=&quot;transfer-learning-in-deep-learning&quot;&gt;Transfer learning in Deep learning&lt;/h1&gt;
+
+&lt;p&gt;由于loss的非凸性、type的不同，造成Transfer learning在不同的数据、task上表现并没有规律性。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/personal_page/images/VTAB_loss.png&quot; alt=&quot;&quot; title=&quot;VTAB protocol&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-visual-task-adaptation-benchmark&quot;&gt;The Visual Task Adaptation Benchmark&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ai.googleblog.com/2019/11/the-visual-task-adaptation-benchmark.html&quot;&gt;VTAB&lt;/a&gt;基于多种数据、多种任务之间的Transfer learning。&lt;/p&gt;
+
+&lt;p&gt;当数据量增加的时候，从scratch训练，不会有performance的损失。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/personal_page/images/VTAB_scratch.png&quot; alt=&quot;&quot; title=&quot;Performance&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pretained-models&quot;&gt;Pretained models&lt;/h2&gt;
+
+&lt;p&gt;不能想当然的认为pretained models是有用的，参考&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;，主要的问题有：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;不同的task&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;数据有很大的difference，如果不能share feature，那么不会有什么好处&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;pretained models是local optima，所以会有bias&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;当然，也可以用pretained models做初始值，最后的结果基本也会差不多&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。也有文章证明即使是training from scratch&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;，结果也不会差很多&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://news.ycombinator.com/item?id=33067056. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://stackoverflow.com/questions/65982245/pretrained-model-or-training-from-scratch-for-object-detection. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://arxiv.org/abs/1811.08883. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://heartbeat.comet.ml/pre-trained-machine-learning-models-vs-models-trained-from-scratch-63e079ed648f. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">Transfer learning in Deep learning</summary></entry><entry><title type="html">Micmac tools in photogrammetry</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/07/31/micmac.html" rel="alternate" type="text/html" title="Micmac tools in photogrammetry" /><published>2022-07-31T00:00:00-05:00</published><updated>2022-07-31T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/07/31/micmac</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/07/31/micmac.html">&lt;h1 id=&quot;micmac-tools-in-photogrammetry&quot;&gt;Micmac tools in photogrammetry&lt;/h1&gt;
+&lt;p&gt;Micmac &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 是一个摄影测量的开源工具，是基于C++的，可以在Windows和Linux/MacOS X 上运行，由于开发的人主要是Ubuntu，建议在Ubuntu下用。&lt;/p&gt;
+
+&lt;p&gt;Micmac的功能与Colmap&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; 类似，但是在处理卫星影像数据时，优势是很大的。虽然也有把卫星影像转成Colmap可以处理的类型 &lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;，Micmac的功能更全，包括Crop、RPC的转换等。&lt;/p&gt;
+
+&lt;h2 id=&quot;build编译&quot;&gt;build(编译)&lt;/h2&gt;
+
+&lt;p&gt;建议在Ubuntu下编译&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;，基本不会有配置、运行、编译等错误。&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/micmacIGN/micmac.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;micmac/
+&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;build
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;build
+cmake &lt;span class=&quot;nt&quot;&gt;-DWITH_QT5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nt&quot;&gt;-DWITH_CPP11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 ..
+make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-j4&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;gedit /etc/bash.bashrc
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/micmac_install_directory/micmac/bin:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;aerial-image航空影像&quot;&gt;Aerial image(航空影像)&lt;/h2&gt;
+
+&lt;p&gt;这里的航空影像是指的框幅影像或者叫小孔成像&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;，对于普通的相机拍摄的都可以处理。之前Github &lt;sup id=&quot;fnref:6&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;上已经写了一个详细的流程可以参考。&lt;/p&gt;
+
+&lt;p&gt;在Ubuntu下面显示界面很少， 不过Micmac中有一些显示工具，可以显示影像和输出的结果。&lt;/p&gt;
+
+&lt;h3 id=&quot;vino&quot;&gt;Vino&lt;/h3&gt;
+
+&lt;p&gt;Vino是显示影像的模块：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Vino Crop-IMG_PHR1B.tif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;显示feature-point&quot;&gt;显示Feature point&lt;/h3&gt;
+
+&lt;p&gt;可以用SEL这个工具显示：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SEL ./ im0.png im1.png &lt;span class=&quot;nv&quot;&gt;KH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;NT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;写有基于python与wxpython&lt;sup id=&quot;fnref:9&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;的工具，是基于keypointgui &lt;sup id=&quot;fnref:10&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;开发的，可以支持Micmac的文本和二进制格式  &lt;sup id=&quot;fnref:11&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; ：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/personal_page/images/micmac_demo.png&quot; alt=&quot;&quot; title=&quot;feature show&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;显示epipolar&quot;&gt;显示Epipolar&lt;/h3&gt;
+
+&lt;p&gt;核线影像是否没有上下视差受影像的姿态精度决定的，也影响后面密集匹配的结果。&lt;/p&gt;
+
+&lt;p&gt;写有一个基于C++与QT的工具 &lt;sup id=&quot;fnref:8&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;，可以显示红/绿映像：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/personal_page/images/eth3d.png&quot; alt=&quot;&quot; title=&quot;red cyan &quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;显示空三结果&quot;&gt;显示空三结果&lt;/h3&gt;
+
+&lt;p&gt;最后显示结果可以用AperiCloud输出结果：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AperiCloud &lt;span class=&quot;s2&quot;&gt;&quot;.*tif&quot;&lt;/span&gt; Ori-Compense
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;satellite-image卫星影像&quot;&gt;Satellite image(卫星影像)&lt;/h2&gt;
+
+&lt;p&gt;对于卫星影像，由于很多用RPC作为参数，因此和航空影像的处理有一些区别，有一个详细的流程介绍了卫星影像的处理 &lt;sup id=&quot;fnref:7&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; 。&lt;/p&gt;
+
+&lt;p&gt;卫星影像处理除了参数与航空影像不一样之外，内部的原理其实是一致的，因此显示工具基本是可以通用的。&lt;/p&gt;
+
+&lt;h3 id=&quot;crop&quot;&gt;Crop&lt;/h3&gt;
+
+&lt;p&gt;Crop是一个很好的工具，当我们要处理一部分数据，可以减少处理时间，可以用命令：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mm3d SateLib CropRPC Ori-satRPC/GB-Orientation-19DEC15WV031000015DEC19142039-P1BS-500514410020_01_P001_________AAE_0AAAAABPABW0.tif.xml Ori-satRPC/GB-Orientation-&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.xml BenchMark &lt;span class=&quot;nv&quot;&gt;Org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;2887,13794] &lt;span class=&quot;nv&quot;&gt;Sz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;13489,34373] 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/micmacIGN/micmac. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/colmap/colmap. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/Kai-46/ColmapForVisSat. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://micmac.ensg.eu/index.php/Install_MicMac_Ubuntu. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://zh.wikipedia.org/wiki/%E9%87%9D%E5%AD%94%E7%9B%B8%E6%A9%9F. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/whuwuteng/EuroSDR_UAV_Micmac. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://www.wxpython.org/. &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/Kitware/keypointgui. &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/whuwuteng/keypointgui. &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/whuwuteng/Stereo_Show. &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://erupnik.github.io/blog/jupyter/2021/05/04/_05_03_satellite_basic_hide.html. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">Micmac tools in photogrammetry Micmac 1 是一个摄影测量的开源工具，是基于C++的，可以在Windows和Linux/MacOS X 上运行，由于开发的人主要是Ubuntu，建议在Ubuntu下用。 https://github.com/micmacIGN/micmac. &amp;#8617;</summary></entry><entry><title type="html">Parallel in Deep learning</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/06/25/parallel.html" rel="alternate" type="text/html" title="Parallel in Deep learning" /><published>2022-06-25T00:00:00-05:00</published><updated>2022-06-25T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/06/25/parallel</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/06/25/parallel.html">&lt;h1 id=&quot;parallel-in-deep-learning&quot;&gt;Parallel in Deep learning&lt;/h1&gt;
+&lt;p&gt;在cluster上用多个GPU进行训练，减少训练的时间；另外随着batch Size 增加，需要的内存也越来越大，在一块GPU上不能进行训练，因此如何用多个GPU进行训练也是一个需求。&lt;/p&gt;
+
+&lt;h2 id=&quot;dataparallel-in-pytorch&quot;&gt;DataParallel in Pytorch&lt;/h2&gt;
+&lt;p&gt;虽然DataParallel不被推荐使用，即使是在一个node中&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;，但是因为&lt;a href=&quot;https://pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DistributedDataParallel&lt;/code&gt;&lt;/a&gt;有一些问题，如windows不支持，所以DataParallel还是可以用的&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;不推荐的主要原因是由于模型要在多个node中复制。&lt;/p&gt;
+
+&lt;p&gt;另外的还有&lt;strong&gt;mp.spawn&lt;/strong&gt;来做并行，感觉需要的代码更多&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;distributeddataparallel-in-pytorch&quot;&gt;DistributedDataParallel in Pytorch&lt;/h2&gt;
+
+&lt;p&gt;DistributedDataParallel 是只用Pytorch的基础上利用较多的，目前很多这样的博客，缺点就是配置起来比较困难&lt;sup id=&quot;fnref:7&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;，具体的可以参考blog&lt;sup id=&quot;fnref:8&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;pytorch-lightning&quot;&gt;Pytorch Lightning&lt;/h2&gt;
+
+&lt;p&gt;是独立于Pytorch的一个库&lt;sup id=&quot;fnref:6&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;，因此对于分布配置时并不用考虑，可以直接从pytorch的模型到pytorch lightning&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;horovod&quot;&gt;Horovod&lt;/h2&gt;
+&lt;p&gt;Horovod&lt;sup id=&quot;fnref:9&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; 可以认为是一个分布式训练的框架，可以支持多种工具，如TensorFlow, Keras, PyTorch, and Apache MXNet。
+目前在Pytorch Lightning中，也可以支持Horovod&lt;sup id=&quot;fnref:11&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;，对于pytorch，也可以自己配置&lt;sup id=&quot;fnref:10&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;batch-size&quot;&gt;Batch size&lt;/h2&gt;
+
+&lt;p&gt;Batch size 是一个重要的问题，因为batch size的大小影响训练的精度，实际上的batch size是多少跟采用哪种并行方式有关，可以参考视频中的计算方式&lt;sup id=&quot;fnref:2:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;考虑到Batch size 的变化，learning rate也需要跟着变化，要不然用DDP的accuracy会降低&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://www.youtube.com/watch?v=a6_pY9WwqdQ. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:2:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://zhuanlan.zhihu.com/p/336863012. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://zhuanlan.zhihu.com/p/206467852. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://shomy.top/2022/01/05/torch-ddp-intro/. &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://zhuanlan.zhihu.com/p/319810661. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://www.youtube.com/watch?v=DbESHcCoWbM&amp;amp;t=1678s. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://github.com/horovod/horovod. &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://horovod.readthedocs.io/en/stable/pytorch.html. &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://zhuanlan.zhihu.com/p/264778072. &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://discuss.pytorch.org/t/should-we-split-batch-size-according-to-ngpu-per-node-when-distributeddataparallel/72769/6. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">Parallel in Deep learning 在cluster上用多个GPU进行训练，减少训练的时间；另外随着batch Size 增加，需要的内存也越来越大，在一块GPU上不能进行训练，因此如何用多个GPU进行训练也是一个需求。</summary></entry><entry><title type="html">Hyperparameters in Deep learning</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/03/24/hyperparameters.html" rel="alternate" type="text/html" title="Hyperparameters in Deep learning" /><published>2022-03-24T00:00:00-05:00</published><updated>2022-03-24T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/03/24/hyperparameters</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/03/24/hyperparameters.html">&lt;h1 id=&quot;hyperparameters-in-deep-learning&quot;&gt;Hyperparameters in Deep learning&lt;/h1&gt;
+&lt;p&gt;深度学习中的hyperparameters(超参数)很多，有时候对结果的影响还挺大的，根据数据的不同、模型的不同会有比较大的区别，下面只是记录一些关于这的blog的内容。&lt;/p&gt;
+
+&lt;h2 id=&quot;batch-size&quot;&gt;Batch Size&lt;/h2&gt;
+&lt;p&gt;Batch Size 是很关键的一个参数，因为它影响利用的内存、每epoch的时间等 &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;，相同的epoch，steps（iteration）的次数也不同。在比较大的Batch Size时，learning rate同时增加，学习结果最好。&lt;/p&gt;
+
+&lt;h2 id=&quot;upsampling&quot;&gt;Upsampling&lt;/h2&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://medium.com/mini-distill/effect-of-batch-size-on-training-dynamics-21c14f7a716e . &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">Hyperparameters in Deep learning 深度学习中的hyperparameters(超参数)很多，有时候对结果的影响还挺大的，根据数据的不同、模型的不同会有比较大的区别，下面只是记录一些关于这的blog的内容。</summary></entry><entry><title type="html">3D point cloud and Mesh Software</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/03/23/3D-software.html" rel="alternate" type="text/html" title="3D point cloud and Mesh Software" /><published>2022-03-23T00:00:00-05:00</published><updated>2022-03-23T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/03/23/3D-software</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/03/23/3D-software.html">&lt;h1 id=&quot;3d-point-cloud-and-mesh-software&quot;&gt;3D point cloud and Mesh Software&lt;/h1&gt;
+&lt;p&gt;主要是介绍一些3D point cloud与Mesh 相关的软件，主要是软件、功能也很多，有利于以后查找。&lt;/p&gt;
+
+&lt;h2 id=&quot;open-source&quot;&gt;Open Source&lt;/h2&gt;
+&lt;p&gt;Open Source主要是以C++为主，随着python的流行，后来也有很多基于python的库。&lt;/p&gt;
+
+&lt;h3 id=&quot;cgal&quot;&gt;&lt;a href=&quot;https://www.cgal.org/&quot;&gt;CGAL&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;CGAL 是目前处理point cloud 和 Mesh首推的库，功能很多，包括点云处理（法向量估计，KD-Tree等）、Mesh处理（重建、平滑、距离查询等），也有GUI的界面，可以跟Meshlab一样的使用。&lt;/p&gt;
+
+&lt;p&gt;在二次开发上，由于都是基于模板类的C++，因此扩展性也是很强的。&lt;/p&gt;
+
+&lt;h3 id=&quot;libigl&quot;&gt;&lt;a href=&quot;https://libigl.github.io/&quot;&gt;libigl&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;libigl 更多的偏向计算机图形学，因此有很多geometry computational、differential geometry的东西，它也有很多接口是基于CGAL的开发。&lt;/p&gt;
+
+&lt;h3 id=&quot;openmesh&quot;&gt;&lt;a href=&quot;https://www.graphics.rwth-aachen.de/software/openmesh/&quot;&gt;OpenMesh&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;OpenMesh早期是基于C++开发的，目前有了python的接口，感觉优势是处理polygonal mesh，而不是triangle based mesh。&lt;/p&gt;
+
+&lt;h3 id=&quot;geogram&quot;&gt;&lt;a href=&quot;https://github.com/BrunoLevy/geogram&quot;&gt;geogram&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;geogram 也是基于C++的开源库，主要是计算图形学(geometry computational、differential geometry)的算法。&lt;/p&gt;
+
+&lt;h3 id=&quot;gmsh与pygmsh&quot;&gt;&lt;a href=&quot;https://gmsh.info/&quot;&gt;Gmsh&lt;/a&gt;与&lt;a href=&quot;https://github.com/nschloe/pygmsh&quot;&gt;pygmsh&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Gmsh 是一个基于C++开发的，主要是CAD相关的模型后处理，如reparametrization、remeshing等，偏计算机图形学。&lt;/p&gt;
+
+&lt;h3 id=&quot;meshlab&quot;&gt;&lt;a href=&quot;https://www.meshlab.net/&quot;&gt;MeshLab&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;MeshLab 是开源的，是基于C++的，目前的大都是基于GUI的使用，尤其在Ubuntu下面，是一个很好的显示软件。&lt;/p&gt;
+
+&lt;h3 id=&quot;mepp&quot;&gt;&lt;a href=&quot;https://projet.liris.cnrs.fr/mepp/mepp2/index.html&quot;&gt;MEPP&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;MEEP是一个mesh处理的开源库，功能上有点类似MeshLab，也是基于C++的。&lt;/p&gt;
+
+&lt;h3 id=&quot;tetgen与triangle&quot;&gt;&lt;a href=&quot;https://wias-berlin.de/software/index.jsp?id=TetGen&amp;amp;lang=1&quot;&gt;TetGen&lt;/a&gt;与&lt;a href=&quot;https://www.cs.cmu.edu/~quake/triangle.html&quot;&gt;Triangle&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;TetGen是基于C++开发的，功能主要是3DT 与CDT，Triangle也是基于C++的，主要是2DT, 虽然这些功能很简单，包含在CGAL里面，但是速度快和数据结构比CGAL简单，用的很广泛。&lt;/p&gt;
+
+&lt;h3 id=&quot;fade2d与fade3d&quot;&gt;&lt;a href=&quot;https://www.geom.at/products/fade2d/&quot;&gt;Fade2D与Fade3D&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Fade2D 与Traingle的功能类似，Fade3D  与TetGen类似，不过没有源代码，但是可以基于开源的lib进行开发。&lt;/p&gt;
+
+&lt;h3 id=&quot;vtk与pyvista&quot;&gt;&lt;a href=&quot;https://vtk.org/&quot;&gt;VTK&lt;/a&gt;与&lt;a href=&quot;https://github.com/pyvista/pyvista&quot;&gt;PyVista&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;VTK是基于C++开发的，由于包括影像处理与图形处理， 因此应用的比较广泛，如Kinect的开发包就利用了VTK。&lt;/p&gt;
+
+&lt;p&gt;PyVista是基于VTK的python的接口。&lt;/p&gt;
+
+&lt;h3 id=&quot;paraview&quot;&gt;&lt;a href=&quot;https://www.paraview.org/&quot;&gt;ParaView&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;ParaView 是基于C++开发的，发现显示线与mesh很方便，比MeshLab显示线的效果更好一些。&lt;/p&gt;
+
+&lt;h3 id=&quot;cloudcompare&quot;&gt;&lt;a href=&quot;https://www.cloudcompare.org/&quot;&gt;CloudCompare&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;CloudCompare 是基于C++的开源库，主要是点云处理，在Ubuntu下面是比较好的显示工具，支持的数据格式也比较多，有一个比较有意思的地方是支持命令行处理 &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;easy3d&quot;&gt;&lt;a href=&quot;https://github.com/LiangliangNan/Easy3D&quot;&gt;Easy3D&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Easy3D也是C++开源的，主要是3D Vision数据的显示，如Keyframe animation的功能就是很好的展示功能，类似飞行模式&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; 。&lt;/p&gt;
+
+&lt;h3 id=&quot;pcl&quot;&gt;&lt;a href=&quot;https://pointclouds.org/&quot;&gt;PCL&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;PCL是一个基于C++的开源库，代码实现比CGAL友好，安装简单一些，因此用的非常广泛，对于小的数据量还行，因此做实验还可以。&lt;/p&gt;
+
+&lt;h3 id=&quot;open3d&quot;&gt;&lt;a href=&quot;http://www.open3d.org/&quot;&gt;Open3D&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Open3D更多的是一个算法库，主要是点云处理，早期是基于C++开发，现在基于python的接口做的很好。&lt;/p&gt;
+
+&lt;h3 id=&quot;lastools&quot;&gt;&lt;a href=&quot;https://github.com/LAStools/LAStools&quot;&gt;LAStools&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;LAStools 是基于C++的库，主要是实现&lt;a href=&quot;https://en.wikipedia.org/wiki/LAS_file_format&quot;&gt;LAS file&lt;/a&gt;的读写。&lt;/p&gt;
+
+&lt;h3 id=&quot;pymesh&quot;&gt;&lt;a href=&quot;https://pymesh.readthedocs.io/en/latest/&quot;&gt;PyMesh&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;是基于python的Mesh处理的库，比Python based Open3D简洁。&lt;/p&gt;
+
+&lt;h3 id=&quot;meshio&quot;&gt;&lt;a href=&quot;https://github.com/nschloe/meshio&quot;&gt;meshio&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;是基于python的Mesh读写库，支持mesh的各种格式。&lt;/p&gt;
+
+&lt;h3 id=&quot;potree&quot;&gt;&lt;a href=&quot;https://github.com/potree/potree&quot;&gt;potree&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;基于web显示点云。&lt;/p&gt;
+
+&lt;h3 id=&quot;f3d&quot;&gt;&lt;a href=&quot;https://github.com/f3d-app/f3d&quot;&gt;F3D&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;开源的跨平台的mesh显示工具。&lt;/p&gt;
+
+&lt;h3 id=&quot;point-processing-toolkit&quot;&gt;&lt;a href=&quot;https://github.com/heremaps/pptk&quot;&gt;Point Processing Toolkit&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Point Processing Toolkit (pptk) 是基于python的显示2D/3D点云的工具，有个技术性的&lt;a href=&quot;https://towardsdatascience.com/guide-to-real-time-visualisation-of-massive-3d-point-clouds-in-python-ea6f00241ee0&quot;&gt;文档介绍&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;laspy&quot;&gt;&lt;a href=&quot;https://github.com/laspy/laspy&quot;&gt;laspy&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;laspy是一个基于python的读写LAS/LAZ文件的开源库。&lt;/p&gt;
+
+&lt;h3 id=&quot;pdal&quot;&gt;&lt;a href=&quot;https://github.com/PDAL/PDAL&quot;&gt;PDAL&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;PDAL是一个基于C++的处理点云数据的开源库，提供python接口。&lt;/p&gt;
+
+&lt;h2 id=&quot;other&quot;&gt;Other&lt;/h2&gt;
+&lt;p&gt;这下面主要是商业软件，很多都是处理整个流程的。&lt;/p&gt;
+
+&lt;h3 id=&quot;geomagic-wrap&quot;&gt;Geomagic Wrap&lt;/h3&gt;
+
+&lt;p&gt;Geomagic Wrap 可以实现点云到Mesh，主要是显示效果很厉害 &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;fugroviewer&quot;&gt;&lt;a href=&quot;https://www.fugro.com/about-fugro/our-expertise/technology/fugroviewer&quot;&gt;FugroViewer&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;FugroViewer 只能在windows中用，能显示很大的点云数据，操作起来比CloudCompare方便。&lt;/p&gt;
+
+&lt;h3 id=&quot;arcgis-3d&quot;&gt;&lt;a href=&quot;https://www.esri.com/en-us/arcgis/3d-gis/overview&quot;&gt;ArcGIS 3D&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;ArcGIS也是windows中用的显示3D模型很好的工具。&lt;/p&gt;
+
+&lt;h3 id=&quot;rhinocity&quot;&gt;&lt;a href=&quot;https://www.rhinoterrain.com/fr/rhinocity.html&quot;&gt;RhinoCity&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;处理LiDAR数据的一家公司，还做城市的&lt;strong&gt;solar energy&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://www.cloudcompare.org/doc/wiki/index.php?title=Command_line_mode . &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://www.youtube.com/watch?v=ST7QWXzez2E&amp;amp;list=PLzcbdLuSRF1PSqnycLzDsn3qG1W63bva7. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://zhuanlan.zhihu.com/p/364552330 . &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">3D point cloud and Mesh Software 主要是介绍一些3D point cloud与Mesh 相关的软件，主要是软件、功能也很多，有利于以后查找。</summary></entry><entry><title type="html">RMSprop 与 Adam</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/03/20/optimizer.html" rel="alternate" type="text/html" title="RMSprop 与 Adam" /><published>2022-03-20T00:00:00-05:00</published><updated>2022-03-20T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/03/20/optimizer</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/03/20/optimizer.html">&lt;h1 id=&quot;rmsprop-与-adam&quot;&gt;RMSprop 与 Adam&lt;/h1&gt;
+&lt;p&gt;深度学习中的optimizer有许多算法，如SGD ，RMSprop, Adam等&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;目前没看到说那个算法就是比其他的都好的说法，大部分都是直接用Adam，只是最近发现了用RMSprop比Adam的效果好，引发了我对这个思考，因为optimizer同时有对learning rate的依赖，具体是因素的主要作用只能用实验来说明。&lt;/p&gt;
+
+&lt;p&gt;具体的公式可以在网上查找，下面只写一些blog的观点。&lt;/p&gt;
+
+&lt;h2 id=&quot;adam&quot;&gt;Adam&lt;/h2&gt;
+
+&lt;p&gt;Adam 几乎是在Deep learning中用的最多的 &lt;sup id=&quot;fnref:8&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;Adam训练的结果比SGD权重更大，可能导致test loss 更小，但是&lt;strong&gt;generalize&lt;/strong&gt;（泛化）没有SGD好&lt;sup id=&quot;fnref:9&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;rmsprop&quot;&gt;RMSprop&lt;/h2&gt;
+&lt;p&gt;RMSprop 是 Geoff Hinton 提出的 &lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; ，如何实现RMSprop可以参考  &lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; 。&lt;/p&gt;
+
+&lt;h2 id=&quot;comparison&quot;&gt;Comparison&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Reinforcement learning中用RMSprop而不用Adam &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;，解释是RMSprop is suitable for sparse problems。&lt;/li&gt;
+  &lt;li&gt;有一个例子出现RMSprop的结果优于Adam &lt;sup id=&quot;fnref:7&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; 。&lt;/li&gt;
+  &lt;li&gt;甚至有的情况下出现SGD要优于其他的optimizer &lt;sup id=&quot;fnref:6&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; 。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://zhuanlan.zhihu.com/p/32488889 . &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://ruder.io/optimizing-gradient-descent/ . &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c . &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://medium.com/mini-distill/effect-of-batch-size-on-training-dynamics-21c14f7a716e . &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf . &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://machinelearningmastery.com/gradient-descent-with-rmsprop-from-scratch/ . &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://stats.stackexchange.com/questions/435735/advantage-of-rmsprop-over-adam . &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://medium.com/analytics-vidhya/a-complete-guide-to-adam-and-rmsprop-optimizer-75f4502d83be . &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://shaoanlu.wordpress.com/2017/05/29/sgd-all-which-one-is-the-best-optimizer-dogs-vs-cats-toy-experiment/ . &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">RMSprop 与 Adam 深度学习中的optimizer有许多算法，如SGD ，RMSprop, Adam等12。 https://zhuanlan.zhihu.com/p/32488889 . &amp;#8617; https://ruder.io/optimizing-gradient-descent/ . &amp;#8617;</summary></entry><entry><title type="html">《活力》经济学的书</title><link href="https://whuwuteng.github.io/personal_page/markdown/2021/09/26/dynamism.html" rel="alternate" type="text/html" title="《活力》经济学的书" /><published>2021-09-26T00:00:00-05:00</published><updated>2021-09-26T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2021/09/26/dynamism</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2021/09/26/dynamism.html">&lt;h1 id=&quot;阅读活力&quot;&gt;阅读《活力》&lt;/h1&gt;
+
+&lt;h2 id=&quot;介绍&quot;&gt;介绍&lt;/h2&gt;
+&lt;p&gt;这本书是一个本经济学方面的书，参考&lt;a href=&quot;https://www.nse.pku.edu.cn/sylm/xwsd/516035.htm&quot;&gt;内容介绍&lt;/a&gt;。主要感觉是介绍西方国家和日本的经济发展因素相关的问题，印象深刻的方面如创始人对公司的影响、母国对移民后代的影响、社会对创业失败的包容性、机器等人工智能对工资的影响等。&lt;/p&gt;
+
+&lt;p&gt;总体感觉是一本比较专业的书，有点类似多篇论文通过章节合并的书，有很多公式来说明影响经济发展的因素。&lt;/p&gt;
+
+&lt;h2 id=&quot;摘录&quot;&gt;摘录&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;创新者喜欢工作的回报属性,愿意在具有创造性的行业工作,并且重视财务独立。创新者往往喜欢不确定性,并乐于冒险。他们也能够接受失败。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;我们发现在有增加型机器人时,最初等于零的消费增长率也会变为正值。沿着这条路径,受到比物
+质资本折旧速度更快的资本积累推动,人均消费会不断上升。在这条均衡增长路径上,总的非人力财富会与人均消费以同样的速度增长,同时传统机器和增加型机器人的份额不变。然而,我们得到的一个严峻的结果是,真实工资被永久性地压低了,(人类)劳动力在国民收入中的份额渐近于零,尽管总的(人类和机器人)劳动力在国民收入中的份额在长期趋向于一个正的常数。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">阅读《活力》</summary></entry><entry><title type="html">Google AI blog summary series</title><link href="https://whuwuteng.github.io/personal_page/markdown/2021/09/12/series.html" rel="alternate" type="text/html" title="Google AI blog summary series" /><published>2021-09-12T00:00:00-05:00</published><updated>2021-09-12T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2021/09/12/series</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2021/09/12/series.html">&lt;h1 id=&quot;goole-ai-blog-summary-series-分析&quot;&gt;Goole AI blog summary series 分析&lt;/h1&gt;
+
+&lt;h2 id=&quot;介绍&quot;&gt;介绍&lt;/h2&gt;
+
+&lt;p&gt;Google AI blog 貌似最近几年有总结和展望，有利于了解Deep learning的工作和趋势：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html&quot;&gt;2020年&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://ai.googleblog.com/2020/01/google-research-looking-back-at-2019.html&quot;&gt;2019年&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://ai.googleblog.com/2019/01/looking-back-at-googles-research.html&quot;&gt;2018年&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://ai.googleblog.com/2018/01/the-google-brain-team-looking-back-on.html&quot;&gt;2017年 part1&lt;/a&gt; 和&lt;a href=&quot;https://ai.googleblog.com/2018/01/the-google-brain-team-looking-back-on_12.html&quot;&gt;2017年 part2&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://ai.googleblog.com/2017/01/the-google-brain-team-looking-back-on.html&quot;&gt;2016年&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;记录&quot;&gt;记录&lt;/h2&gt;
+
+&lt;p&gt;2016年还是数据驱动的一年，主要是依赖大数据的算法与tensorflow的介绍。&lt;/p&gt;
+
+&lt;p&gt;2017年AutoML才开始流行。&lt;/p&gt;
+
+&lt;p&gt;2018年中就有&lt;strong&gt;Computational Photography&lt;/strong&gt;在&lt;a href=&quot;https://ai.googleblog.com/2018/11/night-sight-seeing-in-dark-on-pixel.html&quot;&gt;夜景拍摄&lt;/a&gt;照片和&lt;a href=&quot;https://ai.googleblog.com/2018/11/learning-to-predict-depth-on-pixel-3.html&quot;&gt;深度图&lt;/a&gt;的研究，同时还有很多数据集，如&lt;a href=&quot;http://ai.googleblog.com/2018/04/announcing-open-images-v4-and-eccv-2018.html&quot;&gt;Open Images V4&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;2019年的总结写的比较成熟了，也有很多应用，如&lt;a href=&quot;https://www.blog.google/outreach-initiatives/accessibility/lookout-discover-your-surroundings-help-ai/&quot;&gt;Lookout&lt;/a&gt; ，&lt;a href=&quot;https://www.blog.google/products/translate/google-translates-instant-camera-translation-gets-upgrade/&quot;&gt;Google Translate’s camera translation&lt;/a&gt;和&lt;a href=&quot;https://ai.googleblog.com/2019/02/real-time-continuous-transcription-with.html&quot;&gt;Live Transcribe&lt;/a&gt; ；有学术研究，如&lt;a href=&quot;http://ai.googleblog.com/2019/03/exploring-neural-networks.html&quot;&gt; Activation Atlases&lt;/a&gt;，&lt;a href=&quot;http://ai.googleblog.com/2019/07/learning-better-simulation-methods-for.html&quot;&gt; Partial Differential Equations&lt;/a&gt;等。&lt;/p&gt;
+
+&lt;p&gt;2020年的总结了工作的领域：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#COVIDandHealth&quot;&gt;COVID-19 and Health&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#AutoML&quot;&gt;AutoML&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#MedicalDiagnostics&quot;&gt;ML for Medical Diagnostics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Models&quot;&gt;Understanding ML Algorithms and Models&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Weather&quot;&gt;Weather, Environment and Climate Change&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Foundations&quot;&gt; Algorithmic Foundations and Theory&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Accessibility&quot;&gt;Accessibility&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Perception&quot;&gt;Machine Perception&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#OtherFields&quot;&gt;Applications of ML to Other Fields&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Robotics&quot;&gt;Robotics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#ResponsibleAI&quot;&gt;Responsible AI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Quantum&quot;&gt;Quantum Computing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#NLU&quot;&gt;Natural Language Understanding&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Community&quot;&gt;Supporting Developers and Researchers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Translation&quot;&gt;Language Translation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Datasets&quot;&gt;Open Datasets and Dataset Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#Algorithms&quot;&gt;Machine Learning Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#CommunityInteraction&quot;&gt;Research Community Interaction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html#RL&quot;&gt;Reinforcement Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;比较有特点的工作，如 &lt;a href=&quot;https://www.matthewtancik.com/nerf&quot;&gt;NeRF&lt;/a&gt;， &lt;a href=&quot;https://factorize-a-city.github.io/&quot;&gt;Learning to Factorize and Relight a City&lt;/a&gt;等。&lt;/p&gt;
+
+&lt;h2 id=&quot;google-blog&quot;&gt;Google Blog&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.google/products/maps/new-sense-direction-live-view/&quot;&gt;Google Live View&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;有点类似与之前的&lt;a href=&quot;https://ai.googleblog.com/2019/02/using-global-localization-to-improve.html&quot;&gt;VPS&lt;/a&gt;的功能，就是根据Video进行navigation。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">Goole AI blog summary series 分析</summary></entry></feed>
