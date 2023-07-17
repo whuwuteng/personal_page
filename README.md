@@ -6,6 +6,16 @@
 
 https://whuwuteng.github.io/personal_page/
 
+## Problem bug
+
+In fact, there is bug in the _config.xml file : 
+
+```
+remote_theme: jekyll/minima@69664442e5a45f631d5bccaba6d7978a91ce22c8
+```
+
+And this no need to migrate into Quarto. Because using Quarto, this bug can't be solved.
+
 # My Blog
 
 
