@@ -10,7 +10,7 @@ title: Transfer learning in Deep learning
 
 由于loss的非凸性、type的不同，造成Transfer learning在不同的数据、task上表现并没有规律性。
 
-![]({{ site.baseurl }}/images/VTAB_loss.png "VTAB protocol")
+![](./images/VTAB_loss.png "VTAB protocol")
 
 ## The Visual Task Adaptation Benchmark
 
@@ -18,7 +18,7 @@ title: Transfer learning in Deep learning
 
 当数据量增加的时候，从scratch训练，不会有performance的损失。
 
-![]({{ site.baseurl }}/images/VTAB_scratch.png "Performance")
+![](./images/VTAB_scratch.png "Performance")
 
 ##  Pretained models
 

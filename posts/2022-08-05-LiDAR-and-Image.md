@@ -10,7 +10,7 @@ title: LiDAR and Image in 3D
 
 LiDAR与image的同时的应用越来越多，很多设备都同时有LiDAR和camera：
 
-![]({{ site.baseurl }}/images/iPace-lineart-sensor_calloutv2_03022020-01.png "waymo car")
+![](./images/iPace-lineart-sensor_calloutv2_03022020-01.png "waymo car")
 
 
 ## 4D-Net
