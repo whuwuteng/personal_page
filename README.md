@@ -16,6 +16,8 @@ remote_theme: jekyll/minima@69664442e5a45f631d5bccaba6d7978a91ce22c8
 
 And this no need to migrate into Quarto. Because using Quarto, this bug can't be solved.
 
+Refer to two sites here https://github.com/sebderhy/impactfulai/issues/2 and https://forums.fast.ai/t/fastpages-deprecating-fastpages-in-favor-of-quarto/99095/13
+
 # My Blog
 
 
