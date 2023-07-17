@@ -357,15 +357,6 @@
   
 
   
-      ,"page17": {
-          "title": "About",
-          "content": "About this blog .",
-          "url": "https://whuwuteng.github.io/personal_page/about.qmd",
-          "relUrl": "/about.qmd",
-          "date": ""
-      }
-      
-  
 
   
       ,"page18": {
@@ -380,17 +371,6 @@
 
   
       ,"page19": {
-          "title": "personal_page",
-          "content": "",
-          "url": "https://whuwuteng.github.io/personal_page/index.qmd",
-          "relUrl": "/index.qmd",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page20": {
           "title": "Post With Code",
           "content": "This is a post with executable code. .",
           "url": "https://whuwuteng.github.io/personal_page/posts/post-with-code/index.qmd",
@@ -414,6 +394,8 @@
   
 
   
+  
+
   
 
   
