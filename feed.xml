@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2023-07-17T10:11:07-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">Visualization</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html" rel="alternate" type="text/html" title="Visualization" /><published>2022-09-05T00:00:00-05:00</published><updated>2022-09-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html">&lt;h1 id=&quot;visualization&quot;&gt;Visualization&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2023-07-26T09:51:52-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">Visualization</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html" rel="alternate" type="text/html" title="Visualization" /><published>2022-09-05T00:00:00-05:00</published><updated>2022-09-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/09/05/tSNE.html">&lt;h1 id=&quot;visualization&quot;&gt;Visualization&lt;/h1&gt;
 
 &lt;p&gt;A picture is worth a thousand words&lt;sup id=&quot;fnref:13&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:14&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:14&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 
@@ -413,7 +413,7 @@ make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;
 
 &lt;h3 id=&quot;potree&quot;&gt;&lt;a href=&quot;https://github.com/potree/potree&quot;&gt;potree&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;基于web显示点云。&lt;/p&gt;
+&lt;p&gt;基于web显示点云， 有很多&lt;a href=&quot;https://potree.github.io/&quot;&gt;例子&lt;/a&gt;，同时也有&lt;a href=&quot;https://github.com/centreborelli/pypotree&quot;&gt;python接口&lt;/a&gt;。&lt;/p&gt;
 
 &lt;h3 id=&quot;f3d&quot;&gt;&lt;a href=&quot;https://github.com/f3d-app/f3d&quot;&gt;F3D&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;开源的跨平台的mesh显示工具。&lt;/p&gt;
@@ -429,6 +429,10 @@ make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;
 &lt;h3 id=&quot;pdal&quot;&gt;&lt;a href=&quot;https://github.com/PDAL/PDAL&quot;&gt;PDAL&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;PDAL是一个基于C++的处理点云数据的开源库，提供python接口。&lt;/p&gt;
+
+&lt;h3 id=&quot;pyntcloud&quot;&gt;&lt;a href=&quot;https://github.com/daavoo/pyntcloud&quot;&gt;pyntcloud&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;pyntcloud 是一个基于python的点云处理库。&lt;/p&gt;
 
 &lt;h2 id=&quot;other&quot;&gt;Other&lt;/h2&gt;
 &lt;p&gt;这下面主要是商业软件，很多都是处理整个流程的。&lt;/p&gt;
