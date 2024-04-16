@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "LiDAR测量原理",
-            "content": "LiDAR测量原理 . 引言 . 在摄影测量中，有很多文档对于相机的原理的进行分析，但是对于LiDAR的测量原理分析的并不多。可能的原因是，在实际测量的过程中，对于LiDAR的测量数据，处理时都已经是点云了，因此不太关注它的原理。 . 不过对于多源数据处理，或想通过在几何上处理的(例如ray tracing)，了解原理还是很重要的。 . Forward-looking infrared(FLIR) . 最后，如有不对的地方，请批评指正。 .",
+            "content": "LiDAR测量原理 . 引言 . 在摄影测量中，有很多文档对于相机的原理的进行分析，但是对于LiDAR的测量原理分析的并不多。可能的原因是，在实际测量的过程中，对于LiDAR的测量数据，处理时都已经是点云了，因此不太关注它的原理。 . 不过对于多源数据处理，或想通过在几何上处理的(例如ray tracing)，了解原理还是很重要的。 . 《Airborne and Terrestrial Laser Scanning》by George Vosselman, Hans-Gerd Maas 的第一章就是介绍原理的。 . Forward-looking infrared(FLIR) . 最后，如有不对的地方，请批评指正。 .",
             "url": "https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html",
             "relUrl": "/markdown/2024/04/15/LiDAR.html",
             "date": " • Apr 15, 2024"
