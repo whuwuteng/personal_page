@@ -113,7 +113,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#lidar测量原理">LiDAR测量原理</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#引言">引言</a></li>
-<li class="toc-entry toc-h2"><a href="#forward-looking-infraredflir">Forward-looking infrared(FLIR)</a></li>
+<li class="toc-entry toc-h2"><a href="#扫描原理">扫描原理</a></li>
 </ul>
 </li>
 </ul><h1 id="lidar测量原理">
@@ -130,12 +130,28 @@ window.onload = wrap_img;
 
 <p>《Airborne and Terrestrial Laser Scanning》by George Vosselman, Hans-Gerd Maas 的第一章就是介绍原理的。</p>
 
-<h2 id="forward-looking-infraredflir">
-<a class="anchor" href="#forward-looking-infraredflir" aria-hidden="true"><span class="octicon octicon-link"></span></a>Forward-looking infrared(FLIR)</h2>
+<p>LiDAR很早之前就用于水下测量(bathymetry)，主要是(蓝)绿色波段(532 nm)，具有更强的能量。</p>
 
-<p>卫星LiDAR</p>
+<p>https://www.britannica.com/science/color/The-visible-spectrum</p>
+
+<p>下面的内容主要围绕近红外(～1064 nm)LiDAR进行展开讨论。</p>
+
+<p>从原理上讲，主要有两种方式：Time-of-flight 与Phase based method ：</p>
+
+<p>https://www.laserscanning-europe.com/en/servicesdevices/terrestrial-laser-scanners</p>
+
+<p>Forward-looking infrared(FLIR) 是一种被动的红外摄影相机，目前应用遥感与车载等。</p>
+
+<p>从1960年开始，LiDAR应用在测量中，目前有卫星LiDAR(IceSat)</p>
 
 <p>https://icesat-2.gsfc.nasa.gov/science/data-products</p>
+
+<p>机载LiDAR，UVA(无人机)LiDAR，车载LiDAR与室内LiDAR等，下面主要对机载LiDAR进行说明。</p>
+
+<h2 id="扫描原理">
+<a class="anchor" href="#%E6%89%AB%E6%8F%8F%E5%8E%9F%E7%90%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>扫描原理</h2>
+
+<p>在以前的印象中，一直以为LiDAR大都是线阵扫描的，实际上还有很多是圆形扫描的，比如Leica TerrainMapper。扫描方式与镜面的旋转方式有关，对于获得的点云来说，就是点云的密度是否一致。</p>
 
 <p>最后，如有不对的地方，请批评指正。</p>
 
