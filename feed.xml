@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-04-19T11:01:18-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">LiDAR测量原理</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html" rel="alternate" type="text/html" title="LiDAR测量原理" /><published>2024-04-15T00:00:00-05:00</published><updated>2024-04-15T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html">&lt;h1 id=&quot;lidar测量原理&quot;&gt;LiDAR测量原理&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-04-21T05:23:01-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">LiDAR测量原理</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html" rel="alternate" type="text/html" title="LiDAR测量原理" /><published>2024-04-15T00:00:00-05:00</published><updated>2024-04-15T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html">&lt;h1 id=&quot;lidar测量原理&quot;&gt;LiDAR测量原理&lt;/h1&gt;
 
 &lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;
 
@@ -26,11 +26,13 @@
 
 &lt;p&gt;https://icesat-2.gsfc.nasa.gov/science/data-products&lt;/p&gt;
 
-&lt;p&gt;机载LiDAR，UVA(无人机)LiDAR，车载LiDAR与室内LiDAR等，下面主要对机载LiDAR进行说明。&lt;/p&gt;
+&lt;p&gt;机载LiDAR，UVA(无人机)LiDAR，车载LiDAR，Terrestrial (total station or static) LiDAR与室内LiDAR等，下面主要对机载LiDAR进行说明。&lt;/p&gt;
 
 &lt;h2 id=&quot;扫描原理&quot;&gt;扫描原理&lt;/h2&gt;
 
-&lt;p&gt;在以前的印象中，一直以为LiDAR大都是线阵扫描的，实际上还有很多是圆形扫描的，比如Leica TerrainMapper。扫描方式与镜面的旋转方式有关，对于获得的点云来说，就是点云的密度是否一致。&lt;/p&gt;
+&lt;p&gt;由于在处理LiDAR点云的过程中，一直处理的是LiDAR坐标信息，以为LiDAR大都是线阵扫描的，实际上还有很多是圆形扫描的，比如Leica TerrainMapper。扫描方式与镜面的旋转方式有关，对于获得的点云来说，会影响到点云的密度，扫描的角度的大小等。&lt;/p&gt;
+
+&lt;p&gt;扫描方式有：zigzag扫描，线性扫描，圆形扫描，Terrestrial LiDAR 扫描等。&lt;/p&gt;
 
 &lt;p&gt;最后，如有不对的地方，请批评指正。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">LiDAR测量原理</summary></entry><entry><title type="html">核线影像的坐标转换</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/02/09/epi.html" rel="alternate" type="text/html" title="核线影像的坐标转换" /><published>2024-02-09T00:00:00-06:00</published><updated>2024-02-09T00:00:00-06:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/02/09/epi</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/02/09/epi.html">&lt;h1 id=&quot;核线影像的坐标转换&quot;&gt;核线影像的坐标转换&lt;/h1&gt;
 
