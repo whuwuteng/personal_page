@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-04-22T04:59:33-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">LiDAR测量原理</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html" rel="alternate" type="text/html" title="LiDAR测量原理" /><published>2024-04-15T00:00:00-05:00</published><updated>2024-04-15T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html">&lt;h1 id=&quot;lidar测量原理&quot;&gt;LiDAR测量原理&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-04-22T11:25:46-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">LiDAR测量原理</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html" rel="alternate" type="text/html" title="LiDAR测量原理" /><published>2024-04-15T00:00:00-05:00</published><updated>2024-04-15T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html">&lt;h1 id=&quot;lidar测量原理&quot;&gt;LiDAR测量原理&lt;/h1&gt;
 
 &lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;
 
@@ -34,7 +34,13 @@
 
 &lt;p&gt;扫描方式有：zigzag扫描，线性扫描，圆形扫描，Terrestrial LiDAR 扫描等。&lt;/p&gt;
 
-&lt;p&gt;zigzag扫描应该是较早商业化的设备，但是缺点是&lt;/p&gt;
+&lt;p&gt;zigzag扫描应该是较早商业化的设备，优点是设计简单，可以适应各种设置，但是缺点是会造成密度不均匀。&lt;/p&gt;
+
+&lt;p&gt;线性扫描用一个旋转的棱柱实现线性扫描，比zigzag扫描方式相比，点云的密度是均匀的，这个应该是目商业化设备比较多的，目前接触的数据大多是这一类的。&lt;/p&gt;
+
+&lt;p&gt;圆形扫描刚开始有点奇怪，仔细思考了之后，优点是方便建筑物的墙壁。&lt;/p&gt;
+
+&lt;p&gt;Terrestrial LiDAR 扫描是因为扫描仪是不动的，所以有垂直扫描与水平扫描。&lt;/p&gt;
 
 &lt;h2 id=&quot;测量原理&quot;&gt;测量原理&lt;/h2&gt;
 

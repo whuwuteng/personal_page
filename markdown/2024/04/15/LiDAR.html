@@ -159,7 +159,13 @@ window.onload = wrap_img;
 
 <p>扫描方式有：zigzag扫描，线性扫描，圆形扫描，Terrestrial LiDAR 扫描等。</p>
 
-<p>zigzag扫描应该是较早商业化的设备，但是缺点是</p>
+<p>zigzag扫描应该是较早商业化的设备，优点是设计简单，可以适应各种设置，但是缺点是会造成密度不均匀。</p>
+
+<p>线性扫描用一个旋转的棱柱实现线性扫描，比zigzag扫描方式相比，点云的密度是均匀的，这个应该是目商业化设备比较多的，目前接触的数据大多是这一类的。</p>
+
+<p>圆形扫描刚开始有点奇怪，仔细思考了之后，优点是方便建筑物的墙壁。</p>
+
+<p>Terrestrial LiDAR 扫描是因为扫描仪是不动的，所以有垂直扫描与水平扫描。</p>
 
 <h2 id="测量原理">
 <a class="anchor" href="#%E6%B5%8B%E9%87%8F%E5%8E%9F%E7%90%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>测量原理</h2>
