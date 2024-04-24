@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-04-23T11:07:15-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">LiDAR测量原理</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html" rel="alternate" type="text/html" title="LiDAR测量原理" /><published>2024-04-15T00:00:00-05:00</published><updated>2024-04-15T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html">&lt;h1 id=&quot;lidar测量原理&quot;&gt;LiDAR测量原理&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-04-24T11:07:50-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">LiDAR测量原理</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html" rel="alternate" type="text/html" title="LiDAR测量原理" /><published>2024-04-15T00:00:00-05:00</published><updated>2024-04-15T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html">&lt;h1 id=&quot;lidar测量原理&quot;&gt;LiDAR测量原理&lt;/h1&gt;
 
 &lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;
 
@@ -44,9 +44,13 @@
 
 &lt;h2 id=&quot;测量原理&quot;&gt;测量原理&lt;/h2&gt;
 
-&lt;p&gt;对于LiDAR来说，测量是用的Time-of-flight， 根据测量原理&lt;/p&gt;
+&lt;p&gt;对于LiDAR来说，测量是用的Time-of-flight， 根据光速和返回时间可以进行测量，目前获得的数据有：2D LiDAR 距离数据加上角度信息，多次回波，全波段LiDAR等。&lt;/p&gt;
+
+&lt;p&gt;目前大部分机载LiDAR数据都是LAS格式，是多次回波数据。&lt;/p&gt;
 
 &lt;h2 id=&quot;辐射&quot;&gt;辐射&lt;/h2&gt;
+
+&lt;p&gt;LiDAR数据的辐射指的强度值(intensity)，辐射是用的比较多的，但是&lt;/p&gt;
 
 &lt;p&gt;## 精度&lt;/p&gt;
 
