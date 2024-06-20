@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-05-17T09:13:09-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">LiDAR测量原理</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html" rel="alternate" type="text/html" title="LiDAR测量原理" /><published>2024-04-15T00:00:00-05:00</published><updated>2024-04-15T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html">&lt;h1 id=&quot;lidar测量原理&quot;&gt;LiDAR测量原理&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-06-20T09:56:35-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">博士生面试感受</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/06/20/entretien.html" rel="alternate" type="text/html" title="博士生面试感受" /><published>2024-06-20T00:00:00-05:00</published><updated>2024-06-20T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/06/20/entretien</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/06/20/entretien.html">&lt;h1 id=&quot;博士生面试感受&quot;&gt;博士生面试感受&lt;/h1&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;作为一个刚入职不久的CR，对于角色的转变有一些困惑，写这个主要是一些思考和启发，也希望能帮助到一些人。由于我是在国内的1+4的博士生，对与国外的博士招聘不了解，也不知道需要考察什么问题，而且法国和国内的大学体制也区别很大，也增加了一些问题。最近作为encadrant参与一个CIFRE的博士项目，由于我不是directeur de thèse，因此基本只需参与就可以，下面说一下感受。由于也是第一次参与这样的招聘，也希望以后回过头看，有个备份。&lt;/p&gt;
+
+&lt;h2 id=&quot;经过&quot;&gt;经过&lt;/h2&gt;
+
+&lt;p&gt;面试一开始，主要就是directeur de thèse 和encadrant的介绍，比较简短。然后就是学生的介绍，学生是法国人的话，他简单介绍包括bac的专业和prépa，主要就是介绍了工程师学校的部分，包括主要是stage（实习），有段时间和长时间的。然后老师会对stage提出一些问题。最后就是他对博士课题的看法，然后对博士课题的一些问题。学生结束之后，我们就会留下来讨论一下，如果是不行的话，当场就不考虑了，如果是可以(positive)，就会比较一下。&lt;/p&gt;
+
+&lt;h2 id=&quot;感受&quot;&gt;感受&lt;/h2&gt;
+
+&lt;p&gt;目前我的感受是：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;实习跟博士课题的相关性没有那么关键，没有必要说非要分博士课题一致，因为硕士毕业能发文章的毕竟是少数&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;学生思考很重要，就是要有想法，另外一点也说明有自主性，这一条是他们讨论比较多的&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;学生对博士课题看了之后，提出的问题很重要，如果能提出一些老师觉得好的问题就比较加分&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;回答问题不要怕，有个学生一个问题没回答上来，有个老师都说了这是一个question piège，他还是回答不了，发现影响也不大&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;就是做的实习不要太分散，这个老师也会考虑，会让人觉得不stable&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;其实，之前也和其他的人讨论过怎么评判学生，感觉每个老师都有不同的标准，有的是看一下成绩单，实习的内容，介绍实习的内容，问一些问题，实现一些算法等。不过，一个小时的面试确实很难看出来学生的问题，我也听到过老板对学生工作不满意的话。&lt;/p&gt;
+
+&lt;p&gt;最后，希望和大家多多交流，谢谢。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">博士生面试感受</summary></entry><entry><title type="html">LiDAR测量原理</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html" rel="alternate" type="text/html" title="LiDAR测量原理" /><published>2024-04-15T00:00:00-05:00</published><updated>2024-04-15T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/04/15/LiDAR.html">&lt;h1 id=&quot;lidar测量原理&quot;&gt;LiDAR测量原理&lt;/h1&gt;
 
 &lt;h2 id=&quot;引言&quot;&gt;引言&lt;/h2&gt;
 
@@ -46,15 +80,13 @@
 
 &lt;p&gt;对于LiDAR来说，测量是用的Time-of-flight， 根据光速和返回时间可以进行测量，目前获得的数据有：2D LiDAR 距离数据加上角度信息，多次回波，全波段LiDAR等。&lt;/p&gt;
 
-&lt;p&gt;目前大部分机载LiDAR数据都是LAS格式，是多次回波数据，当然还有全波段数据。&lt;/p&gt;
+&lt;p&gt;目前大部分机载LiDAR数据都是LAS格式，是多次回波数据。&lt;/p&gt;
 
 &lt;h2 id=&quot;辐射&quot;&gt;辐射&lt;/h2&gt;
 
-&lt;p&gt;LiDAR数据的辐射指的强度值(intensity)，辐射是用的比较多的，但是由于LiDAR是主动传感器，因此生成的影像和传统影像有一些区别。&lt;/p&gt;
+&lt;p&gt;LiDAR数据的辐射指的强度值(intensity)，辐射是用的比较多的，但是辐射矫正这块貌似做的人挺少的，貌似硬件也没有辐射矫正。同时也说明在辐射这块也有很多可以做的地方。&lt;/p&gt;
 
 &lt;p&gt;## 精度&lt;/p&gt;
-
-&lt;p&gt;测量精度是在LiDAR数据分析比较少考虑&lt;/p&gt;
 
 &lt;h2 id=&quot;应用&quot;&gt;应用&lt;/h2&gt;
 
@@ -135,47 +167,7 @@ Eigen::Vector2d GlobTransfoEpip(Eigen::Vector2d epixy, CImgCameraIOP * pEpiCamer
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;最后，如有不对的地方，请批评指正。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">核线影像的坐标转换</summary></entry><entry><title type="html">招收摄影测量与计算机视觉研究生</title><link href="https://whuwuteng.github.io/personal_page/markdown/2023/10/01/phd.html" rel="alternate" type="text/html" title="招收摄影测量与计算机视觉研究生" /><published>2023-10-01T00:00:00-05:00</published><updated>2023-10-01T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2023/10/01/phd</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2023/10/01/phd.html">&lt;h1 id=&quot;招收摄影测量与计算机视觉研究生&quot;&gt;招收摄影测量与计算机视觉研究生&lt;/h1&gt;
-
-&lt;h2 id=&quot;导师介绍&quot;&gt;导师介绍&lt;/h2&gt;
-
-&lt;p&gt;吴腾(Teng Wu)博士目前是法国国家地理林业信息研究所(Institut national de l’information géographique et forestière, IGN)的LASTIG组研究员，分别于2016年和2011年在武汉大学遥感信息工程学院取得博士与学士学位。之后，于2017年到2018年，在武汉大学测绘遥感国家重点实验室从事博士后研究，之后于2018年到2023年在IGN的LASTIG从事博士后研究，合作导师是Bruno  Vallet， Marc Pierrot-Deseilligny和Cédric Demonceaux(Université de Bourgogne，勃艮第大学)。&lt;/p&gt;
-
-&lt;p&gt;Google scholar : https://scholar.google.com/citations?user=QC4Qb2sAAAAJ&amp;amp;hl=zh-CN&lt;/p&gt;
-
-&lt;p&gt;主页 : https://www.umr-lastig.fr/WU-Teng/&lt;/p&gt;
-
-&lt;p&gt;目前在准备法国的HDR(habilitation à diriger des recherches)的资格，因此不能独立带博士，所以博士的导师会是Bruno  Vallet(大概率)，我会负责具体的指导。&lt;/p&gt;
-
-&lt;h2 id=&quot;研究方向&quot;&gt;研究方向&lt;/h2&gt;
-
-&lt;p&gt;LiDAR点云数据处理（包括机载与车载）&lt;/p&gt;
-
-&lt;p&gt;影像密集匹配&lt;/p&gt;
-
-&lt;p&gt;影像与LiDAR点云配准&lt;/p&gt;
-
-&lt;p&gt;变化检测&lt;/p&gt;
-
-&lt;p&gt;三维重建&lt;/p&gt;
-
-&lt;h2 id=&quot;申请条件&quot;&gt;申请条件&lt;/h2&gt;
-
-&lt;p&gt;在摄影测量、计算机视觉等相关领域取得硕士学位&lt;/p&gt;
-
-&lt;p&gt;具有良好的编程能力&lt;/p&gt;
-
-&lt;p&gt;具有良好的英语表达能力和写作能力(会法语更好)&lt;/p&gt;
-
-&lt;p&gt;独立自主，踏实认真&lt;/p&gt;
-
-&lt;h2 id=&quot;研究所与法国博士介绍&quot;&gt;研究所与法国博士介绍&lt;/h2&gt;
-
-&lt;p&gt;IGN是位于巴黎大区(1号线末端)的测绘研究单位，负责全法国的地理信息数据，IGN有自己的飞机和飞机场，会采集全法国的数据，包括每3年全法国的航空数据采集与生产，全法国密集LiDAR点云的采集与生产，全法国地图的生产等；IGN和CNES在Toulouse有合作地面卫星数据接受中心，会生产卫星数据；有法国最好的地理信息工程师学校ENSG-géomatique(École nationale des sciences géographiques)。LASTIG是IGN负责科研的部门，有开源摄影测量软件MicMac，主要从事摄影测量与计算机视觉的研究。&lt;/p&gt;
-
-&lt;p&gt;另外，由于IGN的特殊性，不能招收CSC的学生。由于法国的博士生是合同制，在岗位说明之后才知道具体的工作。如果有合适的话，在岗位出来之后，会通知申请。&lt;/p&gt;
-
-&lt;p&gt;根据法国的规则，具有HDR资格的老师大多只能同时带3个左右(如果是30%的话)的博士生，因此博士的导师也会负责指导工作，所以也希望能了解一下Bruno  Vallet的研究方向。另外一方面，这也说明博士岗位也不多，因此希望能相多了解。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">招收摄影测量与计算机视觉研究生</summary></entry><entry><title type="html">法国学术职位经验</title><link href="https://whuwuteng.github.io/personal_page/markdown/2023/09/05/concours.html" rel="alternate" type="text/html" title="法国学术职位经验" /><published>2023-09-05T00:00:00-05:00</published><updated>2023-09-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2023/09/05/concours</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2023/09/05/concours.html">&lt;h1 id=&quot;法国学术职位经验&quot;&gt;法国学术职位经验&lt;/h1&gt;
+&lt;p&gt;最后，如有不对的地方，请批评指正。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">核线影像的坐标转换</summary></entry><entry><title type="html">法国学术职位经验</title><link href="https://whuwuteng.github.io/personal_page/markdown/2023/09/05/concours.html" rel="alternate" type="text/html" title="法国学术职位经验" /><published>2023-09-05T00:00:00-05:00</published><updated>2023-09-05T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2023/09/05/concours</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2023/09/05/concours.html">&lt;h1 id=&quot;法国学术职位经验&quot;&gt;法国学术职位经验&lt;/h1&gt;
 
 &lt;h2 id=&quot;学术岗位介绍&quot;&gt;学术岗位介绍&lt;/h2&gt;
 
