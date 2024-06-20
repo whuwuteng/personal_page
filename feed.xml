@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-06-20T09:56:35-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">博士生面试感受</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/06/20/entretien.html" rel="alternate" type="text/html" title="博士生面试感受" /><published>2024-06-20T00:00:00-05:00</published><updated>2024-06-20T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/06/20/entretien</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/06/20/entretien.html">&lt;h1 id=&quot;博士生面试感受&quot;&gt;博士生面试感受&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2024-06-20T09:58:22-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">博士生面试感受</title><link href="https://whuwuteng.github.io/personal_page/markdown/2024/06/20/entretien.html" rel="alternate" type="text/html" title="博士生面试感受" /><published>2024-06-20T00:00:00-05:00</published><updated>2024-06-20T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2024/06/20/entretien</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2024/06/20/entretien.html">&lt;h1 id=&quot;博士生面试感受&quot;&gt;博士生面试感受&lt;/h1&gt;
 
 &lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
 
@@ -80,11 +80,11 @@
 
 &lt;p&gt;对于LiDAR来说，测量是用的Time-of-flight， 根据光速和返回时间可以进行测量，目前获得的数据有：2D LiDAR 距离数据加上角度信息，多次回波，全波段LiDAR等。&lt;/p&gt;
 
-&lt;p&gt;目前大部分机载LiDAR数据都是LAS格式，是多次回波数据。&lt;/p&gt;
+&lt;p&gt;目前大部分机载LiDAR数据都是LAS格式，是多次回波数据，当然还有全波段数据。&lt;/p&gt;
 
 &lt;h2 id=&quot;辐射&quot;&gt;辐射&lt;/h2&gt;
 
-&lt;p&gt;LiDAR数据的辐射指的强度值(intensity)，辐射是用的比较多的，但是辐射矫正这块貌似做的人挺少的，貌似硬件也没有辐射矫正。同时也说明在辐射这块也有很多可以做的地方。&lt;/p&gt;
+&lt;p&gt;LiDAR数据的辐射指的强度值(intensity)，辐射是用的比较多的，但是但是由于LiDAR是主动传感器，因此生成的影像和传统影像有一些区别。辐射矫正这块貌似做的人挺少的，貌似硬件也没有辐射矫正。同时也说明在辐射这块也有很多可以做的地方。&lt;/p&gt;
 
 &lt;p&gt;## 精度&lt;/p&gt;
 
