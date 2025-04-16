@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2025-02-12T05:01:44-06:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">内向与科研</title><link href="https://whuwuteng.github.io/personal_page/markdown/2025/02/12/interview-phd.html" rel="alternate" type="text/html" title="内向与科研" /><published>2025-02-12T00:00:00-06:00</published><updated>2025-02-12T00:00:00-06:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2025/02/12/interview-phd</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2025/02/12/interview-phd.html">&lt;h1 id=&quot;内向与科研&quot;&gt;内向与科研&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://whuwuteng.github.io/personal_page/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whuwuteng.github.io/personal_page/" rel="alternate" type="text/html" /><updated>2025-04-16T05:19:45-05:00</updated><id>https://whuwuteng.github.io/personal_page/feed.xml</id><title type="html">whuwuteng(吴腾)</title><subtitle>Research Blog</subtitle><entry><title type="html">MCF的qualification</title><link href="https://whuwuteng.github.io/personal_page/markdown/2025/04/16/MCF.html" rel="alternate" type="text/html" title="MCF的qualification" /><published>2025-04-16T00:00:00-05:00</published><updated>2025-04-16T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2025/04/16/MCF</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2025/04/16/MCF.html">&lt;h1 id=&quot;mcf的qualification&quot;&gt;MCF的qualification&lt;/h1&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;这是我在之前在写法国找工作的那篇文章中提到的一个关键的事情，就是如果想找大学的MFC(maître de conférence)，因为它是一个公务员(fonctionaire)的岗位，要通过qualification，之后有MCF的岗位出来后，一般这些MCF都会和大学挂钩了，才有资格申请。当然，有些学校(主要是grande école)自己也会想找类似MCF，不过它叫enseignant chercheur，可以是CDD或者CDI，这个要看那些学校自己的计划。&lt;/p&gt;
+
+&lt;h2 id=&quot;介绍&quot;&gt;介绍&lt;/h2&gt;
+
+&lt;p&gt;qualification 主要是证明自己达到副教授的能力，主要是上课方面和科研方面，在法国是按照CNU(https://conseil-national-des-universites.fr/cnu/#/)划分的，跟计算机相关的主要是27（&lt;a href=&quot;https://conseil-national-des-universites.fr/cnu/#/entite/entiteName/CNU/idChild/33/idNode/3942-3991&quot;&gt;Section 27 - Informatique&lt;/a&gt;）与61（&lt;a href=&quot;https://conseil-national-des-universites.fr/cnu/#/entite/entiteName/CNU/idChild/33/idNode/4243-4270&quot;&gt;Section 61 - Génie informatique, automatique et traitement du signal&lt;/a&gt;)，在2024年之前是在&lt;a href=&quot;https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/candidats.html&quot;&gt;Galaxie des personnels du supérieur&lt;/a&gt;上面申请的，每年要看一下时间表，如2025年的（https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/qualification/campagne_2025/Calendrier_qualification_CAND_2025.pdf），注意2025年的qualification是2024就开始了，不要错过时间，不然别人不会接受材料的。到了2024年之后，就要到Odyssée（https://odyssee.enseignementsup-recherche.gouv.fr/accueil）上提交材料了。&lt;/p&gt;
+
+&lt;h2 id=&quot;过程&quot;&gt;过程&lt;/h2&gt;
+
+&lt;p&gt;主要就是根据每个CNU的要求提交材料，包括简历，论文，上课时间，科研经历，还有一些上课的证明。其中有一项很重要，就是博士论文相关的，就是论文的外审评语和答辩决议，如果博士在法国读的，那么这个很简单，如果在其他国家的话，就需要翻译啥的。上课的时间（课时量）也很关键，因为他们有最低要求，貌似一般要有60小时左右，其实这是最少要求，一般来说，因为对MCF来说，上课才是发工资的条件，科研不是，而且学校在找MCF的时候，一般都会让上大课，所以如果课时太少，即使过来，一般也很难找到岗位。这些具体的要求，可以在每个CNU的站上找，下面我给出27（&lt;a href=&quot;https://conseil-national-des-universites.fr/cnu/#/entite/entiteName/CNU/idChild/33/idNode/3942-3991&quot;&gt;Section 27 - Informatique&lt;/a&gt;）的网站https://cnu27.ls2n.fr/note-pour-les-candidatures-a-la-qualification/和61（&lt;a href=&quot;https://conseil-national-des-universites.fr/cnu/#/entite/entiteName/CNU/idChild/33/idNode/4243-4270&quot;&gt;Section 61 - Génie informatique, automatique et traitement du signal&lt;/a&gt;)的网站https://conseil-national-des-universites.fr/cnu/#/entite/entiteName/CNU/idChild/33/idNode/4243-4270。&lt;/p&gt;
+
+&lt;p&gt;要详细的读一下别人的要求，然后就是根据需要准备材料了。&lt;/p&gt;
+
+&lt;h2 id=&quot;结果&quot;&gt;结果&lt;/h2&gt;
+
+&lt;p&gt;一般来说三月份中旬的时候会有结果发到邮箱，过了的话，在系统中有一个Qualifié，要是没有过，别人也会写一下为啥没过的原因。&lt;/p&gt;
+
+&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
+
+&lt;p&gt;最后，我结合自己的经验说一下感悟，有不对的地方也希望大家谅解。&lt;/p&gt;
+
+&lt;p&gt;这个过程其实和投论文差不多，有时候也会遇到一些不开心的地方，我同时投了27与61，27过了，但是61没过，别人给的理由是科研方面不行，因为我的博士毕业太早了，他可能觉得我研究中断了，我后来写个邮件解释了，也没有用。不过我并不在乎了，因为我只是因为2023年的时候把材料都准备好了，后来找到工作了，想着反正材料都有了，就在2024年提交了。&lt;/p&gt;
+
+&lt;p&gt;提交材料的时候，一定要根据时间来，原来在&lt;a href=&quot;https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/candidats.html&quot;&gt;Galaxie des personnels du supérieur&lt;/a&gt;上面可以多次提交，但是在Odyssée只能一些提交，所以一定要看时间。&lt;/p&gt;
+
+&lt;p&gt;提交材料尽量提交全面一些，在67中，我就是在基本的材料交了，没想到会有误解，所以还是可以自己想办法把材料做的更完整一些。&lt;/p&gt;
+
+&lt;p&gt;MCF和CR有各自的好处，MCF要上课，但是CR要面对每4年的考核压力，这个压力对于外国人还是很大的，主要是项目申请更难。明年，通过考核之后，我会介绍一下考核是怎么弄的。&lt;/p&gt;
+
+&lt;p&gt;最后，希望想做科研的同学早日找到岗位。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">MCF的qualification</summary></entry><entry><title type="html">内向与科研</title><link href="https://whuwuteng.github.io/personal_page/markdown/2025/02/12/interview-phd.html" rel="alternate" type="text/html" title="内向与科研" /><published>2025-02-12T00:00:00-06:00</published><updated>2025-02-12T00:00:00-06:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2025/02/12/interview-phd</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2025/02/12/interview-phd.html">&lt;h1 id=&quot;内向与科研&quot;&gt;内向与科研&lt;/h1&gt;
 
 &lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
 
@@ -502,52 +534,4 @@ Eigen::Vector2d GlobTransfoEpip(Eigen::Vector2d epixy, CImgCameraIOP * pEpiCamer
 
 &lt;h2 id=&quot;lidar-camera-deep-fusion&quot;&gt;&lt;a href=&quot;http://ai.googleblog.com/2022/04/lidar-camera-deep-fusion-for-multi.html&quot;&gt;Lidar-Camera Deep Fusion&lt;/a&gt;&lt;/h2&gt;
 
-&lt;p&gt;感觉有个很大的问题是解决&lt;strong&gt;Alignment&lt;/strong&gt;的不一致的问题。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">LiDAR and Image in 3D</summary></entry><entry><title type="html">Transfer learning in Deep learning</title><link href="https://whuwuteng.github.io/personal_page/markdown/2022/08/04/transfer-learning.html" rel="alternate" type="text/html" title="Transfer learning in Deep learning" /><published>2022-08-04T00:00:00-05:00</published><updated>2022-08-04T00:00:00-05:00</updated><id>https://whuwuteng.github.io/personal_page/markdown/2022/08/04/transfer-learning</id><content type="html" xml:base="https://whuwuteng.github.io/personal_page/markdown/2022/08/04/transfer-learning.html">&lt;h1 id=&quot;transfer-learning-in-deep-learning&quot;&gt;Transfer learning in Deep learning&lt;/h1&gt;
-
-&lt;p&gt;由于loss的非凸性、type的不同，造成Transfer learning在不同的数据、task上表现并没有规律性。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/personal_page/images/VTAB_loss.png&quot; alt=&quot;&quot; title=&quot;VTAB protocol&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-visual-task-adaptation-benchmark&quot;&gt;The Visual Task Adaptation Benchmark&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ai.googleblog.com/2019/11/the-visual-task-adaptation-benchmark.html&quot;&gt;VTAB&lt;/a&gt;基于多种数据、多种任务之间的Transfer learning。&lt;/p&gt;
-
-&lt;p&gt;当数据量增加的时候，从scratch训练，不会有performance的损失。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/personal_page/images/VTAB_scratch.png&quot; alt=&quot;&quot; title=&quot;Performance&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;pretained-models&quot;&gt;Pretained models&lt;/h2&gt;
-
-&lt;p&gt;不能想当然的认为pretained models是有用的，参考&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;，主要的问题有：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;不同的task&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;数据有很大的difference，如果不能share feature，那么不会有什么好处&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;pretained models是local optima，所以会有bias&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;当然，也可以用pretained models做初始值，最后的结果基本也会差不多&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。也有文章证明即使是training from scratch&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;，结果也不会差很多&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
-
-&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;https://news.ycombinator.com/item?id=33067056. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;https://stackoverflow.com/questions/65982245/pretrained-model-or-training-from-scratch-for-object-detection. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;https://arxiv.org/abs/1811.08883. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;https://heartbeat.comet.ml/pre-trained-machine-learning-models-vs-models-trained-from-scratch-63e079ed648f. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">Transfer learning in Deep learning</summary></entry></feed>
+&lt;p&gt;感觉有个很大的问题是解决&lt;strong&gt;Alignment&lt;/strong&gt;的不一致的问题。&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">LiDAR and Image in 3D</summary></entry></feed>
